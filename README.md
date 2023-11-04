@@ -1,16 +1,28 @@
 # tyro_work
+my portfolio website 2.0, created in flutter
 
-A new Flutter project.
 
-## Getting Started
+## Work That's Further off
+set up favicons and splash
 
-This project is a starting point for a Flutter application.
+get image in the right resolution for web
 
-A few resources to get you started if this is your first Flutter project:
+make a link to my resume
+-- can your resume just take up a whole screen? with a download and share link? ooh that'd be tight
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Getting Started To Do
+figure out tiled background image
+-- have content go over it. Stack? with that and the rest of the content in a column?
+-> then figure out randomization of image to different stored assets.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+set up light and dark themes
+see if the scaffold body theme color applies to all containers in that color? if so that would be great
+see if the color in the theme can be based off getting from the localstorage ?? dark
+
+associate light/dark & fonts with switches
+need to import that local storage package
+
+see how to install a custom font, I'm pretty sure I had one as an asset in the other project so look up how I did that
+
+
+
