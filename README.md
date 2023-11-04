@@ -14,9 +14,11 @@ done - import image assets
 done - set up favicon 
 done - figure out tiled background image
 done - -- have content go over it. Stack? with that and the rest of the content in a column?
--> then figure out randomization of image to different stored assets.
+done - set up splash
 
-set up splash
+
+figure out randomization of image to different stored assets.
+
 
 set up light and dark themes
 see if the scaffold body theme color applies to all containers in that color? if so that would be great

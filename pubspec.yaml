@@ -67,11 +67,12 @@ flutter:
     # 4 is my favorite
     - assets/5.png
     - assets/6.png
-    - assets/tyFav16.png
-    - assets/tyFav48.png
-    - assets/tyFav128.png
-    - assets/tyFav192.png
-    - assets/tySplash512.png
+    - assets/ty16.png
+    - assets/ty48.png
+    - assets/ty128.png
+    # 128 was the original resolution, should be max quality
+    - assets/ty192.png
+    - assets/ty512.png
     - assets/tyrowo.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
