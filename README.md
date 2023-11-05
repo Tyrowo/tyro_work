@@ -19,6 +19,8 @@ maybe pay for that animation class video
 
 thought pieces - grill guide
 
+socials
+
 ## Getting Started To Do
 done - import image assets
 done - set up favicon 
@@ -26,6 +28,7 @@ done - figure out tiled background image
 done - -- have content go over it. Stack? with that and the rest of the content in a column?
 done - set up splash
 done - figure out randomization of image to different stored assets.
+done - see how to install a custom font, I'm pretty sure I had one as an asset in the other project so look up how I did that
 
 
 set up theme data
@@ -40,7 +43,6 @@ decide if things should come up from below scrolling upwards (with like a card t
 associate light/dark & fonts with switches
 need to import that local storage package
 
-see how to install a custom font, I'm pretty sure I had one as an asset in the other project so look up how I did that
 
 Work With Tyro
 -> scroll down
