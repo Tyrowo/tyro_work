@@ -25,6 +25,11 @@ socials
 
 set up webhosting - should be able to just copy settings via porkbun from last site
 
+study flutter_animate package
+apply animations to stuff
+[widget].animate(target: _scrollbarposition == ? 1 : 0).slideX()
+[widget, widget, widget].animate(interval : seconds).[animationtype]() // animates a list of widgets in sequence
+
 ## Getting Started To Do
 done - import image assets
 done - set up favicon 
@@ -40,6 +45,7 @@ done - upload color references in a folder to be collected with the rest of the 
 set up theme data
 set up light and dark themes
 see if the scaffold body theme color applies to all containers in that color? if so that would be great
+cardtheme**, primaryswatch, scrollbartheme, divider theme? textbutton theme, elevated button theme, textselection theme, switch theme, texttheme, floatingactionbutton?, scaffold background? (should never be visible in this project)
 see if the color in the theme can be based off getting from the localstorage ?? dark
 decide if app bar should be blue or in the light/dark color
 -- light dark might look nice with some transparency

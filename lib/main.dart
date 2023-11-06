@@ -43,7 +43,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
       body: Center(
@@ -60,17 +59,27 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  const Text(
-                    'You have pushed the button this many times:',
-                  ),
-                  Text(
-                    '$_background',
-                    style: Theme.of(context).textTheme.headlineMedium,
-                  ),
-                ],
+              child: Card(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    const Text(
+                      'You have pushed the button this many times:',
+                    ),
+                    Text(
+                      '$_background',
+                      style: Theme.of(context).textTheme.headlineMedium,
+                    ),
+                    ElevatedButton(
+                      child: const Text('hi'),
+                      onPressed: () => print('hi'),
+                    ),
+                    TextButton(
+                      child: const Text('a link'),
+                      onPressed: () => print('ok'),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
