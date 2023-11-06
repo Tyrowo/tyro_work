@@ -6,9 +6,11 @@ ThemeData lightTheme = ThemeData(
       const AppBarTheme(backgroundColor: Color.fromRGBO(191, 194, 183, 0.35)),
   cardTheme: const CardTheme(color: Color.fromRGBO(191, 194, 183, 0.9)),
   scrollbarTheme: ScrollbarThemeData(
-      thumbColor:
-          MaterialStateProperty.all(const Color.fromRGBO(191, 194, 183, 1)),
-      trackColor: MaterialStateProperty.all(Colors.black)),
+    thumbColor:
+        MaterialStateProperty.all(const Color.fromRGBO(191, 194, 183, 1)),
+    trackColor:
+        MaterialStateProperty.all(const Color.fromRGBO(66, 65, 62, 0.6)),
+  ),
   floatingActionButtonTheme: const FloatingActionButtonThemeData(
     backgroundColor: Color.fromRGBO(191, 194, 183, 1),
   ),
@@ -33,6 +35,15 @@ ThemeData lightTheme = ThemeData(
             MaterialStateProperty.all(const Color.fromRGBO(28, 146, 245, 1)),
         overlayColor: tyButtonOverlay(const Color.fromRGBO(191, 194, 183, 1))),
   ),
+  switchTheme: SwitchThemeData(
+    thumbColor: MaterialStateProperty.all(
+      const Color.fromRGBO(191, 194, 183, 1),
+    ),
+    trackColor: MaterialStateProperty.all(
+      const Color.fromRGBO(66, 65, 62, 0.6),
+    ),
+  ),
+  textTheme: tyTextTheme,
   useMaterial3: true,
 );
 
@@ -42,6 +53,31 @@ ThemeData darkTheme = ThemeData(
       ColorScheme.fromSeed(seedColor: const Color.fromRGBO(66, 65, 62, 1)),
   useMaterial3: true,
 );
+
+// ty font text theme
+TextTheme tyTextTheme = const TextTheme();
+
+// ubuntu font text theme
+TextTheme ubuTextTheme = const TextTheme();
+
+// reusable textstyle for just changing size
+TextStyle tyFont(fontSize, fontColor, [bold = true]) {
+  return TextStyle(
+    fontFamily: 'Tyrowo Inked',
+    color: fontColor,
+    fontWeight: bold ? FontWeight.w600 : FontWeight.w300,
+    fontSize: fontSize,
+  );
+}
+
+// reusable textstyle for just changing size
+TextStyle ubuFont(fontSize, fontColor) {
+  return TextStyle(
+    fontFamily: 'Ubuntu',
+    color: fontColor,
+    fontSize: fontSize,
+  );
+}
 
 // reusable button overlay for text and elevated buttons
 MaterialStateProperty<Color> tyButtonOverlay(Color initColor) {

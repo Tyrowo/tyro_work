@@ -54,10 +54,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: TextStyle(
                       fontFamily: 'Tyrowo Inked', fontWeight: FontWeight.w600)),
               const Spacer(),
+              const SizedBox(width: 10),
               ElevatedButton(onPressed: () {}, child: const Text('Resume')),
-              const SizedBox(width: 20),
+              const SizedBox(width: 15),
               ElevatedButton(onPressed: () {}, child: const Text('Contact')),
-              const SizedBox(width: 20),
+              const SizedBox(width: 15),
               const Text('Ty',
                   style: TextStyle(
                       fontFamily: 'Tyrowo Inked',
@@ -69,11 +70,11 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               const Text('Ø', // capital Ø, lowercase ø
                   style: TextStyle(fontFamily: 'Ubuntu', fontSize: 18)),
-              const SizedBox(width: 20),
+              const SizedBox(width: 15),
               const Icon(Icons.light_mode_outlined),
               const Switch(value: false, onChanged: null),
               const Icon(Icons.dark_mode_outlined),
-              const SizedBox(width: 10),
+              const SizedBox(width: 5),
             ],
           )),
       body: Center(
