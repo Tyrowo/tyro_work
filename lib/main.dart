@@ -44,8 +44,38 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: Text(widget.title),
-      ),
+          leading: Padding(
+            padding: const EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 0.0),
+            child: Image.asset('assets/ty48.png'),
+          ),
+          title: Row(
+            children: [
+              const Text('TyRowo',
+                  style: TextStyle(
+                      fontFamily: 'Tyrowo Inked', fontWeight: FontWeight.w600)),
+              const Spacer(),
+              ElevatedButton(onPressed: () {}, child: const Text('Resume')),
+              const SizedBox(width: 20),
+              ElevatedButton(onPressed: () {}, child: const Text('Contact')),
+              const SizedBox(width: 20),
+              const Text('Ty',
+                  style: TextStyle(
+                      fontFamily: 'Tyrowo Inked',
+                      fontWeight: FontWeight.w600,
+                      fontSize: 18)),
+              const Switch(
+                value: false,
+                onChanged: null,
+              ),
+              const Text('Ø', // capital Ø, lowercase ø
+                  style: TextStyle(fontFamily: 'Ubuntu', fontSize: 18)),
+              const SizedBox(width: 20),
+              const Icon(Icons.light_mode_outlined),
+              const Switch(value: false, onChanged: null),
+              const Icon(Icons.dark_mode_outlined),
+              const SizedBox(width: 10),
+            ],
+          )),
       body: Center(
         child: Stack(
           children: [
