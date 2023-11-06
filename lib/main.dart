@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Tyro Work',
       theme: lightTheme,
       home: const MyHomePage(title: 'Tyro Work'),
@@ -44,37 +45,62 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+          clipBehavior: Clip.antiAlias,
           leading: Padding(
             padding: const EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 0.0),
             child: Image.asset('assets/ty48.png'),
           ),
           title: Row(
+            // crossAxisAlignment: WrapCrossAlignment.center,
             children: [
               const Text('TyRowo',
                   style: TextStyle(
-                      fontFamily: 'Tyrowo Inked', fontWeight: FontWeight.w600)),
+                      fontSize: 20.0,
+                      fontFamily: 'Tyrowo Inked',
+                      fontWeight: FontWeight.w600)),
               const Spacer(),
               const SizedBox(width: 10),
               ElevatedButton(onPressed: () {}, child: const Text('Resume')),
-              const SizedBox(width: 15),
+              const SizedBox(width: 10),
               ElevatedButton(onPressed: () {}, child: const Text('Contact')),
-              const SizedBox(width: 15),
-              const Text('Ty',
-                  style: TextStyle(
-                      fontFamily: 'Tyrowo Inked',
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18)),
-              const Switch(
-                value: false,
-                onChanged: null,
+              const SizedBox(width: 20),
+              SizedBox(
+                width: 65,
+                height: 50,
+                child: FittedBox(
+                  fit: BoxFit.fill,
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const Text('Ty',
+                              style: TextStyle(
+                                  fontFamily: 'Tyrowo Inked',
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 18)),
+                          Switch(
+                            value: false,
+                            onChanged: (bool val) {},
+                          ),
+                          const Text('Ø ',
+                              // capital Ø, lowercase ø // need a space after to balance out with the ty on the other side
+                              style: TextStyle(
+                                  fontFamily: 'Ubuntu', fontSize: 18)),
+                        ],
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const Icon(Icons.light_mode_outlined),
+                          Switch(value: false, onChanged: (bool val) {}),
+                          const Icon(Icons.dark_mode_outlined),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
               ),
-              const Text('Ø', // capital Ø, lowercase ø
-                  style: TextStyle(fontFamily: 'Ubuntu', fontSize: 18)),
-              const SizedBox(width: 15),
-              const Icon(Icons.light_mode_outlined),
-              const Switch(value: false, onChanged: null),
-              const Icon(Icons.dark_mode_outlined),
-              const SizedBox(width: 5),
             ],
           )),
       body: Center(
@@ -112,6 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: const Text('a link'),
                         onPressed: () => print('ok'),
                       ),
+                      const Icon(Icons.abc_outlined),
                     ],
                   ),
                 ),
