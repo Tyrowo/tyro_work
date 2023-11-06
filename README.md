@@ -6,6 +6,7 @@ my portfolio website 2.0, created in flutter
 
 get image in the right resolution for web
 
+update resume
 make a link to my resume
 -- can your resume just take up a whole screen? with a download and share link? ooh that'd be tight
 
@@ -17,9 +18,12 @@ figure out how to do that squarespace fadein animation after scrolling to certai
 maybe set a variable trigger on a scroll controller when reaching+being within certain values
 maybe pay for that animation class video
 
-thought pieces - grill guide
+thought pieces - work more on magic time complexity
+thought pieces - grill guide algorithm lol
 
 socials
+
+set up webhosting - should be able to just copy settings via porkbun from last site
 
 ## Getting Started To Do
 done - import image assets
@@ -29,6 +33,8 @@ done - -- have content go over it. Stack? with that and the rest of the content 
 done - set up splash
 done - figure out randomization of image to different stored assets.
 done - see how to install a custom font, I'm pretty sure I had one as an asset in the other project so look up how I did that
+done - get jill to resize my profile image
+done - upload color references in a folder to be collected with the rest of the repo for posterity
 
 
 set up theme data
@@ -53,13 +59,13 @@ card comes up with projects
 // maybe scrolls could be lengthed by deviceheight, every time you scroll a device height you go to a new section
 
 project tiled images
--- is there a way to make sure that it can crop or expand to be responsive?
+-- is there a way to make sure that it can crop or expand to be responsive? - using cover
 * equidistant
 * procrastination buster
 * tyrowo inked
 project tiles animated expand to show description of the project, link to where it's published
 maybe if the project tiles have a less transparent or even opaque version of the card color it'll make a nice gradient.
+https://medium.com/flutter-community/flutter-widgets-boxes-part-2-the-whole-picture-4bb142f0b1ab#:~:text=cover%3A%2D%20It%20sets%20its,BoxFit.
+-- use cover property so that it adjusts with width
 
-upload inspo images in a folder to be collected with the rest of the repo for posterity? or at least reference images
 
-get jill to resize my profile image
