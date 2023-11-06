@@ -42,6 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         title: Text(widget.title),
       ),
@@ -58,27 +59,30 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            Center(
-              child: Card(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    const Text(
-                      'You have pushed the button this many times:',
-                    ),
-                    Text(
-                      '$_background',
-                      style: Theme.of(context).textTheme.headlineMedium,
-                    ),
-                    ElevatedButton(
-                      child: const Text('hi'),
-                      onPressed: () => print('hi'),
-                    ),
-                    TextButton(
-                      child: const Text('a link'),
-                      onPressed: () => print('ok'),
-                    ),
-                  ],
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 80, 0, 40),
+              child: Center(
+                child: Card(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      const Text(
+                        'You have pushed the button this many times:',
+                      ),
+                      Text(
+                        '$_background',
+                        style: Theme.of(context).textTheme.headlineMedium,
+                      ),
+                      ElevatedButton(
+                        child: const Text('hi'),
+                        onPressed: () => print('hi'),
+                      ),
+                      TextButton(
+                        child: const Text('a link'),
+                        onPressed: () => print('ok'),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 ThemeData lightTheme = ThemeData(
   primaryColor: const Color.fromRGBO(191, 194, 183, 0.8),
   appBarTheme:
-      const AppBarTheme(backgroundColor: Color.fromRGBO(191, 194, 183, 0.8)),
+      const AppBarTheme(backgroundColor: Color.fromRGBO(191, 194, 183, 0.35)),
   cardTheme: const CardTheme(color: Color.fromRGBO(191, 194, 183, 0.9)),
   scrollbarTheme: ScrollbarThemeData(
       thumbColor:
@@ -36,12 +36,14 @@ ThemeData lightTheme = ThemeData(
   useMaterial3: true,
 );
 
+// dark theme will be applied when switch is toggled off
 ThemeData darkTheme = ThemeData(
   colorScheme:
       ColorScheme.fromSeed(seedColor: const Color.fromRGBO(66, 65, 62, 1)),
   useMaterial3: true,
 );
 
+// reusable button overlay for text and elevated buttons
 MaterialStateProperty<Color> tyButtonOverlay(Color initColor) {
   return MaterialStateProperty.resolveWith((Set<MaterialState> state) {
     if (state.contains(MaterialState.pressed) ||
