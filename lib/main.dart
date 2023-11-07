@@ -1,22 +1,49 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tyro_work/helper/themes.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  bool tyFontOff = false;
+  bool darkMode = false;
+
+  Future<void> checkPrefsLight() async {
+    final localStorage = await SharedPreferences.getInstance();
+    bool darkModeOn = localStorage.getBool('darkModeOn') ?? false;
+    setState(() => darkMode = darkModeOn);
+  }
+
+  Future<void> checkPrefsFont() async {
+    final localStorage = await SharedPreferences.getInstance();
+    bool tyFont = localStorage.getBool('tyFontOff') ?? false;
+    setState(() => tyFontOff = tyFont);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    checkPrefsFont();
+    checkPrefsLight();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Tyro Work',
-      theme: lightTheme,
+      theme: darkMode ? darkTheme(tyFontOff) : lightTheme(tyFontOff),
       home: const MyHomePage(title: 'Tyro Work'),
     );
   }
@@ -33,11 +60,32 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _background = 4;
+  bool tyFontOff = false;
+  bool darkMode = false;
 
   void _randomizeBackground() {
     setState(() {
       _background = Random().nextInt(5) + 1;
     });
+  }
+
+  Future<void> checkPrefsLight() async {
+    final localStorage = await SharedPreferences.getInstance();
+    bool darkModeOn = localStorage.getBool('darkModeOn') ?? false;
+    setState(() => darkMode = darkModeOn);
+  }
+
+  Future<void> checkPrefsFont() async {
+    final localStorage = await SharedPreferences.getInstance();
+    bool tyFont = localStorage.getBool('tyFontOff') ?? false;
+    setState(() => tyFontOff = tyFont);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    checkPrefsFont();
+    checkPrefsLight();
   }
 
   @override
@@ -80,8 +128,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                   fontWeight: FontWeight.w600,
                                   fontSize: 18)),
                           Switch(
-                            value: false,
-                            onChanged: (bool val) {},
+                            value: tyFontOff,
+                            onChanged: (bool val) async {
+                              final localStorage =
+                                  await SharedPreferences.getInstance();
+                              localStorage.setBool('tyFontOff', val);
+                              setState(() => tyFontOff = val);
+                            },
                           ),
                           const Text('Ø ',
                               // capital Ø, lowercase ø // need a space after to balance out with the ty on the other side
@@ -93,7 +146,14 @@ class _MyHomePageState extends State<MyHomePage> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           const Icon(Icons.light_mode_outlined),
-                          Switch(value: false, onChanged: (bool val) {}),
+                          Switch(
+                              value: darkMode,
+                              onChanged: (bool val) async {
+                                final localStorage =
+                                    await SharedPreferences.getInstance();
+                                localStorage.setBool('darkModeOn', val);
+                                setState(() => tyFontOff = val);
+                              }),
                           const Icon(Icons.dark_mode_outlined),
                         ],
                       ),

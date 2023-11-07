@@ -41,20 +41,20 @@ done - see how to install a custom font, I'm pretty sure I had one as an asset i
 done - get jill to resize my profile image
 done - upload color references in a folder to be collected with the rest of the repo for posterity
 
-
-set up theme data
-set up light and dark themes
-see if the scaffold body theme color applies to all containers in that color? if so that would be great
-cardtheme**, primaryswatch, scrollbartheme, divider theme? textbutton theme, elevated button theme, textselection theme, switch theme, texttheme, floatingactionbutton?, scaffold background? (should never be visible in this project)
-see if the color in the theme can be based off getting from the localstorage ?? dark
-decide if app bar should be blue or in the light/dark color
--- light dark might look nice with some transparency
-
-decide if things should come up from below scrolling upwards (with like a card to cover the corners) 
+done - set up theme data
+done - set up light and dark themes
+done - see if the scaffold body theme color applies to all containers in that color? if so that would be great
+done - cardtheme**, primaryswatch, scrollbartheme, divider theme? textbutton theme, elevated button theme, textselection theme, switch theme, texttheme, floatingactionbutton?, scaffold background? (should never be visible in this project)
+done - see if the color in the theme can be based off getting from the localstorage ?? dark
+done - decide if app bar should be blue or in the light/dark color
+done - -- light dark might look nice with some transparency
 
 associate light/dark & fonts with switches
 need to import that local storage package
+solution for passing state from the child (screen) widget to the parent (main) that updates the theme
+-- https://stackoverflow.com/questions/51798498/flutter-setstate-to-another-class/51798698#51798698
 
+decide if things should come up from below scrolling upwards (with like a card to cover the corners) 
 
 Work With Tyro
 -> scroll down

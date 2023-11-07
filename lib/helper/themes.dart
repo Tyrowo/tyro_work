@@ -1,125 +1,133 @@
 import 'package:flutter/material.dart';
 
-ThemeData lightTheme = ThemeData(
-  primaryColor: const Color.fromRGBO(191, 194, 183, 0.8),
-  appBarTheme: const AppBarTheme(
-    backgroundColor: Color.fromRGBO(191, 194, 183, 0.5),
-    iconTheme: IconThemeData(color: Colors.black),
-    foregroundColor: Colors.black,
-  ),
-  cardTheme: const CardTheme(color: Color.fromRGBO(191, 194, 183, 0.9)),
-  scrollbarTheme: ScrollbarThemeData(
-    thumbColor:
-        MaterialStateProperty.all(const Color.fromRGBO(191, 194, 183, 1)),
-    trackColor:
-        MaterialStateProperty.all(const Color.fromRGBO(66, 65, 62, 0.6)),
-  ),
-  floatingActionButtonTheme: const FloatingActionButtonThemeData(
-    backgroundColor: Color.fromRGBO(191, 194, 183, 1),
-  ),
-  elevatedButtonTheme: ElevatedButtonThemeData(
-    style: ButtonStyle(
-      backgroundColor:
+ThemeData lightTheme(bool tyFontOff) {
+  return ThemeData(
+    primaryColor: const Color.fromRGBO(191, 194, 183, 0.8),
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Color.fromRGBO(191, 194, 183, 0.5),
+      iconTheme: IconThemeData(color: Colors.black),
+      foregroundColor: Colors.black,
+    ),
+    cardTheme: const CardTheme(color: Color.fromRGBO(191, 194, 183, 0.9)),
+    scrollbarTheme: ScrollbarThemeData(
+      thumbColor:
           MaterialStateProperty.all(const Color.fromRGBO(191, 194, 183, 1)),
-      foregroundColor:
-          MaterialStateProperty.all(const Color.fromRGBO(28, 146, 245, 1)),
-      overlayColor: tyButtonOverlay(const Color.fromRGBO(191, 194, 183, 1)),
-      shape: MaterialStateProperty.all(
-        const RoundedRectangleBorder(
-          side: BorderSide(width: 0.5, color: Color.fromRGBO(66, 65, 62, 1)),
-          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+      trackColor:
+          MaterialStateProperty.all(const Color.fromRGBO(66, 65, 62, 0.6)),
+    ),
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
+      backgroundColor: Color.fromRGBO(191, 194, 183, 1),
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor:
+            MaterialStateProperty.all(const Color.fromRGBO(191, 194, 183, 1)),
+        foregroundColor:
+            MaterialStateProperty.all(const Color.fromRGBO(28, 146, 245, 1)),
+        overlayColor: tyButtonOverlay(const Color.fromRGBO(191, 194, 183, 1)),
+        shape: MaterialStateProperty.all(
+          const RoundedRectangleBorder(
+            side: BorderSide(width: 0.5, color: Color.fromRGBO(66, 65, 62, 1)),
+            borderRadius: BorderRadius.all(Radius.circular(8.0)),
+          ),
         ),
       ),
     ),
-  ),
-  textButtonTheme: TextButtonThemeData(
-    style: ButtonStyle(
-        foregroundColor:
-            MaterialStateProperty.all(const Color.fromRGBO(28, 146, 245, 1)),
-        overlayColor: tyButtonOverlay(const Color.fromRGBO(191, 194, 183, 1))),
-  ),
-  switchTheme: SwitchThemeData(
-    thumbColor: MaterialStateProperty.all(
-      const Color.fromRGBO(191, 194, 183, 1),
+    textButtonTheme: TextButtonThemeData(
+      style: ButtonStyle(
+          foregroundColor:
+              MaterialStateProperty.all(const Color.fromRGBO(28, 146, 245, 1)),
+          overlayColor:
+              tyButtonOverlay(const Color.fromRGBO(191, 194, 183, 1))),
     ),
-    trackColor: MaterialStateProperty.all(
-      const Color.fromRGBO(66, 65, 62, 0.6),
+    switchTheme: SwitchThemeData(
+      thumbColor: MaterialStateProperty.all(
+        const Color.fromRGBO(191, 194, 183, 1),
+      ),
+      trackColor: MaterialStateProperty.all(
+        const Color.fromRGBO(66, 65, 62, 0.6),
+      ),
+      trackOutlineColor: MaterialStateProperty.all(
+        const Color.fromRGBO(191, 194, 183, 1),
+      ),
+      trackOutlineWidth: MaterialStateProperty.all(0.8),
     ),
-    trackOutlineColor: MaterialStateProperty.all(
-      const Color.fromRGBO(191, 194, 183, 1),
-    ),
-    trackOutlineWidth: MaterialStateProperty.all(0.8),
-  ),
-  textTheme: tyTextTheme(Colors.black),
-  iconTheme: const IconThemeData(color: Colors.black),
-  useMaterial3: true,
-);
+    textTheme:
+        tyFontOff ? ubuTextTheme(Colors.black) : tyTextTheme(Colors.black),
+    iconTheme: const IconThemeData(color: Colors.black),
+    useMaterial3: true,
+  );
+}
 
 // dark theme will be applied when switch is toggled off
 // const Color.fromRGBO(191, 194, 183, 1)
-ThemeData darkTheme = ThemeData(
-  primaryColor: const Color.fromRGBO(66, 65, 62, 0.8),
-  appBarTheme: const AppBarTheme(
-    backgroundColor: Color.fromRGBO(66, 65, 62, 0.5),
-    iconTheme: IconThemeData(color: Colors.white),
-    foregroundColor: Colors.white,
-  ),
-  cardTheme: const CardTheme(
-    color: Color.fromRGBO(66, 65, 62, 0.9),
-  ),
-  scrollbarTheme: ScrollbarThemeData(
-    thumbColor: MaterialStateProperty.all(
-      const Color.fromRGBO(66, 65, 62, 1),
+ThemeData darkTheme(bool tyFontOff) {
+  return ThemeData(
+    primaryColor: const Color.fromRGBO(66, 65, 62, 0.8),
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Color.fromRGBO(66, 65, 62, 0.5),
+      iconTheme: IconThemeData(color: Colors.white),
+      foregroundColor: Colors.white,
     ),
-    trackColor: MaterialStateProperty.all(
-      const Color.fromRGBO(191, 194, 183, 0.6),
+    cardTheme: const CardTheme(
+      color: Color.fromRGBO(66, 65, 62, 0.9),
     ),
-  ),
-  floatingActionButtonTheme: const FloatingActionButtonThemeData(
-    backgroundColor: Color.fromRGBO(66, 65, 62, 1),
-  ),
-  elevatedButtonTheme: ElevatedButtonThemeData(
-    style: ButtonStyle(
-      backgroundColor: MaterialStateProperty.all(
+    scrollbarTheme: ScrollbarThemeData(
+      thumbColor: MaterialStateProperty.all(
         const Color.fromRGBO(66, 65, 62, 1),
       ),
-      foregroundColor:
-          MaterialStateProperty.all(const Color.fromRGBO(28, 146, 245, 1)),
-      overlayColor: tyButtonOverlay(
-        const Color.fromRGBO(66, 65, 62, 1),
+      trackColor: MaterialStateProperty.all(
+        const Color.fromRGBO(191, 194, 183, 0.6),
       ),
-      shape: MaterialStateProperty.all(
-        const RoundedRectangleBorder(
-          side: BorderSide(width: 0.5, color: Color.fromRGBO(191, 194, 183, 1)),
-          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+    ),
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
+      backgroundColor: Color.fromRGBO(66, 65, 62, 1),
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(
+          const Color.fromRGBO(66, 65, 62, 1),
         ),
-      ),
-    ),
-  ),
-  textButtonTheme: TextButtonThemeData(
-    style: ButtonStyle(
         foregroundColor:
             MaterialStateProperty.all(const Color.fromRGBO(28, 146, 245, 1)),
         overlayColor: tyButtonOverlay(
           const Color.fromRGBO(66, 65, 62, 1),
-        )),
-  ),
-  switchTheme: SwitchThemeData(
-    thumbColor: MaterialStateProperty.all(
-      const Color.fromRGBO(66, 65, 62, 1),
+        ),
+        shape: MaterialStateProperty.all(
+          const RoundedRectangleBorder(
+            side:
+                BorderSide(width: 0.5, color: Color.fromRGBO(191, 194, 183, 1)),
+            borderRadius: BorderRadius.all(Radius.circular(8.0)),
+          ),
+        ),
+      ),
     ),
-    trackColor: MaterialStateProperty.all(
-      const Color.fromRGBO(191, 194, 183, 0.6),
+    textButtonTheme: TextButtonThemeData(
+      style: ButtonStyle(
+          foregroundColor:
+              MaterialStateProperty.all(const Color.fromRGBO(28, 146, 245, 1)),
+          overlayColor: tyButtonOverlay(
+            const Color.fromRGBO(66, 65, 62, 1),
+          )),
     ),
-    trackOutlineColor: MaterialStateProperty.all(
-      const Color.fromRGBO(66, 65, 62, 1),
+    switchTheme: SwitchThemeData(
+      thumbColor: MaterialStateProperty.all(
+        const Color.fromRGBO(66, 65, 62, 1),
+      ),
+      trackColor: MaterialStateProperty.all(
+        const Color.fromRGBO(191, 194, 183, 0.6),
+      ),
+      trackOutlineColor: MaterialStateProperty.all(
+        const Color.fromRGBO(66, 65, 62, 1),
+      ),
+      trackOutlineWidth: MaterialStateProperty.all(0.8),
     ),
-    trackOutlineWidth: MaterialStateProperty.all(0.8),
-  ),
-  textTheme: ubuTextTheme(Colors.white),
-  iconTheme: const IconThemeData(color: Colors.white),
-  useMaterial3: true,
-);
+    textTheme:
+        tyFontOff ? ubuTextTheme(Colors.white) : tyTextTheme(Colors.white),
+    iconTheme: const IconThemeData(color: Colors.white),
+    useMaterial3: true,
+  );
+}
 
 // ty font text theme
 // based off the 2021 material design typography - https://api.flutter.dev/flutter/material/TextTheme-class.html
