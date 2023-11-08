@@ -168,28 +168,52 @@ class _HomescreenState extends State<Homescreen> {
                       color: Theme.of(context).primaryColor,
                       width: deviceWidth(context),
                       height: deviceHeight(context),
-                      child: Center(
-                        child: Column(
-                          children: [
-                            Text('Projects',
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(
+                                deviceWidth(context) * 0.03,
+                                deviceHeight(context) * 0.03,
+                                deviceWidth(context) * 0.03,
+                                deviceHeight(context) * 0.03),
+                            child: Text('Projects',
                                 style:
                                     Theme.of(context).textTheme.displayLarge),
-                          ],
-                        ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(
+                                deviceWidth(context) * 0.04,
+                                deviceHeight(context) * 0.01,
+                                deviceWidth(context) * 0.04,
+                                deviceHeight(context) * 0.01),
+                            child: ExpansionPanelList(
+                              expandIconColor:
+                                  const Color.fromRGBO(255, 255, 255, 0),
+                              // expandedHeaderPadding: const EdgeInsets.all(1.0),
+                              // projects expansion panel list so that they can expand from the banner to show descriptions of the projects
+                              children: [
+                                ExpansionPanel(
+                                  backgroundColor:
+                                      Theme.of(context).primaryColor,
+                                  canTapOnHeader: true,
+                                  headerBuilder: (context, isOpen) {
+                                    return SizedBox(
+                                      height: 250,
+                                      child: Image.asset(
+                                        'assets/equidistant_1080x200.png',
+                                        fit: BoxFit.cover,
+                                      ),
+                                    );
+                                  },
+                                  body: const Text('hi!'),
+                                  isExpanded: false,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                  ),
-                  SizedBox(
-                      width: deviceWidth(context),
-                      child: const Card(child: Text('Projects'))),
-                  AnimatedContainer(
-                    duration: const Duration(milliseconds: 300),
-                    color: Theme.of(context).primaryColor,
-                    height: 200,
-                    width: deviceWidth(context) * 0.8,
-                    child: FittedBox(
-                        fit: BoxFit.cover,
-                        child: Image.asset('assets/equidistant_1080x100.png')),
                   ),
                   SizedBox(
                     height: deviceHeight(context),
@@ -228,13 +252,14 @@ class _HomescreenState extends State<Homescreen> {
           ),
         ),
       ),
-
+      /*
       // we don't need a floating action button for this page
       floatingActionButton: FloatingActionButton(
         onPressed: _randomizeBackground,
         tooltip: 'Randomize Background',
         child: const Icon(Icons.add),
       ),
+      */
     );
   }
 }
