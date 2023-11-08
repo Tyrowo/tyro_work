@@ -8,12 +8,14 @@ ThemeData lightTheme(bool tyFontOff) {
       iconTheme: IconThemeData(color: Colors.black),
       foregroundColor: Colors.black,
     ),
-    cardTheme: const CardTheme(color: Color.fromRGBO(191, 194, 183, 0.9)),
+    cardTheme: const CardTheme(color: Color.fromRGBO(191, 194, 183, 0.5)),
     scrollbarTheme: ScrollbarThemeData(
       thumbColor:
-          MaterialStateProperty.all(const Color.fromRGBO(191, 194, 183, 1)),
+          MaterialStateProperty.all(const Color.fromRGBO(66, 65, 62, 1)),
       trackColor:
-          MaterialStateProperty.all(const Color.fromRGBO(66, 65, 62, 0.6)),
+          MaterialStateProperty.all(const Color.fromRGBO(191, 194, 183, 0.5)),
+      trackVisibility: MaterialStateProperty.all(true),
+      thumbVisibility: MaterialStateProperty.all(true),
     ),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
       backgroundColor: Color.fromRGBO(191, 194, 183, 1),
@@ -70,15 +72,17 @@ ThemeData darkTheme(bool tyFontOff) {
       foregroundColor: Colors.white,
     ),
     cardTheme: const CardTheme(
-      color: Color.fromRGBO(66, 65, 62, 0.9),
+      color: Color.fromRGBO(66, 65, 62, 0.5),
     ),
     scrollbarTheme: ScrollbarThemeData(
       thumbColor: MaterialStateProperty.all(
-        const Color.fromRGBO(66, 65, 62, 1),
+        const Color.fromRGBO(191, 194, 183, 1),
       ),
       trackColor: MaterialStateProperty.all(
-        const Color.fromRGBO(191, 194, 183, 0.6),
+        const Color.fromRGBO(66, 65, 62, 0.5),
       ),
+      trackVisibility: MaterialStateProperty.all(true),
+      thumbVisibility: MaterialStateProperty.all(true),
     ),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
       backgroundColor: Color.fromRGBO(66, 65, 62, 1),
@@ -115,7 +119,7 @@ ThemeData darkTheme(bool tyFontOff) {
         const Color.fromRGBO(66, 65, 62, 1),
       ),
       trackColor: MaterialStateProperty.all(
-        const Color.fromRGBO(191, 194, 183, 0.6),
+        const Color.fromRGBO(191, 194, 183, 0.3),
       ),
       trackOutlineColor: MaterialStateProperty.all(
         const Color.fromRGBO(66, 65, 62, 1),

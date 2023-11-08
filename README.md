@@ -49,10 +49,10 @@ done - see if the color in the theme can be based off getting from the localstor
 done - decide if app bar should be blue or in the light/dark color
 done - -- light dark might look nice with some transparency
 
-associate light/dark & fonts with switches
-need to import that local storage package
-solution for passing state from the child (screen) widget to the parent (main) that updates the theme
--- https://stackoverflow.com/questions/51798498/flutter-setstate-to-another-class/51798698#51798698
+done - associate light/dark & fonts with switches
+done - need to import that local storage package
+done - solution for passing state from the child (screen) widget to the parent (main) that updates the theme
+done - -- https://stackoverflow.com/questions/51798498/flutter-setstate-to-another-class/51798698#51798698
 
 decide if things should come up from below scrolling upwards (with like a card to cover the corners) 
 
@@ -63,6 +63,10 @@ image comes up with "the rockstar developer you've been looking for"
 card comes up with projects
 -- projects are in horizontal tiles just showing the image and then those scroll down
 // maybe scrolls could be lengthed by deviceheight, every time you scroll a device height you go to a new section
+
+need to make image change dynamically with viewport size
+need to have fonts change size dynamically with viewport size
+consider cropping top
 
 project tiled images
 -- is there a way to make sure that it can crop or expand to be responsive? - using cover

@@ -17,6 +17,9 @@ class _HomescreenState extends State<Homescreen> {
   int _background = 4;
   bool tyFontOff = false;
   bool darkMode = false;
+  double deviceWidth(BuildContext context) => MediaQuery.of(context).size.width;
+  double deviceHeight(BuildContext context) =>
+      MediaQuery.of(context).size.height;
 
   void _randomizeBackground() {
     setState(() {
@@ -41,6 +44,7 @@ class _HomescreenState extends State<Homescreen> {
     super.initState();
     checkPrefsFont();
     checkPrefsLight();
+    _randomizeBackground();
   }
 
   @override
@@ -127,42 +131,82 @@ class _HomescreenState extends State<Homescreen> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 80, 0, 40),
-              child: Center(
-                child: Card(
-                  child: Column(
+            SingleChildScrollView(
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: deviceHeight(context) * 0.15,
+                  ),
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      const Text(
-                        'You have pushed the button this many times:',
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(40.0),
+                        child: Image.asset('assets/tyrowo.jpg'),
                       ),
-                      Text(
-                        '$_background',
-                        style: Theme.of(context).textTheme.headlineMedium,
-                      ),
-                      ElevatedButton(
-                        child: const Text('hi'),
-                        onPressed: () => print('hi'),
-                      ),
-                      TextButton(
-                        child: const Text('a link'),
-                        onPressed: () => print('ok'),
-                      ),
-                      const Icon(Icons.abc_outlined),
+                      SizedBox(width: deviceWidth(context) * 0.5),
                     ],
                   ),
-                ),
+                  SizedBox(height: deviceHeight(context) * 0.1),
+                  Row(
+                    children: [
+                      const Spacer(),
+                      Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Text(
+                              "The Rockstar Developer you've been looking for.",
+                              style: Theme.of(context).textTheme.displayLarge),
+                        ),
+                      ),
+                      SizedBox(width: deviceWidth(context) * 0.01),
+                    ],
+                  ),
+                  SizedBox(
+                    height: deviceHeight(context),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 80, 0, 40),
+                    child: Center(
+                      child: Card(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            const Text(
+                              'You have pushed the button this many times:',
+                            ),
+                            Text(
+                              '$_background',
+                              style: Theme.of(context).textTheme.headlineMedium,
+                            ),
+                            ElevatedButton(
+                              child: const Text('hi'),
+                              onPressed: () => print('hi'),
+                            ),
+                            TextButton(
+                              child: const Text('a link'),
+                              onPressed: () => print('ok'),
+                            ),
+                            const Icon(Icons.abc_outlined),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
         ),
       ),
+      /*
+      // we don't need a floating action button for this page
       floatingActionButton: FloatingActionButton(
         onPressed: _randomizeBackground,
-        tooltip: 'Increment',
+        tooltip: 'Randomize Background',
         child: const Icon(Icons.add),
       ),
+      */
     );
   }
 }
