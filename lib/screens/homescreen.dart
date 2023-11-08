@@ -118,21 +118,18 @@ class _HomescreenState extends State<Homescreen> {
               ),
             ],
           )),
-      body: Center(
-        child: Stack(
-          children: [
-            FractionallySizedBox(
-              widthFactor: 1.0,
-              heightFactor: 1.0,
-              child: Positioned.fill(
+      body: SingleChildScrollView(
+        // to lock this background image in place and have everything scroll past it move the SCSV to the content column and put the tiled image in a fractionally sized box with height and width factor of 1.
+        child: Center(
+          child: Stack(
+            children: [
+              Positioned.fill(
                 child: Image.asset(
                   'assets/$_background.png',
                   repeat: ImageRepeat.repeat,
                 ),
               ),
-            ),
-            SingleChildScrollView(
-              child: Column(
+              Column(
                 children: [
                   SizedBox(
                     height: deviceHeight(context) * 0.15,
@@ -171,7 +168,15 @@ class _HomescreenState extends State<Homescreen> {
                       color: Theme.of(context).primaryColor,
                       width: deviceWidth(context),
                       height: deviceHeight(context),
-                      child: const Text('hi'),
+                      child: Center(
+                        child: Column(
+                          children: [
+                            Text('Projects',
+                                style:
+                                    Theme.of(context).textTheme.displayLarge),
+                          ],
+                        ),
+                      ),
                     ),
                   ),
                   SizedBox(
@@ -219,18 +224,17 @@ class _HomescreenState extends State<Homescreen> {
                   ),
                 ],
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
-      /*
+
       // we don't need a floating action button for this page
       floatingActionButton: FloatingActionButton(
         onPressed: _randomizeBackground,
         tooltip: 'Randomize Background',
         child: const Icon(Icons.add),
       ),
-      */
     );
   }
 }
