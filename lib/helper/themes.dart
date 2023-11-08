@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 ThemeData lightTheme(bool tyFontOff) {
   return ThemeData(
-    primaryColor: const Color.fromRGBO(191, 194, 183, 0.8),
+    primaryColor: const Color.fromRGBO(191, 194, 183, 0.96),
     appBarTheme: const AppBarTheme(
       backgroundColor: Color.fromRGBO(191, 194, 183, 0.5),
       iconTheme: IconThemeData(color: Colors.black),
@@ -65,7 +65,7 @@ ThemeData lightTheme(bool tyFontOff) {
 // const Color.fromRGBO(191, 194, 183, 1)
 ThemeData darkTheme(bool tyFontOff) {
   return ThemeData(
-    primaryColor: const Color.fromRGBO(66, 65, 62, 0.8),
+    primaryColor: const Color.fromRGBO(66, 65, 62, 0.96),
     appBarTheme: const AppBarTheme(
       backgroundColor: Color.fromRGBO(66, 65, 62, 0.5),
       iconTheme: IconThemeData(color: Colors.white),

@@ -165,9 +165,27 @@ class _HomescreenState extends State<Homescreen> {
                   SizedBox(
                     height: deviceHeight(context) * 0.5,
                   ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(40.0),
+                    child: Container(
+                      color: Theme.of(context).primaryColor,
+                      width: deviceWidth(context),
+                      height: deviceHeight(context),
+                      child: const Text('hi'),
+                    ),
+                  ),
                   SizedBox(
                       width: deviceWidth(context),
                       child: const Card(child: Text('Projects'))),
+                  AnimatedContainer(
+                    duration: const Duration(milliseconds: 300),
+                    color: Theme.of(context).primaryColor,
+                    height: 200,
+                    width: deviceWidth(context) * 0.8,
+                    child: FittedBox(
+                        fit: BoxFit.cover,
+                        child: Image.asset('assets/equidistant_1080x100.png')),
+                  ),
                   SizedBox(
                     height: deviceHeight(context),
                   ),

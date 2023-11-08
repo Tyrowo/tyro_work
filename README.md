@@ -80,5 +80,7 @@ project tiles animated expand to show description of the project, link to where 
 maybe if the project tiles have a less transparent or even opaque version of the card color it'll make a nice gradient.
 https://medium.com/flutter-community/flutter-widgets-boxes-part-2-the-whole-picture-4bb142f0b1ab#:~:text=cover%3A%2D%20It%20sets%20its,BoxFit.
 -- use cover property so that it adjusts with width
+https://www.youtube.com/watch?v=2aJZzRMziJc
+-- use expansion panels and expansion panel lists, they have an animated property to customize instead of doing separate animated boxes, and the list can make sure that no more than one are expanded at a time
 
 
