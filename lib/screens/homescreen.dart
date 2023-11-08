@@ -20,6 +20,7 @@ class _HomescreenState extends State<Homescreen> {
   double deviceWidth(BuildContext context) => MediaQuery.of(context).size.width;
   double deviceHeight(BuildContext context) =>
       MediaQuery.of(context).size.height;
+  final List<bool> _openProjects = [false, false, false];
 
   void _randomizeBackground() {
     setState(() {
@@ -205,10 +206,16 @@ class _HomescreenState extends State<Homescreen> {
                                       ),
                                     );
                                   },
-                                  body: const Text('hi!'),
-                                  isExpanded: false,
+                                  body: const Card(
+                                      child: SizedBox(
+                                          width: 100,
+                                          height: 100,
+                                          child: Text('hi!'))),
+                                  isExpanded: _openProjects[0],
                                 ),
                               ],
+                              expansionCallback: (i, isOpen) =>
+                                  setState(() => _openProjects[i] = isOpen),
                             ),
                           ),
                         ],
