@@ -147,7 +147,7 @@ class _HomescreenState extends State<Homescreen> {
                       SizedBox(width: deviceWidth(context) * 0.5),
                     ],
                   ),
-                  SizedBox(height: deviceHeight(context) * 0.1),
+                  SizedBox(height: deviceHeight(context) * 0.05),
                   Row(
                     children: [
                       const Spacer(),
@@ -162,6 +162,12 @@ class _HomescreenState extends State<Homescreen> {
                       SizedBox(width: deviceWidth(context) * 0.01),
                     ],
                   ),
+                  SizedBox(
+                    height: deviceHeight(context) * 0.5,
+                  ),
+                  SizedBox(
+                      width: deviceWidth(context),
+                      child: const Card(child: Text('Projects'))),
                   SizedBox(
                     height: deviceHeight(context),
                   ),

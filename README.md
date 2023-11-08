@@ -27,8 +27,10 @@ set up webhosting - should be able to just copy settings via porkbun from last s
 
 study flutter_animate package
 apply animations to stuff
+fade in for initial image and text
 [widget].animate(target: _scrollbarposition == ? 1 : 0).slideX()
 [widget, widget, widget].animate(interval : seconds).[animationtype]() // animates a list of widgets in sequence
+shimmer on Rockstar Developer text, test that or maybe wipe-across color change through my three colors
 
 ## Getting Started To Do
 done - import image assets
@@ -66,9 +68,10 @@ card comes up with projects
 
 need to make image change dynamically with viewport size
 need to have fonts change size dynamically with viewport size
-consider cropping top
+consider cropping bottom of profile pic
 
-project tiled images
+projects - tiled images
+container for the projects needs to stretch all the way to the edges and card doesn't do that because of built in padding, probably need to just create a custom container for that
 -- is there a way to make sure that it can crop or expand to be responsive? - using cover
 * equidistant
 * procrastination buster
