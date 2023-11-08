@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:tyro_work/helper/themes.dart';
 
 class Homescreen extends StatefulWidget {
   final ValueChanged<bool> updateFont;
@@ -168,7 +169,6 @@ class _HomescreenState extends State<Homescreen> {
                     child: Container(
                       color: Theme.of(context).primaryColor,
                       width: deviceWidth(context),
-                      height: deviceHeight(context),
                       child: Column(
                         children: [
                           Padding(
@@ -188,9 +188,8 @@ class _HomescreenState extends State<Homescreen> {
                                 deviceWidth(context) * 0.04,
                                 deviceHeight(context) * 0.01),
                             child: ExpansionPanelList(
-                              expandIconColor:
-                                  const Color.fromRGBO(255, 255, 255, 0),
-                              // expandedHeaderPadding: const EdgeInsets.all(1.0),
+                              materialGapSize: deviceHeight(context) * 0.03,
+                              // expandIconColor: Colors.white, // can't get this color to change no matter what I do, would like to change it to a ternary for light/dark
                               // projects expansion panel list so that they can expand from the banner to show descriptions of the projects
                               children: [
                                 ExpansionPanel(
@@ -213,11 +212,76 @@ class _HomescreenState extends State<Homescreen> {
                                           child: Text('hi!'))),
                                   isExpanded: _openProjects[0],
                                 ),
+                                ExpansionPanel(
+                                  backgroundColor:
+                                      Theme.of(context).primaryColor,
+                                  canTapOnHeader: true,
+                                  headerBuilder: (context, isOpen) {
+                                    return Container(
+                                      decoration: const BoxDecoration(
+                                        gradient: LinearGradient(
+                                          colors: [
+                                            Color.fromRGBO(251, 80, 201, 1),
+                                            Color.fromRGBO(251, 80, 201, 1),
+                                            Color.fromRGBO(7, 214, 105, 1),
+                                            Color.fromRGBO(7, 214, 105, 1),
+                                            Color.fromRGBO(28, 146, 245, 1),
+                                            Color.fromRGBO(28, 146, 245, 1),
+                                          ],
+                                          stops: [
+                                            0.1,
+                                            0.25,
+                                            0.251,
+                                            0.75,
+                                            0.751,
+                                            0.99
+                                          ],
+                                          transform: GradientRotation(0.9),
+                                        ),
+                                      ),
+                                      height: 250,
+                                      child: Center(
+                                        child: Text(
+                                            'The Procrastination Buster',
+                                            style: tyTextTheme(Colors.white)
+                                                .displayLarge,
+                                            textAlign: TextAlign.center),
+                                      ),
+                                    );
+                                  },
+                                  body: const Card(
+                                      child: SizedBox(
+                                          width: 100,
+                                          height: 100,
+                                          child: Text('hi!'))),
+                                  isExpanded: _openProjects[1],
+                                ),
+                                ExpansionPanel(
+                                  backgroundColor:
+                                      Theme.of(context).primaryColor,
+                                  canTapOnHeader: true,
+                                  headerBuilder: (context, isOpen) {
+                                    return SizedBox(
+                                      height: 250,
+                                      child: Image.asset(
+                                        'assets/inked_1080x200.png',
+                                        fit: BoxFit.cover,
+                                      ),
+                                    );
+                                  },
+                                  body: const Card(
+                                      child: SizedBox(
+                                          width: 100,
+                                          height: 100,
+                                          child: Text('hi!'))),
+                                  isExpanded: _openProjects[2],
+                                ),
                               ],
                               expansionCallback: (i, isOpen) =>
                                   setState(() => _openProjects[i] = isOpen),
                             ),
                           ),
+                          SizedBox(height: deviceHeight(context) * 0.03),
                         ],
                       ),
                     ),

@@ -21,7 +21,8 @@ maybe pay for that animation class video
 thought pieces - work more on magic time complexity
 thought pieces - grill guide algorithm lol
 
-socials
+socials + contact screen
+should contact be a separate screen or just take you to the bottom of the page?
 
 set up webhosting - should be able to just copy settings via porkbun from last site
 
@@ -31,6 +32,8 @@ fade in for initial image and text
 [widget].animate(target: _scrollbarposition == ? 1 : 0).slideX()
 [widget, widget, widget].animate(interval : seconds).[animationtype]() // animates a list of widgets in sequence
 shimmer on Rockstar Developer text, test that or maybe wipe-across color change through my three colors
+projects should swipe in from left, right, left as you scroll down that'd be cool
+thought pieces at the end shouldn't be animated they can just chill
 
 ## Getting Started To Do
 done - import image assets
@@ -56,31 +59,29 @@ done - need to import that local storage package
 done - solution for passing state from the child (screen) widget to the parent (main) that updates the theme
 done - -- https://stackoverflow.com/questions/51798498/flutter-setstate-to-another-class/51798698#51798698
 
-decide if things should come up from below scrolling upwards (with like a card to cover the corners) 
-
-Work With Tyro
--> scroll down
-image comes up with "the rockstar developer you've been looking for"
--> scroll down
-card comes up with projects
--- projects are in horizontal tiles just showing the image and then those scroll down
+done - decide if things should come up from below scrolling upwards (with like a card to cover the corners) 
+nah - Work With Tyro -> scroll down
+done - image comes up with "the rockstar developer you've been looking for" -> scroll down
+done - card comes up with projects-- projects are in horizontal tiles just showing the image and then those scroll down
 // maybe scrolls could be lengthed by deviceheight, every time you scroll a device height you go to a new section
 
-need to make image change dynamically with viewport size
-need to have fonts change size dynamically with viewport size
-consider cropping bottom of profile pic
-
-projects - tiled images
-container for the projects needs to stretch all the way to the edges and card doesn't do that because of built in padding, probably need to just create a custom container for that
--- is there a way to make sure that it can crop or expand to be responsive? - using cover
+done - projects - tiled images
+done - container for the projects needs to stretch all the way to the edges and card doesn't do that because of built in padding, probably need to just create a custom container for that
+done - -- is there a way to make sure that it can crop or expand to be responsive? - using cover
 * equidistant
 * procrastination buster
 * tyrowo inked
-project tiles animated expand to show description of the project, link to where it's published
-maybe if the project tiles have a less transparent or even opaque version of the card color it'll make a nice gradient.
+done - project tiles animated expand to show description of the project, link to where it's published
+done - maybe if the project tiles have a less transparent or even opaque version of the card color it'll make a nice gradient.
 https://medium.com/flutter-community/flutter-widgets-boxes-part-2-the-whole-picture-4bb142f0b1ab#:~:text=cover%3A%2D%20It%20sets%20its,BoxFit.
--- use cover property so that it adjusts with width
+done - -- use cover property so that it adjusts with width
 https://www.youtube.com/watch?v=2aJZzRMziJc
--- use expansion panels and expansion panel lists, they have an animated property to customize instead of doing separate animated boxes, and the list can make sure that no more than one are expanded at a time
+done - -- use expansion panels and expansion panel lists, they have an animated property to customize instead of doing separate animated boxes, and the list can make sure that no more than one are expanded at a time
 
 
+need to set animated property of expansion panels, 
+fill the body with the descriptions of the projects
+
+need to make image change dynamically with viewport size
+need to have fonts change size dynamically with viewport size
+consider cropping bottom of profile pic like jaime suggested
