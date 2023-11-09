@@ -22,6 +22,8 @@ class _HomescreenState extends State<Homescreen> {
   double deviceHeight(BuildContext context) =>
       MediaQuery.of(context).size.height;
   final List<bool> _openProjects = [false, false, false];
+  double magicHeight = 200.0;
+  double magicWidth = 400.0;
 
   void _randomizeBackground() {
     setState(() {
@@ -289,33 +291,75 @@ class _HomescreenState extends State<Homescreen> {
                     ),
                   ),
                   SizedBox(
-                    height: deviceHeight(context),
+                    height: deviceHeight(context) * 0.35,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 80, 0, 40),
-                    child: Center(
-                      child: Card(
+                  SizedBox(
+                    width: deviceWidth(context) * 0.97,
+                    child: Card(
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(
+                            deviceWidth(context) * 0.03,
+                            deviceHeight(context) * 0.03,
+                            deviceWidth(context) * 0.03,
+                            deviceHeight(context) * 0.03),
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            const Text(
-                              'You have pushed the button this many times:',
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Thought Pieces',
+                                style:
+                                    Theme.of(context).textTheme.displayLarge),
+                            SizedBox(
+                              height: deviceHeight(context) * 0.03,
                             ),
-                            Text(
-                              '$_background',
-                              style: Theme.of(context).textTheme.headlineMedium,
+                            GestureDetector(
+                              onTap: () {
+                                if (magicHeight == 200.0 &&
+                                    magicWidth == 400.0) {
+                                  setState(() {
+                                    magicHeight = deviceHeight(context) * 0.95;
+                                    magicWidth = deviceWidth(context) * 0.95;
+                                  });
+                                } else {
+                                  setState(() {
+                                    magicHeight = 200.0;
+                                    magicWidth = 400.0;
+                                  });
+                                }
+                              },
+                              child: AnimatedContainer(
+                                duration: const Duration(milliseconds: 400),
+                                width: magicWidth,
+                                height: magicHeight,
+                                child: Card(
+                                  child: Padding(
+                                    padding: EdgeInsets.fromLTRB(
+                                        deviceWidth(context) * 0.01,
+                                        deviceHeight(context) * 0.01,
+                                        deviceWidth(context) * 0.01,
+                                        deviceHeight(context) * 0.01),
+                                    child: const Text(
+                                        '\nTEDH: \nRefactoring the rules of Magic: The Gathering to improve time complexity for the casual participant.'),
+                                  ),
+                                ),
+                              ),
                             ),
-                            ElevatedButton(
-                              child: const Text('hi'),
-                              onPressed: () => print('hi'),
-                            ),
-                            TextButton(
-                              child: const Text('a link'),
-                              onPressed: () => print('ok'),
-                            ),
-                            const Icon(Icons.abc_outlined),
                           ],
                         ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: deviceHeight(context) * 0.35,
+                  ),
+                  ClipRRect(
+                    borderRadius: const BorderRadius.vertical(
+                        top: Radius.circular(40.0), bottom: Radius.zero),
+                    child: Container(
+                      color: Theme.of(context).primaryColor,
+                      width: deviceWidth(context),
+                      height: deviceHeight(context) * 0.25,
+                      child: const Column(
+                        children: [Text('Contact Footer')],
                       ),
                     ),
                   ),

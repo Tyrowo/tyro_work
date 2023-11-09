@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 ThemeData lightTheme(bool tyFontOff) {
   return ThemeData(
-    primaryColor: const Color.fromRGBO(191, 194, 183, 0.96),
+    primaryColor: const Color.fromRGBO(191, 194, 183, 1),
     appBarTheme: const AppBarTheme(
       backgroundColor: Color.fromRGBO(191, 194, 183, 0.5),
       iconTheme: IconThemeData(color: Colors.black),
       foregroundColor: Colors.black,
     ),
-    cardTheme: const CardTheme(color: Color.fromRGBO(191, 194, 183, 0.5)),
+    cardTheme: const CardTheme(color: Color.fromRGBO(191, 194, 183, 0.69)),
     scrollbarTheme: ScrollbarThemeData(
       thumbColor:
           MaterialStateProperty.all(const Color.fromRGBO(66, 65, 62, 1)),
@@ -65,14 +65,14 @@ ThemeData lightTheme(bool tyFontOff) {
 // const Color.fromRGBO(191, 194, 183, 1)
 ThemeData darkTheme(bool tyFontOff) {
   return ThemeData(
-    primaryColor: const Color.fromRGBO(66, 65, 62, 0.96),
+    primaryColor: const Color.fromRGBO(66, 65, 62, 1),
     appBarTheme: const AppBarTheme(
       backgroundColor: Color.fromRGBO(66, 65, 62, 0.5),
       iconTheme: IconThemeData(color: Colors.white),
       foregroundColor: Colors.white,
     ),
     cardTheme: const CardTheme(
-      color: Color.fromRGBO(66, 65, 62, 0.5),
+      color: Color.fromRGBO(66, 65, 62, 0.69),
     ),
     scrollbarTheme: ScrollbarThemeData(
       thumbColor: MaterialStateProperty.all(

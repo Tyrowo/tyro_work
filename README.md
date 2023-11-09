@@ -6,6 +6,14 @@ my portfolio website 2.0, created in flutter
 
 it turns out for my other project I used a package called expandable, and used their ExpandablePanel, not the list tile. For now I've decided that I want to make this site with as many out of the box components as possible, so I'm going to stick with the native ExpansionPanelList and maybe revisit this concept later on. Really depends on if that dropdown arrow is too ugly to keep. It kind of is annoying but maybe it's good ux to show people that they're not just banners anyway. If only the color customizer actually worked lol
 
+though i guess i'm being a little hypocritical because I don't want to learn how to finesse the animations myself... Taking the time to learn how to do animations myself seems like overkill?
+
+## Deployment To-Do
+done - set up nameservers for webhosting
+
+investigate this concept of deploying to webassembly instead of javascript. (build web --wasm) Since this is a simple page maybe web assembly would be able to improve performance? If it has a shorter boot up time then hell yeah.
+https://docs.flutter.dev/platform-integration/web/wasm
+
 ## Work That's Further off - Content and Fine Tuning Responsive Design
 
 
@@ -31,9 +39,6 @@ maybe pay for that animation class video
 
 thought pieces - work more on magic time complexity
 thought pieces - grill guide algorithm lol
-
-
-set up webhosting - should be able to just copy settings via porkbun from last site
 
 study flutter_animate package
 apply animations to stuff
