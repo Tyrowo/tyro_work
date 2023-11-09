@@ -189,6 +189,8 @@ class _HomescreenState extends State<Homescreen> {
                                 deviceHeight(context) * 0.01),
                             child: ExpansionPanelList(
                               materialGapSize: deviceHeight(context) * 0.03,
+                              animationDuration:
+                                  const Duration(milliseconds: 800),
                               // expandIconColor: Colors.white, // can't get this color to change no matter what I do, would like to change it to a ternary for light/dark
                               // projects expansion panel list so that they can expand from the banner to show descriptions of the projects
                               children: [
