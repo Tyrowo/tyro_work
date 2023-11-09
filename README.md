@@ -2,7 +2,18 @@
 my portfolio website 2.0, created in flutter
 
 
-## Work That's Further off
+## Creative Decisions/Things to Revisit Way Later
+
+it turns out for my other project I used a package called expandable, and used their ExpandablePanel, not the list tile. For now I've decided that I want to make this site with as many out of the box components as possible, so I'm going to stick with the native ExpansionPanelList and maybe revisit this concept later on. Really depends on if that dropdown arrow is too ugly to keep. It kind of is annoying but maybe it's good ux to show people that they're not just banners anyway. If only the color customizer actually worked lol
+
+## Work That's Further off - Content and Fine Tuning Responsive Design
+
+
+fill the body with the descriptions of the projects
+
+need to make image change dynamically with viewport size
+need to have fonts change size dynamically with viewport size
+consider cropping bottom of profile pic like jaime suggested
 
 get image in the right resolution for web
 
@@ -21,8 +32,6 @@ maybe pay for that animation class video
 thought pieces - work more on magic time complexity
 thought pieces - grill guide algorithm lol
 
-socials + contact screen
-should contact be a separate screen or just take you to the bottom of the page?
 
 set up webhosting - should be able to just copy settings via porkbun from last site
 
@@ -35,7 +44,8 @@ shimmer on Rockstar Developer text, test that or maybe wipe-across color change 
 projects should swipe in from left, right, left as you scroll down that'd be cool
 thought pieces at the end shouldn't be animated they can just chill
 
-## Getting Started To Do
+
+## Getting Started To Do - Groundwork
 done - import image assets
 done - set up favicon 
 done - figure out tiled background image
@@ -77,11 +87,17 @@ https://medium.com/flutter-community/flutter-widgets-boxes-part-2-the-whole-pict
 done - -- use cover property so that it adjusts with width
 https://www.youtube.com/watch?v=2aJZzRMziJc
 done - -- use expansion panels and expansion panel lists, they have an animated property to customize instead of doing separate animated boxes, and the list can make sure that no more than one are expanded at a time
+done - need to set animated property of expansion panels - there aren't really any
 
 
-need to set animated property of expansion panels, 
-fill the body with the descriptions of the projects
+figure out how you want to set up the thought pieces section. Maybe just one item expansionpanellists?
 
-need to make image change dynamically with viewport size
-need to have fonts change size dynamically with viewport size
-consider cropping bottom of profile pic like jaime suggested
+
+socials + contact "screen"
+set up socials and contact screen as a footer. 
+email link should open up to email
+
+set up the scrollbarcontroller ->
+use the scrollbar controller to make the contact button go to the bottom of the page
+
+above the divider for the footer on the bottom right there should be like a pseudo fab just an elevated button there that takes you back to the top of the screen
