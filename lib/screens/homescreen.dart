@@ -158,7 +158,7 @@ class _HomescreenState extends State<Homescreen> {
                         child: Padding(
                           padding: const EdgeInsets.all(15.0),
                           child: Text(
-                              "The Rockstar Developer you've been looking for.",
+                              "The Rockstar Developer you've been searching for.",
                               style: Theme.of(context).textTheme.displayMedium),
                         ),
                       ),
@@ -333,6 +333,7 @@ class _HomescreenState extends State<Homescreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
+                          const Spacer(),
                           Column(
                             children: [
                               SizedBox(height: deviceHeight(context) * 0.04),
@@ -361,18 +362,41 @@ class _HomescreenState extends State<Homescreen> {
                               SizedBox(height: deviceHeight(context) * 0.02),
                               Row(
                                 children: [
+                                  SocialsButton(
+                                      image: darkMode
+                                          ? 'assets/socials/github_dark.png'
+                                          : 'assets/socials/github_light.png',
+                                      label: 'label',
+                                      uri: 'uri'),
+                                  SocialsButton(
+                                      image: darkMode
+                                          ? 'assets/socials/leetcode_dark.png'
+                                          : 'assets/socials/leetcode_light.webp',
+                                      label: 'label',
+                                      uri: 'uri'),
+                                  const SocialsButton(
+                                      image: 'assets/socials/linkedin.png',
+                                      label: 'label',
+                                      uri: 'uri'),
                                   const SocialsButton(
                                       image: 'assets/socials/facebook.png',
                                       label: 'label',
                                       uri: 'uri'),
-                                  Text('984-244-3107',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .titleMedium),
+                                  const SocialsButton(
+                                      image: 'assets/socials/instagram.png',
+                                      label: 'label',
+                                      uri: 'uri'),
+                                  SocialsButton(
+                                      image: darkMode
+                                          ? 'assets/socials/x_dark.png'
+                                          : 'assets/socials/x_light.png',
+                                      label: 'label',
+                                      uri: 'uri'),
                                 ],
                               ),
                             ],
                           ),
+                          const Spacer(),
                         ],
                       ),
                     ),

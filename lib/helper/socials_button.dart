@@ -9,12 +9,15 @@ class SocialsButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 32,
-      width: 32,
-      child: Image.asset(
-        image,
-        fit: BoxFit.scaleDown,
+    return Padding(
+      padding: const EdgeInsets.all(5.0),
+      child: SizedBox(
+        height: 36,
+        width: 36,
+        child: Image.asset(
+          image,
+          fit: BoxFit.scaleDown,
+        ),
       ),
     );
   }
