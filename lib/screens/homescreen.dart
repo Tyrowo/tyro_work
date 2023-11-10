@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tyro_work/helper/themes.dart';
+import 'package:tyro_work/helper/thought_pieces.dart';
 
 class Homescreen extends StatefulWidget {
   final ValueChanged<bool> updateFont;
@@ -363,6 +364,12 @@ class _HomescreenState extends State<Homescreen> {
                                 ),
                               ),
                             ),
+                            const SizedBox(
+                                width: 100,
+                                child: Text('to the right is the clone')),
+                            ThoughtPieces(
+                                previewText: 'previewText',
+                                articleText: 'articleText')
                           ],
                         ),
                       ),
