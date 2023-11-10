@@ -25,8 +25,6 @@ class _HomescreenState extends State<Homescreen> {
   double deviceHeight(BuildContext context) =>
       MediaQuery.of(context).size.height;
   final List<bool> _openProjects = [false, false, false];
-  double magicHeight = 200.0;
-  double magicWidth = 400.0;
 
   void _randomizeBackground() {
     setState(() {

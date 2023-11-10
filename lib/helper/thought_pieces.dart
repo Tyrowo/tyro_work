@@ -19,6 +19,13 @@ class _ThoughtPiecesState extends State<ThoughtPieces> {
       MediaQuery.of(context).size.height;
   double curHeight = 200.0;
   double curWidth = 400.0;
+  bool selected = false;
+  bool opaque = false; // placeholder color until initstate can refer to theme
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,45 +33,67 @@ class _ThoughtPiecesState extends State<ThoughtPieces> {
       onEnter: (hovered) {
         if (curHeight == 200 && curWidth == 400) {
           setState(() {
-            curHeight = 250;
-            curWidth = 450;
+            curHeight = 225;
+            curWidth = 425;
+            opaque = true;
           });
         }
       },
       onExit: (notHovered) {
-        if (curHeight == 250 && curWidth == 450) {
+        if (curHeight == 225 && curWidth == 425) {
           setState(() {
             curHeight = 200;
             curWidth = 400;
+            opaque = false;
           });
         }
       },
       child: GestureDetector(
         onTap: () {
-          if (curHeight == 250.0 && curWidth == 450.0) {
+          if (curHeight == 225.0 && curWidth == 425.0) {
             setState(() {
               curHeight = deviceHeight(context) * 0.95;
               curWidth = deviceWidth(context) * 0.95;
+              selected = true;
+              opaque = true;
             });
           } else {
             setState(() {
               curHeight = 200.0;
               curWidth = 400.0;
+              selected = false;
+              opaque = false;
             });
           }
         },
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 200),
-          width: curWidth,
-          height: curHeight,
-          child: Card(
-            child: Padding(
-              padding: EdgeInsets.fromLTRB(
-                  deviceWidth(context) * 0.01,
-                  deviceHeight(context) * 0.01,
-                  deviceWidth(context) * 0.01,
-                  deviceHeight(context) * 0.01),
-              child: Text(widget.previewText),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(40.0),
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 200),
+            width: curWidth,
+            height: curHeight,
+            padding: selected
+                ? EdgeInsets.fromLTRB(
+                    deviceWidth(context) * 0.03,
+                    deviceHeight(context) * 0.05,
+                    deviceWidth(context) * 0.03,
+                    deviceHeight(context) * 0.05)
+                : EdgeInsets.fromLTRB(
+                    curWidth * 0.15,
+                    curHeight * 0.15,
+                    curWidth * 0.15,
+                    curHeight * 0.15,
+                  ),
+            color: opaque
+                ? Theme.of(context).primaryColor
+                : Theme.of(context).cardTheme.color,
+            child: SingleChildScrollView(
+              child: Text(
+                selected ? widget.articleText : widget.previewText,
+                style: selected
+                    ? Theme.of(context).textTheme.bodyLarge
+                    : Theme.of(context).textTheme.titleSmall,
+              ),
             ),
           ),
         ),

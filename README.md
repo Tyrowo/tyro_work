@@ -95,8 +95,14 @@ https://www.youtube.com/watch?v=2aJZzRMziJc
 done - -- use expansion panels and expansion panel lists, they have an animated property to customize instead of doing separate animated boxes, and the list can make sure that no more than one are expanded at a time
 done - need to set animated property of expansion panels - there aren't really any
 
-
-figure out how you want to set up the thought pieces section. Maybe just one item expansionpanellists?
+done - figure out how you want to set up the thought pieces section. Maybe just one item expansionpanellists? - no, created my own animatedboxes
+done - wrap the think pieces in MouseRegion widgets to change the animated sized box onHover, will need to fix the conditional logic for setting the size on gesture detector though
+done - Make their contents a single child scroll view in case we manage to go over a whole screen of text, that will make the responsiveness easy too
+done - turn the thought pieces containers into their own self contained classes - would this work with their variables? would make the whole homescreen much cleaner without floating global variables
+need to make the fill text widget a variable that is replaced on setstate too, that way title can be centered until it expands
+done - need to think of an elegant way to keep the text from resizing with the hover size change.
+done - should you also color the container a little darker? - made opaque on hover and selected
+done - instead of using a card inside the animated container we just need to make a fully customized animated container with rounded edges and color and padding properties that will all be variables that change in motion
 
 
 socials + contact "screen"
@@ -110,10 +116,6 @@ use the scrollbar controller to make the contact button go to the bottom of the 
 
 above the divider for the footer on the bottom right there should be like a pseudo fab just an elevated button there that takes you back to the top of the screen
 
-wrap the think pieces in MouseRegion widgets to change the animated sized box onHover, will need to fix the conditional logic for setting the size on gesture detector though
-Make their contents a single child scroll view in case we manage to go over a whole screen of text, that will make the responsiveness easy too
-turn the thought pieces containers into their own self contained classes - would this work with their variables? would make the whole homescreen much cleaner without floating global variables
-need to make the fill text widget a variable that is replaced on setstate too, that way title can be centered until it expands
-need to think of an elegant way to keep the text from resizing with the hover size change.
-should you also color the container a little darker? 
-instead of using a card inside the animated container we just need to make a fully customized animated container with rounded edges and color and padding properties that will all be variables that change in motion
+
+
+reworking the banner dropdowns - theyre too big. simply too big. need to come up with a way to make them smaller without ruining the resolution.
