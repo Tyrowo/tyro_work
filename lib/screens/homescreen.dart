@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tyro_work/data/article_data.dart';
+import 'package:tyro_work/helper/socials_button.dart';
 import 'package:tyro_work/helper/themes.dart';
 import 'package:tyro_work/helper/thought_pieces.dart';
 
@@ -306,7 +307,7 @@ class _HomescreenState extends State<Homescreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Thought Pieces',
+                            Text('Think Pieces',
                                 style:
                                     Theme.of(context).textTheme.displayLarge),
                             SizedBox(
@@ -358,15 +359,18 @@ class _HomescreenState extends State<Homescreen> {
                                   style:
                                       Theme.of(context).textTheme.displaySmall),
                               SizedBox(height: deviceHeight(context) * 0.02),
-                              Text('984-244-3107',
-                                  style:
-                                      Theme.of(context).textTheme.titleMedium),
-                              TextButton(
-                                  onPressed: () {},
-                                  child: Text('tylerpcrews@gmail.com',
+                              Row(
+                                children: [
+                                  const SocialsButton(
+                                      image: 'assets/socials/facebook.png',
+                                      label: 'label',
+                                      uri: 'uri'),
+                                  Text('984-244-3107',
                                       style: Theme.of(context)
                                           .textTheme
-                                          .titleMedium)),
+                                          .titleMedium),
+                                ],
+                              ),
                             ],
                           ),
                         ],

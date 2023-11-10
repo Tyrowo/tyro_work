@@ -24,6 +24,7 @@ need to have fonts change size dynamically with viewport size
 consider cropping bottom of profile pic like jaime suggested
 
 get image in the right resolution for web
+maybe decrease saturation or blur the edges of the picture - mom suggestion
 
 update resume
 make a link to my resume
@@ -37,9 +38,9 @@ figure out how to do that squarespace fadein animation after scrolling to certai
 maybe set a variable trigger on a scroll controller when reaching+being within certain values
 maybe pay for that animation class video
 
-thought pieces - work more on magic time complexity
-thought pieces - grill guide algorithm lol
-thought pieces - A Year of Leetcode
+think pieces - work more on magic time complexity
+think pieces - grill guide algorithm lol
+think pieces - A Year of Leetcode
 -- will need to figure out how to set the texttheme for the article since it's a widget that can't access the context currently
 
 change tyrowo inked to - tyrowo inked + portfolio website 1.0
@@ -52,7 +53,7 @@ fade in for initial image and text
 [widget, widget, widget].animate(interval : seconds).[animationtype]() // animates a list of widgets in sequence
 shimmer on Rockstar Developer text, test that or maybe wipe-across color change through my three colors
 projects should swipe in from left, right, left as you scroll down that'd be cool
-thought pieces at the end shouldn't be animated they can just chill
+think pieces at the end shouldn't be animated they can just chill
 
 
 ## Getting Started To Do - Groundwork
@@ -99,19 +100,22 @@ https://www.youtube.com/watch?v=2aJZzRMziJc
 done - -- use expansion panels and expansion panel lists, they have an animated property to customize instead of doing separate animated boxes, and the list can make sure that no more than one are expanded at a time
 done - need to set animated property of expansion panels - there aren't really any
 
-done - figure out how you want to set up the thought pieces section. Maybe just one item expansionpanellists? - no, created my own animatedboxes
+done - figure out how you want to set up the think pieces section. Maybe just one item expansionpanellists? - no, created my own animatedboxes
 done - wrap the think pieces in MouseRegion widgets to change the animated sized box onHover, will need to fix the conditional logic for setting the size on gesture detector though
 done - Make their contents a single child scroll view in case we manage to go over a whole screen of text, that will make the responsiveness easy too
-done - turn the thought pieces containers into their own self contained classes - would this work with their variables? would make the whole homescreen much cleaner without floating global variables
+done - turn the think pieces containers into their own self contained classes - would this work with their variables? would make the whole homescreen much cleaner without floating global variables
 need to make the fill text widget a variable that is replaced on setstate too, that way title can be centered until it expands
 done - need to think of an elegant way to keep the text from resizing with the hover size change.
 done - should you also color the container a little darker? - made opaque on hover and selected
 done - instead of using a card inside the animated container we just need to make a fully customized animated container with rounded edges and color and padding properties that will all be variables that change in motion
-done - I think I should refactor the thought pieces class to take a text title on unselected and a Widget on selected, and that way you can customize the full article however you want with pictures and whatnot.
+done - I think I should refactor the think pieces class to take a text title on unselected and a Widget on selected, and that way you can customize the full article however you want with pictures and whatnot.
 
+done - set up socials and contact screen as a footer. 
 
-socials + contact "screen"
-set up socials and contact screen as a footer. 
+need to create a new class for the socials button - it will take a string for the assetname, take a string for the tooltip label,
+    the class will have a tooltip that appears on hover to show what the button is representing
+    the class will take the asset and compress it down to a standard size for all of the different socials
+    gesture detector over the picture so on link takes you to the site
 -- email, linkedin, github, leetcode, twitter, facebook, instagram (used to have reddit, discord, twitch, but I think those are unnecessary as well as youtube)
 -- tooltip indicators on each of the socials to clarify
 email link should open up to email

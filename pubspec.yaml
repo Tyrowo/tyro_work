@@ -89,6 +89,16 @@ flutter:
     - assets/inked_1080x100.png
     - assets/inked_600x100.png
     - assets/inked_600x50.png
+  # socials icons
+    - assets/socials/facebook.png
+    - assets/socials/github_dark.png
+    - assets/socials/github_light.png
+    - assets/socials/instagram.png
+    - assets/socials/leetcode_dark.png
+    - assets/socials/leetcode_light.webp
+    - assets/socials/linkedin.png
+    - assets/socials/x_dark.png
+    - assets/socials/x_light.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
