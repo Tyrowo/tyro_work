@@ -313,8 +313,7 @@ class _HomescreenState extends State<Homescreen> {
                               height: deviceHeight(context) * 0.03,
                             ),
                             ThoughtPieces(
-                                previewText: tedhPreview,
-                                articleText: tedhArticle)
+                                previewText: tedhPreview, article: tedhArticle)
                           ],
                         ),
                       ),

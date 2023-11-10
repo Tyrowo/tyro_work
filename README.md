@@ -104,6 +104,8 @@ done - need to think of an elegant way to keep the text from resizing with the h
 done - should you also color the container a little darker? - made opaque on hover and selected
 done - instead of using a card inside the animated container we just need to make a fully customized animated container with rounded edges and color and padding properties that will all be variables that change in motion
 
+I think I should refactor the thought pieces class to take a text title on unselected and a Widget on selected, and that way you can customize the full article however you want with pictures and whatnot.
+
 
 socials + contact "screen"
 set up socials and contact screen as a footer. 

@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 // it should expand to the full size of the screen and lock in the opacity
 class ThoughtPieces extends StatefulWidget {
   final String previewText;
-  final String articleText;
+  final Widget article;
   const ThoughtPieces(
-      {super.key, required this.previewText, required this.articleText});
+      {super.key, required this.previewText, required this.article});
 
   @override
   State<ThoughtPieces> createState() => _ThoughtPiecesState();
@@ -88,12 +88,12 @@ class _ThoughtPiecesState extends State<ThoughtPieces> {
                 ? Theme.of(context).primaryColor
                 : Theme.of(context).cardTheme.color,
             child: SingleChildScrollView(
-              child: Text(
-                selected ? widget.articleText : widget.previewText,
-                style: selected
-                    ? Theme.of(context).textTheme.bodyLarge
-                    : Theme.of(context).textTheme.titleSmall,
-              ),
+              child: selected
+                  ? widget.article
+                  : Text(
+                      widget.previewText,
+                      style: Theme.of(context).textTheme.titleSmall,
+                    ),
             ),
           ),
         ),
