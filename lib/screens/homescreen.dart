@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:tyro_work/data/article_data.dart';
 import 'package:tyro_work/helper/themes.dart';
 import 'package:tyro_work/helper/thought_pieces.dart';
 
@@ -313,63 +314,9 @@ class _HomescreenState extends State<Homescreen> {
                             SizedBox(
                               height: deviceHeight(context) * 0.03,
                             ),
-                            MouseRegion(
-                              onEnter: (hovered) {
-                                if (magicHeight == 200 && magicWidth == 400) {
-                                  setState(() {
-                                    magicHeight = 250;
-                                    magicWidth = 450;
-                                  });
-                                }
-                              },
-                              onExit: (notHovered) {
-                                if (magicHeight == 250 && magicWidth == 450) {
-                                  setState(() {
-                                    magicHeight = 200;
-                                    magicWidth = 400;
-                                  });
-                                }
-                              },
-                              child: GestureDetector(
-                                onTap: () {
-                                  if (magicHeight == 250.0 &&
-                                      magicWidth == 450.0) {
-                                    setState(() {
-                                      magicHeight =
-                                          deviceHeight(context) * 0.95;
-                                      magicWidth = deviceWidth(context) * 0.95;
-                                    });
-                                  } else {
-                                    setState(() {
-                                      magicHeight = 200.0;
-                                      magicWidth = 400.0;
-                                    });
-                                  }
-                                },
-                                child: AnimatedContainer(
-                                  duration: const Duration(milliseconds: 200),
-                                  width: magicWidth,
-                                  height: magicHeight,
-                                  child: Card(
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(
-                                          deviceWidth(context) * 0.01,
-                                          deviceHeight(context) * 0.01,
-                                          deviceWidth(context) * 0.01,
-                                          deviceHeight(context) * 0.01),
-                                      child: const Text(
-                                          '\nTEDH: \nRefactoring the rules of Magic: The Gathering to improve time complexity for the casual participant.'),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            const SizedBox(
-                                width: 100,
-                                child: Text('to the right is the clone')),
                             ThoughtPieces(
-                                previewText: 'previewText',
-                                articleText: 'articleText')
+                                previewText: tedhPreview,
+                                articleText: tedhArticle)
                           ],
                         ),
                       ),

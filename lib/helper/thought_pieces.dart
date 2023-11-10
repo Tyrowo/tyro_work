@@ -64,7 +64,7 @@ class _ThoughtPiecesState extends State<ThoughtPieces> {
                   deviceHeight(context) * 0.01,
                   deviceWidth(context) * 0.01,
                   deviceHeight(context) * 0.01),
-              child: Text(widget.articleText),
+              child: Text(widget.previewText),
             ),
           ),
         ),
