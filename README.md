@@ -39,6 +39,7 @@ maybe pay for that animation class video
 
 thought pieces - work more on magic time complexity
 thought pieces - grill guide algorithm lol
+thought pieces - A Year of Leetcode
 
 study flutter_animate package
 apply animations to stuff
@@ -100,9 +101,19 @@ figure out how you want to set up the thought pieces section. Maybe just one ite
 
 socials + contact "screen"
 set up socials and contact screen as a footer. 
+-- email, linkedin, github, leetcode, twitter, facebook, instagram
+-- tooltip indicators on each of the socials
 email link should open up to email
 
 set up the scrollbarcontroller ->
 use the scrollbar controller to make the contact button go to the bottom of the page
 
 above the divider for the footer on the bottom right there should be like a pseudo fab just an elevated button there that takes you back to the top of the screen
+
+wrap the think pieces in MouseRegion widgets to change the animated sized box onHover, will need to fix the conditional logic for setting the size on gesture detector though
+Make their contents a single child scroll view in case we manage to go over a whole screen of text, that will make the responsiveness easy too
+turn the thought pieces containers into their own self contained classes - would this work with their variables? would make the whole homescreen much cleaner without floating global variables
+need to make the fill text widget a variable that is replaced on setstate too, that way title can be centered until it expands
+need to think of an elegant way to keep the text from resizing with the hover size change.
+should you also color the container a little darker? 
+instead of using a card inside the animated container we just need to make a fully customized animated container with rounded edges and color and padding properties that will all be variables that change in motion
