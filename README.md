@@ -40,6 +40,10 @@ maybe pay for that animation class video
 thought pieces - work more on magic time complexity
 thought pieces - grill guide algorithm lol
 thought pieces - A Year of Leetcode
+-- will need to figure out how to set the texttheme for the article since it's a widget that can't access the context currently
+
+change tyrowo inked to - tyrowo inked + portfolio website 1.0
+then add a second project for randomized leopard print background + portfolio website 2.0
 
 study flutter_animate package
 apply animations to stuff
@@ -103,14 +107,13 @@ need to make the fill text widget a variable that is replaced on setstate too, t
 done - need to think of an elegant way to keep the text from resizing with the hover size change.
 done - should you also color the container a little darker? - made opaque on hover and selected
 done - instead of using a card inside the animated container we just need to make a fully customized animated container with rounded edges and color and padding properties that will all be variables that change in motion
-
-I think I should refactor the thought pieces class to take a text title on unselected and a Widget on selected, and that way you can customize the full article however you want with pictures and whatnot.
+done - I think I should refactor the thought pieces class to take a text title on unselected and a Widget on selected, and that way you can customize the full article however you want with pictures and whatnot.
 
 
 socials + contact "screen"
 set up socials and contact screen as a footer. 
--- email, linkedin, github, leetcode, twitter, facebook, instagram
--- tooltip indicators on each of the socials
+-- email, linkedin, github, leetcode, twitter, facebook, instagram (used to have reddit, discord, twitch, but I think those are unnecessary as well as youtube)
+-- tooltip indicators on each of the socials to clarify
 email link should open up to email
 
 set up the scrollbarcontroller ->

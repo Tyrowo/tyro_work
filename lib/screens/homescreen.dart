@@ -158,7 +158,7 @@ class _HomescreenState extends State<Homescreen> {
                           padding: const EdgeInsets.all(15.0),
                           child: Text(
                               "The Rockstar Developer you've been looking for.",
-                              style: Theme.of(context).textTheme.displayLarge),
+                              style: Theme.of(context).textTheme.displayMedium),
                         ),
                       ),
                       SizedBox(width: deviceWidth(context) * 0.01),
@@ -328,9 +328,48 @@ class _HomescreenState extends State<Homescreen> {
                     child: Container(
                       color: Theme.of(context).primaryColor,
                       width: deviceWidth(context),
-                      height: deviceHeight(context) * 0.25,
-                      child: const Column(
-                        children: [Text('Contact Footer')],
+                      height: deviceHeight(context) * 0.2,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Column(
+                            children: [
+                              SizedBox(height: deviceHeight(context) * 0.04),
+                              Text('Contact Me',
+                                  style:
+                                      Theme.of(context).textTheme.displaySmall),
+                              SizedBox(height: deviceHeight(context) * 0.02),
+                              Text('984-244-3107',
+                                  style:
+                                      Theme.of(context).textTheme.titleMedium),
+                              TextButton(
+                                  onPressed: () {},
+                                  child: Text('tylerpcrews@gmail.com',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .titleMedium)),
+                            ],
+                          ),
+                          SizedBox(width: deviceWidth(context) * 0.1),
+                          Column(
+                            children: [
+                              SizedBox(height: deviceHeight(context) * 0.04),
+                              Text('Socials',
+                                  style:
+                                      Theme.of(context).textTheme.displaySmall),
+                              SizedBox(height: deviceHeight(context) * 0.02),
+                              Text('984-244-3107',
+                                  style:
+                                      Theme.of(context).textTheme.titleMedium),
+                              TextButton(
+                                  onPressed: () {},
+                                  child: Text('tylerpcrews@gmail.com',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .titleMedium)),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
                   ),
