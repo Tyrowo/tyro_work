@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SocialsButton extends StatelessWidget {
   final String image;
@@ -17,14 +18,13 @@ class SocialsButton extends StatelessWidget {
             shape: MaterialStateProperty.all(const CircleBorder()),
             padding: MaterialStateProperty.all(EdgeInsets.zero)),
         // luckily our text button is already styled but we add a nice little circle radius to it
-        // on hover show tooltip
-        /*
-        onHover: (hovered) {
-          while (hovered) {}
-        },
-        */
         // on pressed send to social media link provided in constructor
-        onPressed: () {},
+        onPressed: () async {
+          final Uri url = Uri.parse(uri);
+          if (!await launchUrl(url)) {
+            throw Exception('Could not launch $url');
+          }
+        },
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: SizedBox(

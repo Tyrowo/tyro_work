@@ -7,6 +7,7 @@ import 'package:tyro_work/data/article_data.dart';
 import 'package:tyro_work/helper/socials_button.dart';
 import 'package:tyro_work/helper/themes.dart';
 import 'package:tyro_work/helper/thought_pieces.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Homescreen extends StatefulWidget {
   final ValueChanged<bool> updateFont;
@@ -345,7 +346,13 @@ class _HomescreenState extends State<Homescreen> {
                                   style:
                                       Theme.of(context).textTheme.titleMedium),
                               TextButton(
-                                  onPressed: () {},
+                                  onPressed: () async {
+                                    final Uri url = Uri.parse(
+                                        'mailto:tylerpcrews@gmail.com');
+                                    if (!await launchUrl(url)) {
+                                      throw Exception('Could not launch $url');
+                                    }
+                                  },
                                   child: Text('tylerpcrews@gmail.com',
                                       style: Theme.of(context)
                                           .textTheme
@@ -367,31 +374,33 @@ class _HomescreenState extends State<Homescreen> {
                                           ? 'assets/socials/github_dark.png'
                                           : 'assets/socials/github_light.png',
                                       label: 'GitHub',
-                                      uri: 'uri'),
+                                      uri: 'https://github.com/Tyrowo'),
                                   SocialsButton(
                                       image: darkMode
                                           ? 'assets/socials/leetcode_dark.png'
                                           : 'assets/socials/leetcode_light.webp',
                                       label: 'LeetCode',
-                                      uri: 'uri'),
+                                      uri: 'https://leetcode.com/tyrowo/'),
                                   const SocialsButton(
                                       image: 'assets/socials/linkedin.png',
                                       label: 'LinkedIn',
-                                      uri: 'uri'),
+                                      uri:
+                                          'https://www.linkedin.com/in/tyrowo/'),
                                   const SocialsButton(
                                       image: 'assets/socials/facebook.png',
                                       label: 'Facebook',
-                                      uri: 'uri'),
+                                      uri: 'https://www.facebook.com/tycrews/'),
                                   const SocialsButton(
                                       image: 'assets/socials/instagram.png',
                                       label: 'Instagram',
-                                      uri: 'uri'),
+                                      uri:
+                                          'https://www.instagram.com/thundercrews/'),
                                   SocialsButton(
                                       image: darkMode
                                           ? 'assets/socials/x_dark.png'
                                           : 'assets/socials/x_light.png',
                                       label: 'X',
-                                      uri: 'uri'),
+                                      uri: 'https://twitter.com/Tyrowo'),
                                 ],
                               ),
                             ],
