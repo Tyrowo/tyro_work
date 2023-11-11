@@ -366,31 +366,31 @@ class _HomescreenState extends State<Homescreen> {
                                       image: darkMode
                                           ? 'assets/socials/github_dark.png'
                                           : 'assets/socials/github_light.png',
-                                      label: 'label',
+                                      label: 'GitHub',
                                       uri: 'uri'),
                                   SocialsButton(
                                       image: darkMode
                                           ? 'assets/socials/leetcode_dark.png'
                                           : 'assets/socials/leetcode_light.webp',
-                                      label: 'label',
+                                      label: 'LeetCode',
                                       uri: 'uri'),
                                   const SocialsButton(
                                       image: 'assets/socials/linkedin.png',
-                                      label: 'label',
+                                      label: 'LinkedIn',
                                       uri: 'uri'),
                                   const SocialsButton(
                                       image: 'assets/socials/facebook.png',
-                                      label: 'label',
+                                      label: 'Facebook',
                                       uri: 'uri'),
                                   const SocialsButton(
                                       image: 'assets/socials/instagram.png',
-                                      label: 'label',
+                                      label: 'Instagram',
                                       uri: 'uri'),
                                   SocialsButton(
                                       image: darkMode
                                           ? 'assets/socials/x_dark.png'
                                           : 'assets/socials/x_light.png',
-                                      label: 'label',
+                                      label: 'X',
                                       uri: 'uri'),
                                 ],
                               ),
