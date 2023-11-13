@@ -203,10 +203,15 @@ MaterialStateProperty<Color> tyButtonOverlay(Color initColor) {
   return MaterialStateProperty.resolveWith((Set<MaterialState> state) {
     if (state.contains(MaterialState.pressed) ||
         state.contains(MaterialState.selected)) {
-      return const Color.fromRGBO(7, 214, 105, 0.75);
+      return const Color.fromRGBO(28, 146, 245, 1);
     } else if (state.contains(MaterialState.focused) ||
         state.contains(MaterialState.hovered)) {
-      return const Color.fromRGBO(251, 80, 201, 0.5);
+      int time = DateTime.now().second;
+      if (time % 2 == 0) {
+        return const Color.fromRGBO(251, 80, 201, 0.5);
+      } else {
+        return const Color.fromRGBO(7, 214, 105, 0.75);
+      }
     } else {
       return initColor;
     }

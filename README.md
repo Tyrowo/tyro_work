@@ -8,6 +8,8 @@ it turns out for my other project I used a package called expandable, and used t
 
 though i guess i'm being a little hypocritical because I don't want to learn how to finesse the animations myself... Taking the time to learn how to do animations myself seems like overkill?
 
+add stackoverflow profile to socials if I get enough karma that it's not just a fresh account
+
 ## Deployment To-Do
 done - set up nameservers for webhosting
 
@@ -54,6 +56,9 @@ fade in for initial image and text
 shimmer on Rockstar Developer text, test that or maybe wipe-across color change through my three colors
 projects should swipe in from left, right, left as you scroll down that'd be cool
 think pieces at the end shouldn't be animated they can just chill
+
+maybe advance the button highlighting color so it pulses pink and green while hovered, and blue when clicked
+  instead of using real animation maybe you could use a delayed 
 
 
 ## Getting Started To Do - Groundwork
@@ -111,20 +116,28 @@ done - instead of using a card inside the animated container we just need to mak
 done - I think I should refactor the think pieces class to take a text title on unselected and a Widget on selected, and that way you can customize the full article however you want with pictures and whatnot.
 
 done - set up socials and contact screen as a footer. 
-
-need to create a new class for the socials button - it will take a string for the assetname, take a string for the tooltip label,
+done - need to create a new class for the socials button - it will take a string for the assetname, take a string for the tooltip label,
     the class will have a tooltip that appears on hover to show what the button is representing
     the class will take the asset and compress it down to a standard size for all of the different socials
     gesture detector over the picture so on link takes you to the site
--- email, linkedin, github, leetcode, twitter, facebook, instagram (used to have reddit, discord, twitch, but I think those are unnecessary as well as youtube)
--- tooltip indicators on each of the socials to clarify
-email link should open up to email
+done - -- email, linkedin, github, leetcode, twitter, facebook, instagram (used to have reddit, discord, twitch, but I think those are unnecessary as well as youtube)
+done - -- tooltip indicators on each of the socials to clarify
+done - email link should open up to email
 
 set up the scrollbarcontroller ->
 use the scrollbar controller to make the contact button go to the bottom of the page
 
 above the divider for the footer on the bottom right there should be like a pseudo fab just an elevated button there that takes you back to the top of the screen
 
-
-
 reworking the banner dropdowns - theyre too big. simply too big. need to come up with a way to make them smaller without ruining the resolution.
+  okay how to design them?
+  they should be a sizedbox for the banner and the sizedbox is ht 100, width is a proportion of the screen length
+  // and then under a certain viewport width it should collapse to 50 and whatever viewport width
+  outside the sizedbox should be an animated box, which is constructed very similarly to the blog post container
+    the difference will be that we have to make the child a column that contains the banner and contains null when turned off and contains the banner and a content widget when it's turned on
+  is there a way to add a color transition to the box as it's opening up?
+  // as an aside working with these animated box widgets feels very cool.
+  maybe have a cliprect of 0 for the top always and x for the bottom only when it's expanded
+  then you can add a little bit of space between the tiles so they don't looked so cramped too
+    maybe give them a default padding?
+  i guess the animated boxes should have a border so you know the underlying text is grouped with it?
