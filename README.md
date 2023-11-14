@@ -145,4 +145,4 @@ done - need to have fonts change size dynamically with viewport size
 -- especially title fonts. the minor text fonts can stay the same
 
 
-allow drag scrolling with mouse, it's annoying that that needs to be specified but whatever
+impossible - allow drag scrolling with mouse, it's annoying that that needs to be specified but whatever. I enabled "mouse drag scrolling" but that isn't the same as center mouse button click scrolling. Because flutter is so mac oriented it seems that this is actually impossible as of this moment

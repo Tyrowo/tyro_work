@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -265,4 +266,17 @@ class ScaleSize {
     double val = (width / 1400) * maxTextScaleFactor;
     return min(val, maxTextScaleFactor);
   }
+}
+
+// set scroll behavior on the material app to allow mouse drag scrolling
+// this allows drag scrolling with left click, but does not allow center mouse scrolling like I want
+class AllowDragScroll extends MaterialScrollBehavior {
+  // Override behavior methods and getters like dragDevices
+  @override
+  Set<PointerDeviceKind> get dragDevices => {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse,
+        PointerDeviceKind.unknown
+        // etc.
+      };
 }

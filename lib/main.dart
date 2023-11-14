@@ -52,6 +52,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      scrollBehavior: AllowDragScroll(),
       debugShowCheckedModeBanner: false,
       title: 'Tyro Work',
       theme: darkMode ? darkTheme(tyFontOff) : lightTheme(tyFontOff),
