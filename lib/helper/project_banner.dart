@@ -23,9 +23,6 @@ class _ProjectBannerState extends State<ProjectBanner> {
   double curHeight = 150.0;
   double curWidth = 1080.0;
   String state = 'closed'; // closed, hovered, open
-  bool opaque = false; // placeholder color until initstate can refer to theme
-  double outerPaddingHeight = 20;
-  double outerPaddingWidth = 20;
 
   @override
   Widget build(BuildContext context) {
@@ -34,8 +31,6 @@ class _ProjectBannerState extends State<ProjectBanner> {
         if (state != 'open') {
           setState(() {
             state = 'hovered';
-            // reduce outer padding, maybe make it colored?
-            opaque = true;
           });
         }
       },
@@ -43,8 +38,6 @@ class _ProjectBannerState extends State<ProjectBanner> {
         if (state == 'hovered') {
           setState(() {
             state = 'closed';
-            // increase outer padding, return color back
-            opaque = false;
           });
         }
       },
@@ -54,13 +47,11 @@ class _ProjectBannerState extends State<ProjectBanner> {
             setState(() {
               state = 'open';
               curHeight = deviceHeight(context) * 0.8;
-              opaque = true;
             });
           } else {
             setState(() {
               state = 'closed';
               curHeight = deviceWidth(context) < 1000 ? 50 : 150;
-              opaque = false;
             });
           }
         },
@@ -91,9 +82,6 @@ class _ProjectBannerState extends State<ProjectBanner> {
                     deviceWidth(context) * 0.05,
                     deviceHeight(context) * 0.0,
                   ),
-            // color: opaque
-            //     ? Theme.of(context).primaryColor
-            //     : Theme.of(context).cardTheme.color,
             child: state == 'open'
                 ?
                 // if open then we return an image and then the article

@@ -1,12 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tyro_work/data/article_data.dart';
 import 'package:tyro_work/helper/project_banner.dart';
 import 'package:tyro_work/helper/socials_button.dart';
-import 'package:tyro_work/helper/themes.dart';
 import 'package:tyro_work/helper/thought_pieces.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -27,7 +25,6 @@ class _HomescreenState extends State<Homescreen> {
   double deviceWidth(BuildContext context) => MediaQuery.of(context).size.width;
   double deviceHeight(BuildContext context) =>
       MediaQuery.of(context).size.height;
-  final List<bool> _openProjects = [false, false, false];
 
   void _randomizeBackground() {
     setState(() {
@@ -187,114 +184,28 @@ class _HomescreenState extends State<Homescreen> {
                                 style:
                                     Theme.of(context).textTheme.displayLarge),
                           ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(
-                                deviceWidth(context) * 0.04,
-                                deviceHeight(context) * 0.01,
-                                deviceWidth(context) * 0.04,
-                                deviceHeight(context) * 0.01),
-                            child: ExpansionPanelList(
-                              materialGapSize: deviceHeight(context) * 0.03,
-                              animationDuration:
-                                  const Duration(milliseconds: 800),
-                              // expandIconColor: Colors.white, // can't get this color to change no matter what I do, would like to change it to a ternary for light/dark
-                              // projects expansion panel list so that they can expand from the banner to show descriptions of the projects
-                              children: [
-                                ExpansionPanel(
-                                  backgroundColor:
-                                      Theme.of(context).primaryColor,
-                                  canTapOnHeader: true,
-                                  headerBuilder: (context, isOpen) {
-                                    return SizedBox(
-                                      height: 250,
-                                      child: Image.asset(
-                                        'assets/equidistant_1080x200.png',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    );
-                                  },
-                                  body: const Card(
-                                      child: SizedBox(
-                                          width: 100,
-                                          height: 100,
-                                          child: Text('hi!'))),
-                                  isExpanded: _openProjects[0],
-                                ),
-                                ExpansionPanel(
-                                  backgroundColor:
-                                      Theme.of(context).primaryColor,
-                                  canTapOnHeader: true,
-                                  headerBuilder: (context, isOpen) {
-                                    return Container(
-                                      decoration: const BoxDecoration(
-                                        gradient: LinearGradient(
-                                          colors: [
-                                            Color.fromRGBO(251, 80, 201, 1),
-                                            Color.fromRGBO(251, 80, 201, 1),
-                                            Color.fromRGBO(7, 214, 105, 1),
-                                            Color.fromRGBO(7, 214, 105, 1),
-                                            Color.fromRGBO(28, 146, 245, 1),
-                                            Color.fromRGBO(28, 146, 245, 1),
-                                          ],
-                                          stops: [
-                                            0.1,
-                                            0.25,
-                                            0.251,
-                                            0.75,
-                                            0.751,
-                                            0.99
-                                          ],
-                                          transform: GradientRotation(0.9),
-                                        ),
-                                      ),
-                                      height: 250,
-                                      child: Center(
-                                        child: Text(
-                                            'The Procrastination Buster',
-                                            style: tyTextTheme(Colors.white)
-                                                .displayLarge,
-                                            textAlign: TextAlign.center),
-                                      ),
-                                    );
-                                  },
-                                  body: const Card(
-                                      child: SizedBox(
-                                          width: 100,
-                                          height: 100,
-                                          child: Text('hi!'))),
-                                  isExpanded: _openProjects[1],
-                                ),
-                                ExpansionPanel(
-                                  backgroundColor:
-                                      Theme.of(context).primaryColor,
-                                  canTapOnHeader: true,
-                                  headerBuilder: (context, isOpen) {
-                                    return SizedBox(
-                                      height: 250,
-                                      child: Image.asset(
-                                        'assets/inked_1080x200.png',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    );
-                                  },
-                                  body: const Card(
-                                      child: SizedBox(
-                                          width: 100,
-                                          height: 100,
-                                          child: Text('hi!'))),
-                                  isExpanded: _openProjects[2],
-                                ),
-                              ],
-                              expansionCallback: (i, isOpen) =>
-                                  setState(() => _openProjects[i] = isOpen),
-                            ),
-                          ),
-                          SizedBox(height: deviceHeight(context) * 0.03),
-                          const Text('test'),
                           SizedBox(height: deviceHeight(context) * 0.03),
                           const ProjectBanner(
                               largeBanner: 'assets/equidistant_1080x100.png',
-                              smallBanner: 'assets/equidistant_600x50.png',
+                              smallBanner: 'assets/equidistant_700x50.png',
+                              description: Text('hi this is the description'),
+                              index: 0),
+                          SizedBox(height: deviceHeight(context) * 0.03),
+                          const ProjectBanner(
+                              largeBanner: 'assets/probuster_1080x100.png',
+                              smallBanner: 'assets/probuster_700x50.png',
+                              description: Text('hi this is the description'),
+                              index: 0),
+                          SizedBox(height: deviceHeight(context) * 0.03),
+                          const ProjectBanner(
+                              largeBanner: 'assets/web1_1080x100.png',
+                              smallBanner: 'assets/web1_700x50.png',
+                              description: Text('hi this is the description'),
+                              index: 0),
+                          SizedBox(height: deviceHeight(context) * 0.03),
+                          const ProjectBanner(
+                              largeBanner: 'assets/web2_1080x100.png',
+                              smallBanner: 'assets/web2_700x50.png',
                               description: Text('hi this is the description'),
                               index: 0),
                           SizedBox(height: deviceHeight(context) * 0.03),
