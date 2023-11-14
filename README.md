@@ -21,10 +21,7 @@ https://docs.flutter.dev/platform-integration/web/wasm
 
 fill the body with the descriptions of the projects
 
-need to make image change dynamically with viewport size
-need to have fonts change size dynamically with viewport size
 consider cropping bottom of profile pic like jaime suggested
-
 get image in the right resolution for web
 maybe decrease saturation or blur the edges of the picture - mom suggestion
 
@@ -46,9 +43,6 @@ think pieces - work more on magic time complexity
 think pieces - grill guide algorithm lol
 think pieces - A Year of Leetcode
 -- will need to figure out how to set the texttheme for the article since it's a widget that can't access the context currently
-
-change tyrowo inked to - tyrowo inked + portfolio website 1.0
-then add a second project for randomized leopard print background + portfolio website 2.0
 
 study flutter_animate package
 apply animations to stuff
@@ -126,12 +120,7 @@ done - -- email, linkedin, github, leetcode, twitter, facebook, instagram (used 
 done - -- tooltip indicators on each of the socials to clarify
 done - email link should open up to email
 
-set up the scrollbarcontroller ->
-use the scrollbar controller to make the contact button go to the bottom of the page
-
-above the divider for the footer on the bottom right there should be like a pseudo fab just an elevated button there that takes you back to the top of the screen
-
-reworking the banner dropdowns - theyre too big. simply too big. need to come up with a way to make them smaller without ruining the resolution.
+done - reworking the banner dropdowns - theyre too big. simply too big. need to come up with a way to make them smaller without ruining the resolution.
   okay how to design them?
   they should be a sizedbox for the banner and the sizedbox is ht 100, width is a proportion of the screen length
   // and then under a certain viewport width it should collapse to 50 and whatever viewport width
@@ -143,3 +132,19 @@ reworking the banner dropdowns - theyre too big. simply too big. need to come up
   then you can add a little bit of space between the tiles so they don't looked so cramped too
     maybe give them a default padding?
   i guess the animated boxes should have a border so you know the underlying text is grouped with it?
+done - change tyrowo inked to - tyrowo inked + portfolio website 1.0
+done - then add a second project for randomized leopard print background + portfolio website 2.0
+
+
+## Phase 2 - Responsiveness
+
+need to make image change dynamically with viewport size
+need to have fonts change size dynamically with viewport size
+-- especially title fonts. the minor text fonts can stay the same
+  
+set up the scrollbarcontroller ->
+use the scrollbar controller to make the contact button go to the bottom of the page
+
+above the divider for the footer on the bottom right there should be like a pseudo fab just an elevated button there that takes you back to the top of the screen -- vertical_align_top
+
+allow drag scrolling with mouse, it's annoying that that needs to be specified but whatever

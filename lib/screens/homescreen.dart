@@ -25,6 +25,7 @@ class _HomescreenState extends State<Homescreen> {
   double deviceWidth(BuildContext context) => MediaQuery.of(context).size.width;
   double deviceHeight(BuildContext context) =>
       MediaQuery.of(context).size.height;
+  final scrollController = ScrollController();
 
   void _randomizeBackground() {
     setState(() {
@@ -53,6 +54,12 @@ class _HomescreenState extends State<Homescreen> {
   }
 
   @override
+  void dispose() {
+    scrollController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -74,7 +81,14 @@ class _HomescreenState extends State<Homescreen> {
               const SizedBox(width: 10),
               ElevatedButton(onPressed: () {}, child: const Text('Resume')),
               const SizedBox(width: 10),
-              ElevatedButton(onPressed: () {}, child: const Text('Contact')),
+              ElevatedButton(
+                  onPressed: () {
+                    setState(() => scrollController.animateTo(
+                        scrollController.position.maxScrollExtent,
+                        duration: const Duration(milliseconds: 1200),
+                        curve: Curves.ease));
+                  },
+                  child: const Text('Contact')),
               const SizedBox(width: 20),
               SizedBox(
                 width: 65,
@@ -124,6 +138,7 @@ class _HomescreenState extends State<Homescreen> {
             ],
           )),
       body: SingleChildScrollView(
+        controller: scrollController,
         // to lock this background image in place and have everything scroll past it move the SCSV to the content column and put the tiled image in a fractionally sized box with height and width factor of 1.
         child: Center(
           child: Stack(
