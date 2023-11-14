@@ -42,6 +42,24 @@ ThemeData lightTheme(bool tyFontOff) {
           overlayColor:
               tyButtonOverlay(const Color.fromRGBO(191, 194, 183, 1))),
     ),
+    iconButtonTheme: IconButtonThemeData(
+      style: ButtonStyle(
+        iconSize: MaterialStateProperty.all(45.0),
+        backgroundColor: MaterialStateProperty.all(
+          const Color.fromRGBO(191, 194, 183, 0.8),
+        ),
+        foregroundColor: MaterialStateProperty.all(Colors.black),
+        overlayColor: tyButtonOverlay(
+          const Color.fromRGBO(191, 194, 183, 0.8),
+        ),
+        shape: MaterialStateProperty.all(
+          const RoundedRectangleBorder(
+            side: BorderSide(width: 0.5, color: Color.fromRGBO(66, 65, 62, 1)),
+            borderRadius: BorderRadius.all(Radius.circular(8.0)),
+          ),
+        ),
+      ),
+    ),
     switchTheme: SwitchThemeData(
       thumbColor: MaterialStateProperty.all(
         const Color.fromRGBO(191, 194, 183, 1),
@@ -113,6 +131,25 @@ ThemeData darkTheme(bool tyFontOff) {
           overlayColor: tyButtonOverlay(
             const Color.fromRGBO(66, 65, 62, 1),
           )),
+    ),
+    iconButtonTheme: IconButtonThemeData(
+      style: ButtonStyle(
+        iconSize: MaterialStateProperty.all(45.0),
+        backgroundColor: MaterialStateProperty.all(
+          const Color.fromRGBO(66, 65, 62, 0.8),
+        ),
+        foregroundColor: MaterialStateProperty.all(Colors.white),
+        overlayColor: tyButtonOverlay(
+          const Color.fromRGBO(66, 65, 62, 0.8),
+        ),
+        shape: MaterialStateProperty.all(
+          const RoundedRectangleBorder(
+            side:
+                BorderSide(width: 0.5, color: Color.fromRGBO(191, 194, 183, 1)),
+            borderRadius: BorderRadius.all(Radius.circular(8.0)),
+          ),
+        ),
+      ),
     ),
     switchTheme: SwitchThemeData(
       thumbColor: MaterialStateProperty.all(

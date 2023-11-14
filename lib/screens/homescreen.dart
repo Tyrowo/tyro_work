@@ -259,6 +259,14 @@ class _HomescreenState extends State<Homescreen> {
                   SizedBox(
                     height: deviceHeight(context) * 0.35,
                   ),
+                  IconButton.filled(
+                      onPressed: () => scrollController.animateTo(0.0,
+                          duration: const Duration(milliseconds: 1200),
+                          curve: Curves.ease),
+                      icon: const Icon(Icons.vertical_align_top)),
+                  SizedBox(
+                    height: deviceHeight(context) * 0.05,
+                  ),
                   ClipRRect(
                     borderRadius: const BorderRadius.vertical(
                         top: Radius.circular(40.0), bottom: Radius.zero),
