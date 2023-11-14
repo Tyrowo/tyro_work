@@ -173,7 +173,7 @@ class _HomescreenState extends State<Homescreen> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(40.0),
                     child: Container(
-                      color: Theme.of(context).primaryColor,
+                      color: Theme.of(context).cardTheme.color,
                       width: deviceWidth(context),
                       child: Column(
                         children: [
@@ -337,7 +337,7 @@ class _HomescreenState extends State<Homescreen> {
                     borderRadius: const BorderRadius.vertical(
                         top: Radius.circular(40.0), bottom: Radius.zero),
                     child: Container(
-                      color: Theme.of(context).primaryColor,
+                      color: Theme.of(context).primaryColor.withOpacity(0.85),
                       width: deviceWidth(context),
                       height: deviceHeight(context) * 0.2,
                       child: Row(

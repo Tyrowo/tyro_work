@@ -59,67 +59,72 @@ class _ProjectBannerState extends State<ProjectBanner> {
           } else {
             setState(() {
               state = 'closed';
-              curHeight = deviceWidth(context) < 700 ? 50 : 150;
+              curHeight = deviceWidth(context) < 1000 ? 50 : 150;
               opaque = false;
             });
           }
         },
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 200),
-          width: deviceWidth(context),
-          height: state == 'closed' || state == 'hovered'
-              ? deviceWidth(context) < 700
-                  ? 50
-                  : 150
-              : deviceHeight(context) * 0.8,
-          padding: state == 'closed'
-              ? EdgeInsets.fromLTRB(
-                  deviceWidth(context) * 0.1,
-                  deviceHeight(context) * 0.0,
-                  deviceWidth(context) * 0.1,
-                  deviceHeight(context) * 0.0)
-              : EdgeInsets.fromLTRB(
-                  deviceWidth(context) * 0.05,
-                  deviceHeight(context) * 0.0,
-                  deviceWidth(context) * 0.05,
-                  deviceHeight(context) * 0.0,
-                ),
-          // color: opaque
-          //     ? Theme.of(context).primaryColor
-          //     : Theme.of(context).cardTheme.color,
-          child: state == 'open'
-              ?
-              // if open then we return an image and then the article
-              Column(
-                  children: [
-                    FractionallySizedBox(
-                      heightFactor: null,
-                      widthFactor: 0.9,
-                      child: Image.asset(
-                        deviceWidth(context) < 600
-                            ? widget.smallBanner
-                            : widget.largeBanner,
-                        fit: BoxFit.fill,
+        child: ClipRRect(
+          borderRadius: deviceWidth(context) < 1000
+              ? BorderRadius.circular(50.0)
+              : BorderRadius.circular(100.0),
+          child: AnimatedContainer(
+            color: state == 'open'
+                ? Theme.of(context).primaryColor
+                : const Color.fromRGBO(0, 0, 0, 0),
+            duration: const Duration(milliseconds: 200),
+            width: deviceWidth(context),
+            height: state == 'closed' || state == 'hovered'
+                ? deviceWidth(context) < 1000
+                    ? 50
+                    : 150
+                : deviceHeight(context) * 0.8,
+            padding: state == 'closed'
+                ? EdgeInsets.fromLTRB(
+                    deviceWidth(context) * 0.1,
+                    deviceHeight(context) * 0.0,
+                    deviceWidth(context) * 0.1,
+                    deviceHeight(context) * 0.0)
+                : EdgeInsets.fromLTRB(
+                    deviceWidth(context) * 0.05,
+                    deviceHeight(context) * 0.0,
+                    deviceWidth(context) * 0.05,
+                    deviceHeight(context) * 0.0,
+                  ),
+            // color: opaque
+            //     ? Theme.of(context).primaryColor
+            //     : Theme.of(context).cardTheme.color,
+            child: state == 'open'
+                ?
+                // if open then we return an image and then the article
+                Column(
+                    children: [
+                      FractionallySizedBox(
+                        heightFactor: null,
+                        widthFactor: 0.9,
+                        child: Image.asset(
+                          deviceWidth(context) < 1000
+                              ? widget.smallBanner
+                              : widget.largeBanner,
+                          fit: BoxFit.fill,
+                        ),
                       ),
-                    ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(20.0),
-                      child: Expanded(
+                      Expanded(
                         child: SingleChildScrollView(child: widget.description),
                       ),
+                    ],
+                  )
+                : FractionallySizedBox(
+                    heightFactor: null,
+                    widthFactor: 0.9,
+                    child: Image.asset(
+                      deviceWidth(context) < 1000
+                          ? widget.smallBanner
+                          : widget.largeBanner,
+                      fit: BoxFit.cover,
                     ),
-                  ],
-                )
-              : FractionallySizedBox(
-                  heightFactor: null,
-                  widthFactor: 0.9,
-                  child: Image.asset(
-                    deviceWidth(context) < 600
-                        ? widget.smallBanner
-                        : widget.largeBanner,
-                    fit: BoxFit.cover,
                   ),
-                ),
+          ),
         ),
       ),
     );
