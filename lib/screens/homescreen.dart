@@ -156,14 +156,17 @@ class _HomescreenState extends State<Homescreen> {
               Column(
                 children: [
                   SizedBox(
-                    height: deviceHeight(context) * 0.15,
+                    height: deviceHeight(context) * 0.25,
                   ),
                   Row(
                     children: [
                       SizedBox(width: deviceWidth(context) * 0.10),
                       ClipRRect(
                         borderRadius: BorderRadius.circular(40.0),
-                        child: Image.asset('assets/tyrowo.jpg'),
+                        child: Image.asset(
+                          'assets/tyrowo.webp',
+                          width: max(1.0, deviceWidth(context) / 1080) * 200,
+                        ),
                       ),
                       const Spacer(),
                     ],
@@ -177,16 +180,16 @@ class _HomescreenState extends State<Homescreen> {
                             padding: const EdgeInsets.all(15.0),
                             child: Text(
                               "The Rockstar Developer you've been searching for.",
-                              style: Theme.of(context).textTheme.displayMedium,
+                              style: Theme.of(context).textTheme.displaySmall,
                               textScaleFactor:
                                   ScaleSize.textScaleFactor(context),
                             )),
                       ),
-                      SizedBox(width: deviceWidth(context) * 0.01),
+                      SizedBox(width: deviceWidth(context) * 0.05),
                     ],
                   ),
                   SizedBox(
-                    height: deviceHeight(context) * 0.5,
+                    height: deviceHeight(context) * 0.35,
                   ),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(40.0),
@@ -291,14 +294,16 @@ class _HomescreenState extends State<Homescreen> {
                     child: Container(
                       color: Theme.of(context).primaryColor.withOpacity(0.85),
                       width: deviceWidth(context),
-                      height: deviceHeight(context) * 0.25,
+                      height: max(150, deviceHeight(context) * 0.25),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Spacer(),
                           Column(
                             children: [
-                              SizedBox(height: deviceHeight(context) * 0.075),
+                              SizedBox(
+                                  height:
+                                      max(35, deviceHeight(context) * 0.075)),
                               Text(
                                 'Contact Me',
                                 style: Theme.of(context).textTheme.titleLarge,
@@ -333,7 +338,9 @@ class _HomescreenState extends State<Homescreen> {
                           SizedBox(width: deviceWidth(context) * 0.1),
                           Column(
                             children: [
-                              SizedBox(height: deviceHeight(context) * 0.075),
+                              SizedBox(
+                                  height:
+                                      max(35, deviceHeight(context) * 0.075)),
                               Text(
                                 'Socials',
                                 style: Theme.of(context).textTheme.titleLarge,
