@@ -82,14 +82,14 @@ flutter:
     - assets/tyrowo.webp
     # not sure which image format will work better so keeping both pics of me for now
   # project banners
-    - assets/equidistant_1080x200.png
     - assets/equidistant_1080x100.png
-    - assets/equidistant_600x100.png
-    - assets/equidistant_600x50.png
-    - assets/inked_1080x200.png
-    - assets/inked_1080x100.png
-    - assets/inked_600x100.png
-    - assets/inked_600x50.png
+    - assets/equidistant_700x50.png
+    - assets/probuster_1080x100.png
+    - assets/probuster_700x50.png
+    - assets/web1_1080x100.png
+    - assets/web1_700x50.png
+    - assets/web2_1080x100.png
+    - assets/web2_700x50.png
   # socials icons
     - assets/socials/facebook.png
     - assets/socials/github_dark.png

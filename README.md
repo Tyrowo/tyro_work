@@ -40,6 +40,8 @@ figure out how to do that squarespace fadein animation after scrolling to certai
 maybe set a variable trigger on a scroll controller when reaching+being within certain values
 maybe pay for that animation class video
 
+project articles - procrastination buster - https://chrome.google.com/webstore/detail/tyrowos-procrastination-b/ecdedcllldeigficjfdbjgepojogaepe?hl=en-GB
+
 think pieces - work more on magic time complexity
 think pieces - grill guide algorithm lol
 think pieces - A Year of Leetcode
