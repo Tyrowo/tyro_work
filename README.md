@@ -137,14 +137,13 @@ done - then add a second project for randomized leopard print background + portf
 
 
 ## Phase 2 - Responsiveness
+done - set up the scrollbarcontroller ->
+done - use the scrollbar controller to make the contact button go to the bottom of the page
+done - above the divider for the footer on the bottom right there should be like a pseudo fab just an icon button there that takes you back to the top of the screen -- vertical_align_top
 
 need to make image change dynamically with viewport size
 need to have fonts change size dynamically with viewport size
 -- especially title fonts. the minor text fonts can stay the same
-  
-set up the scrollbarcontroller ->
-use the scrollbar controller to make the contact button go to the bottom of the page
 
-above the divider for the footer on the bottom right there should be like a pseudo fab just an elevated button there that takes you back to the top of the screen -- vertical_align_top
 
 allow drag scrolling with mouse, it's annoying that that needs to be specified but whatever

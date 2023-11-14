@@ -155,13 +155,13 @@ class _HomescreenState extends State<Homescreen> {
                     height: deviceHeight(context) * 0.15,
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      SizedBox(width: deviceWidth(context) * 0.10),
                       ClipRRect(
                         borderRadius: BorderRadius.circular(40.0),
                         child: Image.asset('assets/tyrowo.jpg'),
                       ),
-                      SizedBox(width: deviceWidth(context) * 0.5),
+                      const Spacer(),
                     ],
                   ),
                   SizedBox(height: deviceHeight(context) * 0.05),
@@ -259,11 +259,17 @@ class _HomescreenState extends State<Homescreen> {
                   SizedBox(
                     height: deviceHeight(context) * 0.35,
                   ),
-                  IconButton.filled(
-                      onPressed: () => scrollController.animateTo(0.0,
-                          duration: const Duration(milliseconds: 1200),
-                          curve: Curves.ease),
-                      icon: const Icon(Icons.vertical_align_top)),
+                  Row(
+                    children: [
+                      const Spacer(),
+                      IconButton.filled(
+                          onPressed: () => scrollController.animateTo(0.0,
+                              duration: const Duration(milliseconds: 1200),
+                              curve: Curves.ease),
+                          icon: const Icon(Icons.vertical_align_top)),
+                      SizedBox(width: deviceWidth(context) * 0.05),
+                    ],
+                  ),
                   SizedBox(
                     height: deviceHeight(context) * 0.05,
                   ),
