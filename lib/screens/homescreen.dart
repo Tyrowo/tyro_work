@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tyro_work/data/article_data.dart';
+import 'package:tyro_work/helper/project_banner.dart';
 import 'package:tyro_work/helper/socials_button.dart';
 import 'package:tyro_work/helper/themes.dart';
 import 'package:tyro_work/helper/thought_pieces.dart';
@@ -288,6 +289,14 @@ class _HomescreenState extends State<Homescreen> {
                                   setState(() => _openProjects[i] = isOpen),
                             ),
                           ),
+                          SizedBox(height: deviceHeight(context) * 0.03),
+                          const Text('test'),
+                          SizedBox(height: deviceHeight(context) * 0.03),
+                          const ProjectBanner(
+                              largeBanner: 'assets/equidistant_1080x100.png',
+                              smallBanner: 'assets/equidistant_600x50.png',
+                              description: Text('hi this is the description'),
+                              index: 0),
                           SizedBox(height: deviceHeight(context) * 0.03),
                         ],
                       ),
