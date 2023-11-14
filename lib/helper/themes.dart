@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 ThemeData lightTheme(bool tyFontOff) {
@@ -253,4 +255,14 @@ MaterialStateProperty<Color> tyButtonOverlay(Color initColor) {
       return initColor;
     }
   });
+}
+
+// found a user on github who created this class to scale text with viewport size
+class ScaleSize {
+  static double textScaleFactor(BuildContext context,
+      {double maxTextScaleFactor = 1}) {
+    final width = MediaQuery.of(context).size.width;
+    double val = (width / 1400) * maxTextScaleFactor;
+    return min(val, maxTextScaleFactor);
+  }
 }

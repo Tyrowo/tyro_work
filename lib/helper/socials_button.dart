@@ -10,9 +10,12 @@ class SocialsButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double deviceWidth(BuildContext context) =>
+        MediaQuery.of(context).size.width;
     return Tooltip(
       message: label,
-      textStyle: const TextStyle(fontSize: 20, color: Colors.white),
+      textStyle: TextStyle(
+          fontSize: deviceWidth(context) < 1000 ? 11 : 20, color: Colors.white),
       child: TextButton(
         style: ButtonStyle(
             shape: MaterialStateProperty.all(const CircleBorder()),
@@ -26,10 +29,10 @@ class SocialsButton extends StatelessWidget {
           }
         },
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: EdgeInsets.all(deviceWidth(context) < 1000 ? 5.0 : 10.0),
           child: SizedBox(
-            height: 36,
-            width: 36,
+            height: deviceWidth(context) < 1000 ? 18 : 36,
+            width: deviceWidth(context) < 1000 ? 18 : 36,
             child: Image.asset(
               image,
               fit: BoxFit.scaleDown,

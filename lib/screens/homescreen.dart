@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tyro_work/data/article_data.dart';
 import 'package:tyro_work/helper/project_banner.dart';
 import 'package:tyro_work/helper/socials_button.dart';
+import 'package:tyro_work/helper/themes.dart';
 import 'package:tyro_work/helper/thought_pieces.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -72,11 +73,14 @@ class _HomescreenState extends State<Homescreen> {
           title: Row(
             // crossAxisAlignment: WrapCrossAlignment.center,
             children: [
-              const Text('TyRowo',
-                  style: TextStyle(
-                      fontSize: 20.0,
-                      fontFamily: 'Tyrowo Inked',
-                      fontWeight: FontWeight.w600)),
+              Text(
+                'TyRowo',
+                style: const TextStyle(
+                    fontSize: 20.0,
+                    fontFamily: 'Tyrowo Inked',
+                    fontWeight: FontWeight.w600),
+                textScaleFactor: max(ScaleSize.textScaleFactor(context), 0.69),
+              ),
               const Spacer(),
               const SizedBox(width: 10),
               ElevatedButton(onPressed: () {}, child: const Text('Resume')),
@@ -170,11 +174,13 @@ class _HomescreenState extends State<Homescreen> {
                       const Spacer(),
                       Card(
                         child: Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Text(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Text(
                               "The Rockstar Developer you've been searching for.",
-                              style: Theme.of(context).textTheme.displayMedium),
-                        ),
+                              style: Theme.of(context).textTheme.displayMedium,
+                              textScaleFactor:
+                                  ScaleSize.textScaleFactor(context),
+                            )),
                       ),
                       SizedBox(width: deviceWidth(context) * 0.01),
                     ],
@@ -195,9 +201,12 @@ class _HomescreenState extends State<Homescreen> {
                                 deviceHeight(context) * 0.03,
                                 deviceWidth(context) * 0.03,
                                 deviceHeight(context) * 0.03),
-                            child: Text('Projects',
-                                style:
-                                    Theme.of(context).textTheme.displayLarge),
+                            child: Text(
+                              'Projects',
+                              style: Theme.of(context).textTheme.displayLarge,
+                              textScaleFactor:
+                                  ScaleSize.textScaleFactor(context),
+                            ),
                           ),
                           SizedBox(height: deviceHeight(context) * 0.03),
                           const ProjectBanner(
@@ -243,9 +252,12 @@ class _HomescreenState extends State<Homescreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Think Pieces',
-                                style:
-                                    Theme.of(context).textTheme.displayLarge),
+                            Text(
+                              'Think Pieces',
+                              style: Theme.of(context).textTheme.displayLarge,
+                              textScaleFactor:
+                                  ScaleSize.textScaleFactor(context),
+                            ),
                             SizedBox(
                               height: deviceHeight(context) * 0.03,
                             ),
@@ -279,79 +291,152 @@ class _HomescreenState extends State<Homescreen> {
                     child: Container(
                       color: Theme.of(context).primaryColor.withOpacity(0.85),
                       width: deviceWidth(context),
-                      height: deviceHeight(context) * 0.2,
+                      height: deviceHeight(context) * 0.25,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Spacer(),
                           Column(
                             children: [
-                              SizedBox(height: deviceHeight(context) * 0.04),
-                              Text('Contact Me',
-                                  style:
-                                      Theme.of(context).textTheme.displaySmall),
+                              SizedBox(height: deviceHeight(context) * 0.075),
+                              Text(
+                                'Contact Me',
+                                style: Theme.of(context).textTheme.titleLarge,
+                                textScaleFactor: max(
+                                    ScaleSize.textScaleFactor(context), 0.69),
+                              ),
                               SizedBox(height: deviceHeight(context) * 0.02),
-                              Text('984-244-3107',
-                                  style:
-                                      Theme.of(context).textTheme.titleMedium),
+                              Text(
+                                '984-244-3107',
+                                style: Theme.of(context).textTheme.titleMedium,
+                                textScaleFactor: max(
+                                    ScaleSize.textScaleFactor(context), 0.69),
+                              ),
                               TextButton(
-                                  onPressed: () async {
-                                    final Uri url = Uri.parse(
-                                        'mailto:tylerpcrews@gmail.com');
-                                    if (!await launchUrl(url)) {
-                                      throw Exception('Could not launch $url');
-                                    }
-                                  },
-                                  child: Text('tylerpcrews@gmail.com',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .titleMedium)),
+                                onPressed: () async {
+                                  final Uri url =
+                                      Uri.parse('mailto:tylerpcrews@gmail.com');
+                                  if (!await launchUrl(url)) {
+                                    throw Exception('Could not launch $url');
+                                  }
+                                },
+                                child: Text(
+                                  'tylerpcrews@gmail.com',
+                                  style:
+                                      Theme.of(context).textTheme.titleMedium,
+                                  textScaleFactor: max(
+                                      ScaleSize.textScaleFactor(context), 0.69),
+                                ),
+                              ),
                             ],
                           ),
                           SizedBox(width: deviceWidth(context) * 0.1),
                           Column(
                             children: [
-                              SizedBox(height: deviceHeight(context) * 0.04),
-                              Text('Socials',
-                                  style:
-                                      Theme.of(context).textTheme.displaySmall),
-                              SizedBox(height: deviceHeight(context) * 0.02),
-                              Row(
-                                children: [
-                                  SocialsButton(
-                                      image: darkMode
-                                          ? 'assets/socials/github_dark.png'
-                                          : 'assets/socials/github_light.png',
-                                      label: 'GitHub',
-                                      uri: 'https://github.com/Tyrowo'),
-                                  SocialsButton(
-                                      image: darkMode
-                                          ? 'assets/socials/leetcode_dark.png'
-                                          : 'assets/socials/leetcode_light.webp',
-                                      label: 'LeetCode',
-                                      uri: 'https://leetcode.com/tyrowo/'),
-                                  const SocialsButton(
-                                      image: 'assets/socials/linkedin.png',
-                                      label: 'LinkedIn',
-                                      uri:
-                                          'https://www.linkedin.com/in/tyrowo/'),
-                                  const SocialsButton(
-                                      image: 'assets/socials/facebook.png',
-                                      label: 'Facebook',
-                                      uri: 'https://www.facebook.com/tycrews/'),
-                                  const SocialsButton(
-                                      image: 'assets/socials/instagram.png',
-                                      label: 'Instagram',
-                                      uri:
-                                          'https://www.instagram.com/thundercrews/'),
-                                  SocialsButton(
-                                      image: darkMode
-                                          ? 'assets/socials/x_dark.png'
-                                          : 'assets/socials/x_light.png',
-                                      label: 'X',
-                                      uri: 'https://twitter.com/Tyrowo'),
-                                ],
+                              SizedBox(height: deviceHeight(context) * 0.075),
+                              Text(
+                                'Socials',
+                                style: Theme.of(context).textTheme.titleLarge,
+                                textScaleFactor: max(
+                                    ScaleSize.textScaleFactor(context), 0.69),
                               ),
+                              SizedBox(
+                                  height: deviceWidth(context) < 600
+                                      ? 0
+                                      : deviceHeight(context) * 0.02),
+                              deviceWidth(context) < 600
+                                  ? Column(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            SocialsButton(
+                                                image: darkMode
+                                                    ? 'assets/socials/github_dark.png'
+                                                    : 'assets/socials/github_light.png',
+                                                label: 'GitHub',
+                                                uri:
+                                                    'https://github.com/Tyrowo'),
+                                            SocialsButton(
+                                                image: darkMode
+                                                    ? 'assets/socials/leetcode_dark.png'
+                                                    : 'assets/socials/leetcode_light.webp',
+                                                label: 'LeetCode',
+                                                uri:
+                                                    'https://leetcode.com/tyrowo/'),
+                                            const SocialsButton(
+                                                image:
+                                                    'assets/socials/linkedin.png',
+                                                label: 'LinkedIn',
+                                                uri:
+                                                    'https://www.linkedin.com/in/tyrowo/'),
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            const SocialsButton(
+                                                image:
+                                                    'assets/socials/facebook.png',
+                                                label: 'Facebook',
+                                                uri:
+                                                    'https://www.facebook.com/tycrews/'),
+                                            const SocialsButton(
+                                                image:
+                                                    'assets/socials/instagram.png',
+                                                label: 'Instagram',
+                                                uri:
+                                                    'https://www.instagram.com/thundercrews/'),
+                                            SocialsButton(
+                                                image: darkMode
+                                                    ? 'assets/socials/x_dark.png'
+                                                    : 'assets/socials/x_light.png',
+                                                label: 'X',
+                                                uri:
+                                                    'https://twitter.com/Tyrowo'),
+                                          ],
+                                        ),
+                                      ],
+                                    )
+                                  : Row(
+                                      children: [
+                                        SocialsButton(
+                                            image: darkMode
+                                                ? 'assets/socials/github_dark.png'
+                                                : 'assets/socials/github_light.png',
+                                            label: 'GitHub',
+                                            uri: 'https://github.com/Tyrowo'),
+                                        SocialsButton(
+                                            image: darkMode
+                                                ? 'assets/socials/leetcode_dark.png'
+                                                : 'assets/socials/leetcode_light.webp',
+                                            label: 'LeetCode',
+                                            uri:
+                                                'https://leetcode.com/tyrowo/'),
+                                        const SocialsButton(
+                                            image:
+                                                'assets/socials/linkedin.png',
+                                            label: 'LinkedIn',
+                                            uri:
+                                                'https://www.linkedin.com/in/tyrowo/'),
+                                        const SocialsButton(
+                                            image:
+                                                'assets/socials/facebook.png',
+                                            label: 'Facebook',
+                                            uri:
+                                                'https://www.facebook.com/tycrews/'),
+                                        const SocialsButton(
+                                            image:
+                                                'assets/socials/instagram.png',
+                                            label: 'Instagram',
+                                            uri:
+                                                'https://www.instagram.com/thundercrews/'),
+                                        SocialsButton(
+                                            image: darkMode
+                                                ? 'assets/socials/x_dark.png'
+                                                : 'assets/socials/x_light.png',
+                                            label: 'X',
+                                            uri: 'https://twitter.com/Tyrowo'),
+                                      ],
+                                    ),
                             ],
                           ),
                           const Spacer(),
