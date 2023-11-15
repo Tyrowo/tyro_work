@@ -5,8 +5,10 @@ my portfolio website 2.0, created in flutter
 ## Creative Decisions/Things to Revisit Way Later
 
 it turns out for my other project I used a package called expandable, and used their ExpandablePanel, not the list tile. For now I've decided that I want to make this site with as many out of the box components as possible, so I'm going to stick with the native ExpansionPanelList and maybe revisit this concept later on. Really depends on if that dropdown arrow is too ugly to keep. It kind of is annoying but maybe it's good ux to show people that they're not just banners anyway. If only the color customizer actually worked lol
+>> building my own widgets for the banners was pretty cool and looks much better now
 
 though i guess i'm being a little hypocritical because I don't want to learn how to finesse the animations myself... Taking the time to learn how to do animations myself seems like overkill?
+>> well I decided to do it anyway. the only thing I used a plugin for was a rainbow tween, and learning how to use animatedboxes and the opacity effects were the simplest forms of animation, but it was still nice learning how to play around with it myself. 
 
 add stackoverflow profile to socials if I get enough karma that it's not just a fresh account
 
@@ -15,25 +17,6 @@ done - set up nameservers for webhosting
 
 investigate this concept of deploying to webassembly instead of javascript. (build web --wasm) Since this is a simple page maybe web assembly would be able to improve performance? If it has a shorter boot up time then hell yeah.
 https://docs.flutter.dev/platform-integration/web/wasm
-
-## Work That's Further off - Content and Fine Tuning Responsive Design
-
-
-fill the body with the descriptions of the projects
-
-update resume
-make a link to my resume
--- can your resume just take up a whole screen? with a download and share link? ooh that'd be tight
-
-
-
-project articles - procrastination buster - https://chrome.google.com/webstore/detail/tyrowos-procrastination-b/ecdedcllldeigficjfdbjgepojogaepe?hl=en-GB
-
-think pieces - work more on magic time complexity
-think pieces - grill guide algorithm lol
-think pieces - A Year of Leetcode
--- will need to figure out how to set the texttheme for the article since it's a widget that can't access the context currently
-
 
 ## Getting Started To Do - Groundwork
 done - import image assets
@@ -143,5 +126,24 @@ think pieces at the end shouldn't be animated they can just chill - this is too 
 can't do - maybe advance the button highlighting color so it pulses pink and green while hovered, and blue when clicked
   instead of using real animation maybe you could use a delayed 
 
-shimmer on Rockstar Developer text, test that or maybe wipe-across color change through my three colors
+done - shimmer on Rockstar Developer text, test that or maybe wipe-across color change through my three colors
   dang I really love this flickering effect - duration: const Duration(milliseconds: 80), vsync: this); but it's like illegal I don't want to give someone a seizure
+  -- had to add shadow effect to text for visibility on light mode
+
+## Phase 3 - Content
+
+update resume
+make a link to my resume
+-- can your resume just take up a whole screen? with a download and share link? ooh that'd be tight
+
+fill the descriptions of the projects
+project articles {
+procrastination buster - https://chrome.google.com/webstore/detail/tyrowos-procrastination-b/ecdedcllldeigficjfdbjgepojogaepe?hl=en-GB
+
+website 2.0 thoughts - talk about leopard, talk about flutter limitations (seo, no middle mouse button clickscrolling)
+}
+
+think pieces - work more on magic time complexity
+think pieces - grill guide algorithm lol - definitely not for now but maybe one day
+think pieces - A Year of Leetcode
+-- will need to figure out how to set the texttheme for the article since it's a widget that can't access the context currently
