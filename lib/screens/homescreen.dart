@@ -27,6 +27,8 @@ class _HomescreenState extends State<Homescreen> {
   double deviceHeight(BuildContext context) =>
       MediaQuery.of(context).size.height;
   final scrollController = ScrollController();
+  bool picOpacity = false;
+  bool titleOpacity = false;
 
   void _randomizeBackground() {
     setState(() {
@@ -46,12 +48,20 @@ class _HomescreenState extends State<Homescreen> {
     setState(() => tyFontOff = tyFont);
   }
 
+  Future<void> fadeInMain() async {
+    await Future.delayed(const Duration(milliseconds: 600));
+    setState(() => picOpacity = true);
+    await Future.delayed(const Duration(milliseconds: 600));
+    setState(() => titleOpacity = true);
+  }
+
   @override
   void initState() {
     super.initState();
     checkPrefsFont();
     checkPrefsLight();
     _randomizeBackground();
+    fadeInMain();
   }
 
   @override
@@ -161,32 +171,52 @@ class _HomescreenState extends State<Homescreen> {
                   Row(
                     children: [
                       SizedBox(width: deviceWidth(context) * 0.10),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(40.0),
-                        child: Image.asset(
-                          'assets/tyrowo.webp',
-                          width: max(1.0, deviceWidth(context) / 1080) * 200,
+                      AnimatedOpacity(
+                        opacity: picOpacity ? 1.0 : 0.0,
+                        duration: const Duration(milliseconds: 800),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(40.0),
+                          child: Container(
+                            color: Theme.of(context).cardTheme.color,
+                            child: Padding(
+                              padding: EdgeInsets.all(
+                                max(1.0, deviceWidth(context) / 1080) * 10,
+                              ),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(40.0),
+                                child: Image.asset(
+                                  'assets/tyrowo.webp',
+                                  width: max(1.0, deviceWidth(context) / 1080) *
+                                      200,
+                                ),
+                              ),
+                            ),
+                          ),
                         ),
                       ),
                       const Spacer(),
                     ],
                   ),
                   SizedBox(height: deviceHeight(context) * 0.05),
-                  Row(
-                    children: [
-                      const Spacer(),
-                      Card(
-                        child: Padding(
-                            padding: const EdgeInsets.all(15.0),
-                            child: Text(
-                              "The Rockstar Developer you've been searching for.",
-                              style: Theme.of(context).textTheme.displaySmall,
-                              textScaleFactor:
-                                  ScaleSize.textScaleFactor(context),
-                            )),
-                      ),
-                      SizedBox(width: deviceWidth(context) * 0.05),
-                    ],
+                  AnimatedOpacity(
+                    opacity: titleOpacity ? 1.0 : 0.0,
+                    duration: const Duration(milliseconds: 800),
+                    child: Row(
+                      children: [
+                        const Spacer(),
+                        Card(
+                          child: Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: Text(
+                                "The Rockstar Developer you've been searching for.",
+                                style: Theme.of(context).textTheme.displaySmall,
+                                textScaleFactor:
+                                    ScaleSize.textScaleFactor(context),
+                              )),
+                        ),
+                        SizedBox(width: deviceWidth(context) * 0.05),
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: deviceHeight(context) * 0.35,
