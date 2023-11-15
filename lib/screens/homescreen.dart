@@ -166,7 +166,7 @@ class _HomescreenState extends State<Homescreen> {
               Column(
                 children: [
                   SizedBox(
-                    height: deviceHeight(context) * 0.25,
+                    height: deviceHeight(context) * 0.15,
                   ),
                   Row(
                     children: [

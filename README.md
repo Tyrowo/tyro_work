@@ -21,21 +21,11 @@ https://docs.flutter.dev/platform-integration/web/wasm
 
 fill the body with the descriptions of the projects
 
-consider cropping bottom of profile pic like jaime suggested
-get image in the right resolution for web
-maybe decrease saturation or blur the edges of the picture - mom suggestion
-
 update resume
 make a link to my resume
 -- can your resume just take up a whole screen? with a download and share link? ooh that'd be tight
 
-figure out how to rotate text.
--- what angle? 
 
-maybe add an animation on all the main screen stuff so that it comes in one at a time and you see the background for a sec?
-figure out how to do that squarespace fadein animation after scrolling to certain points
-maybe set a variable trigger on a scroll controller when reaching+being within certain values
-maybe pay for that animation class video
 
 project articles - procrastination buster - https://chrome.google.com/webstore/detail/tyrowos-procrastination-b/ecdedcllldeigficjfdbjgepojogaepe?hl=en-GB
 
@@ -43,18 +33,6 @@ think pieces - work more on magic time complexity
 think pieces - grill guide algorithm lol
 think pieces - A Year of Leetcode
 -- will need to figure out how to set the texttheme for the article since it's a widget that can't access the context currently
-
-study flutter_animate package
-apply animations to stuff
-fade in for initial image and text
-[widget].animate(target: _scrollbarposition == ? 1 : 0).slideX()
-[widget, widget, widget].animate(interval : seconds).[animationtype]() // animates a list of widgets in sequence
-shimmer on Rockstar Developer text, test that or maybe wipe-across color change through my three colors
-projects should swipe in from left, right, left as you scroll down that'd be cool
-think pieces at the end shouldn't be animated they can just chill
-
-maybe advance the button highlighting color so it pulses pink and green while hovered, and blue when clicked
-  instead of using real animation maybe you could use a delayed 
 
 
 ## Getting Started To Do - Groundwork
@@ -136,7 +114,7 @@ done - change tyrowo inked to - tyrowo inked + portfolio website 1.0
 done - then add a second project for randomized leopard print background + portfolio website 2.0
 
 
-## Phase 2 - Responsiveness
+## Phase 2 - Responsiveness and Animations
 done - set up the scrollbarcontroller ->
 done - use the scrollbar controller to make the contact button go to the bottom of the page
 done - above the divider for the footer on the bottom right there should be like a pseudo fab just an icon button there that takes you back to the top of the screen -- vertical_align_top
@@ -144,3 +122,25 @@ done - need to make image change dynamically with viewport size
 done - need to have fonts change size dynamically with viewport size
 -- especially title fonts. the minor text fonts can stay the same
 impossible - allow drag scrolling with mouse, it's annoying that that needs to be specified but whatever. I enabled "mouse drag scrolling" but that isn't the same as center mouse button click scrolling. Because flutter is so mac oriented it seems that this is actually impossible as of this moment
+
+won't do - consider cropping bottom of profile pic like jaime suggested
+it's good - get image in the right resolution for web
+won't do - maybe decrease saturation or blur the edges of the picture - mom suggestion
+won't do - figure out how to rotate text.-- what angle? 
+
+done - maybe add an animation on all the main screen stuff so that it comes in one at a time and you see the background for a sec?
+won't do - figure out how to do that squarespace fadein animation after scrolling to certain points
+  maybe set a variable trigger on a scroll controller when reaching+being within certain values
+  nah - maybe pay for that animation class video
+won't do - study flutter_animate package
+apply animations to stuff
+done - fade in for initial image and text
+won't do - [widget].animate(target: _scrollbarposition == ? 1 : 0).slideX()
+[widget, widget, widget].animate(interval : seconds).[animationtype]() // animates a list of widgets in sequence
+won't do - projects should swipe in from left, right, left as you scroll down that'd be cool
+think pieces at the end shouldn't be animated they can just chill - this is too much
+
+can't do - maybe advance the button highlighting color so it pulses pink and green while hovered, and blue when clicked
+  instead of using real animation maybe you could use a delayed 
+
+shimmer on Rockstar Developer text, test that or maybe wipe-across color change through my three colors
