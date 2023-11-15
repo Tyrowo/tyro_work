@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:rainbow_color/rainbow_color.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tyro_work/data/article_data.dart';
 import 'package:tyro_work/helper/project_banner.dart';
@@ -19,7 +20,8 @@ class Homescreen extends StatefulWidget {
   State<Homescreen> createState() => _HomescreenState();
 }
 
-class _HomescreenState extends State<Homescreen> {
+class _HomescreenState extends State<Homescreen>
+    with SingleTickerProviderStateMixin {
   int _background = 4;
   bool tyFontOff = false;
   bool darkMode = false;
@@ -29,6 +31,8 @@ class _HomescreenState extends State<Homescreen> {
   final scrollController = ScrollController();
   bool picOpacity = false;
   bool titleOpacity = false;
+  late AnimationController controller;
+  late Animation<Color> _colorAnim;
 
   void _randomizeBackground() {
     setState(() {
@@ -62,6 +66,29 @@ class _HomescreenState extends State<Homescreen> {
     checkPrefsLight();
     _randomizeBackground();
     fadeInMain();
+    controller = AnimationController(
+        duration: const Duration(milliseconds: 8069), vsync: this);
+    _colorAnim = RainbowColorTween([
+      const Color.fromRGBO(28, 146, 245, 1),
+      const Color.fromRGBO(251, 80, 201, 1),
+      const Color.fromRGBO(251, 80, 201, 1),
+      const Color.fromRGBO(7, 214, 105, 1),
+      const Color.fromRGBO(7, 214, 105, 1),
+      const Color.fromRGBO(28, 146, 245, 1),
+      const Color.fromRGBO(28, 146, 245, 1),
+    ]).animate(controller)
+      ..addListener(() {
+        setState(() {});
+      })
+      ..addStatusListener((status) {
+        if (status == AnimationStatus.completed) {
+          controller.reset();
+          controller.forward();
+        } else if (status == AnimationStatus.dismissed) {
+          controller.forward();
+        }
+      });
+    controller.forward();
   }
 
   @override
@@ -180,14 +207,15 @@ class _HomescreenState extends State<Homescreen> {
                             color: Theme.of(context).cardTheme.color,
                             child: Padding(
                               padding: EdgeInsets.all(
-                                max(1.0, deviceWidth(context) / 1080) * 10,
+                                max(0.69, deviceWidth(context) / 1080) * 10,
                               ),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(40.0),
                                 child: Image.asset(
                                   'assets/tyrowo.webp',
-                                  width: max(1.0, deviceWidth(context) / 1080) *
-                                      200,
+                                  width:
+                                      max(0.69, deviceWidth(context) / 1080) *
+                                          200,
                                 ),
                               ),
                             ),
@@ -207,11 +235,41 @@ class _HomescreenState extends State<Homescreen> {
                         Card(
                           child: Padding(
                               padding: const EdgeInsets.all(15.0),
-                              child: Text(
-                                "The Rockstar Developer you've been searching for.",
-                                style: Theme.of(context).textTheme.displaySmall,
-                                textScaleFactor:
-                                    ScaleSize.textScaleFactor(context),
+                              child: Row(
+                                children: [
+                                  Text(
+                                    "The ",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .displaySmall,
+                                    textScaleFactor:
+                                        ScaleSize.textScaleFactor(context),
+                                  ),
+                                  Text(
+                                    "Rockstar Developer",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .displaySmall!
+                                        .copyWith(
+                                            color: _colorAnim.value,
+                                            shadows: [
+                                          const Shadow(
+                                            blurRadius: 3.0,
+                                            color: Colors.black,
+                                          )
+                                        ]),
+                                    textScaleFactor:
+                                        ScaleSize.textScaleFactor(context),
+                                  ),
+                                  Text(
+                                    " you've been searching for.",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .displaySmall,
+                                    textScaleFactor:
+                                        ScaleSize.textScaleFactor(context),
+                                  ),
+                                ],
                               )),
                         ),
                         SizedBox(width: deviceWidth(context) * 0.05),

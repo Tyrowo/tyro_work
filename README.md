@@ -144,3 +144,4 @@ can't do - maybe advance the button highlighting color so it pulses pink and gre
   instead of using real animation maybe you could use a delayed 
 
 shimmer on Rockstar Developer text, test that or maybe wipe-across color change through my three colors
+  dang I really love this flickering effect - duration: const Duration(milliseconds: 80), vsync: this); but it's like illegal I don't want to give someone a seizure
