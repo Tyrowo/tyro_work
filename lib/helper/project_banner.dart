@@ -43,7 +43,7 @@ class _ProjectBannerState extends State<ProjectBanner> {
       },
       child: GestureDetector(
         onTap: () {
-          if (state == 'hovered') {
+          if (state == 'closed' || state == 'hovered') {
             setState(() {
               state = 'open';
               curHeight = deviceHeight(context) * 0.8;

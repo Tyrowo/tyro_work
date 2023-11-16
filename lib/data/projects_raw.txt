@@ -1,0 +1,138 @@
+Web 2.0 -
+
+[github repo link]
+
+When I decided that I would learn how to use Flutter, it was exciting to have a new framework under my belt that I could apply to updating my portfolio.
+Not that I wasn't ... proud of what I was able to accomplish with vanilla html+css+js, but the results also weren't anything I was very excited to show off, either. 😹
+
+Working with Flutter on a second project was an awesome experience, because I was able to pull in a lot of work that I had done on Equidistant, and had already researched some of the features I wanted to implement.
+It made development a breeze, and all in all it only took about two weeks (despite a concurrent stay in the hospital) to develop the page you're looking at now.
+I also felt like my coding through this project was more clean and organized, because I was more confident in how Flutter allows stateful widgets to be self contained into their own classes rather.
+
+Flutter is really a pleasure to work with, and I really enjoyed creating class based components that I could resuse throughout the page. 
+Customizing properties is a breeze, and simple ternaries were enough to create breakpoints to ensure responsive design on various device widths.
+
+However, Flutter Web has some notable drawbacks that I've discovered.
+The primary issue is that it's not compatible with webcrawlers, which heavily impairs its SEO potential and prevents pages from coming up on Google search results without any extra effort.
+I'm in the process of researching how I can correct this, but it being a hurdle at all is a major shortcoming for development.
+There are also some random issues with Flutter UI that I've noticed - it seems that Flutter is pretty Mac oriented. I say that because, as a Windows user, I noticed that you can't use the middle mouse button to click-scroll, and without a designated package (most of which are very poorly reviewed) there is no workaround for this.
+Finally, although I don't really mind the bootup time to run Flutter, and have found it to be pretty comparable to webtool created portfolio sites, it's a little excessive for a small page like mine.
+
+For these reasons this will probably be my final web-only Flutter project.
+No surprise, it's an app framework.
+However, I'm sure the experience with class based web development will be invaluable working with other frameworks in the future, and I'm very happy with the results.
+
+Speaking to the themes of this project, my biggest feedback with my last website design was that it was too loud.
+However, I loved the color scheme as accent colors for a more light/dark theme that wouldn't be as gaudy.
+I also to experiment with customization, allowing users to be able to toggle off my font if it wasn't readable enough for them, as well as toggle light/dark.
+
+In classic Tyler fashion I wanted to create a really personal feel to this website, and that's where the leopard print theme comes into play.
+With the rise of AI, I was impressed with image generation tools available for public use, and one thing that I've noticed in the commercial sector is that many leopard prints are excessively simplistic and unrealistic in design.
+They're too consistent in pattern, where real leopard print is a camoflauge of varied patterns across the head, back, sides of the cat.
+So what I wanted to accomplish was to create a more realistic leopard print pattern using Midjourney. I chose Midjourney in particular because they explicitly state that you own the rights to any images produced with the tool.
+To do that I tested the potential by using some publicly available images of snow leopards on the internet, but my issues with using these images were that they were poor models for the AI, they were low resolution, and ethically they weren't my images to use and base My designs off of.
+So on a trip to visit some friends in San Francisco, I took a trip to the zoo.
+It was my first opportunity to see a snow leopard in person, so I spent the day there trying to shoot pictures on my Pixel 4.
+What a journey that was. I navigated the public transit and arrived just past noon to an empty exhibit. But after a while of looking I discovered the cat asleep by the wall interior, barely visible.
+I snapped some pics of his back, but I knew they were barely useable.
+So I waited. I sat outside the snow leopard exhibit until 5 PM, patiently rationing my phone battery life to mitigate my boredom.
+Surely he would leave the interior area to use the bathroom or something? No.
+I learned from a zookeeper that the cat's name was Jimmy G, and at 5 PM when another zookeeper came to bring him his food Jimmy finally woke up.
+He ate his food, and began to do laps around his exhibit.
+I ran alongside him, furiously snapping as many pictures as I could in as many poses as I could, with a focus on trying to get a broad view of his side for an optimal look at the print on his side.
+I took pictures until my phone died, watched him until he finished his rounds, and he promptly went back to sleep.
+
+With those pictures I selected the cleanest I could find, cropped them to focus on the print, and used them as a model for Midjourney to base the results of my prompt on.
+Creating a smooth tiling image was difficult with an inconsistent design, but after generating a hundred images or so, I had 6 perfect images to use for this project.
+See, I didn't want just one tiled image. If you haven't noticed yet, I wanted to create a background that randomized every time you load this page.
+As modern web design moves towards simple plain backgrounds, I wanted mine to be a little more subtly dynamic and engaging to repeat visitors.
+I think the results speak for themselves. I find it very visually appealing, and found that it served as a great basis for the off-black and off-white color scheme. 
+[color palette references]
+
+So shouts out to my model and basis for this website, Jimmy G.
+Thanks for allowing me the opportunity to ethically source the images myself. 
+Hope you're doing well. 💕
+
+
+Web 1.0
+
+[pictures of old web page]
+
+When I started learning how to code I wasn't sure if I wanted to be more of a front end developer or back end developer.
+I decided to try out everything, and to do so I started learning how to code in Javascript.
+
+When I asked a friend whether I should learn a framework like React, he gave me the advice "sure, just don't start coding anything in react that you wouldn't know how to make in vanilla js."
+I may have gone a little overboard, because I decided to code a website as a little sandbox area to test javascript projects, and decided to do it in 100% vanilla html/css + js.
+The results were basic, and the project convinced me I would prefer to be more of a backend developer than a front end developer. 😹
+But it was nice to build something to start with, and learning the core design of css properties has made my life a lot easier working on other projects since.
+
+While it was a little basic, I put a lot of love into some of the components.
+In particular, I designed the notepad sheet sections to represent the piles of notebooks I had filled during my coding self-study over the previous months.
+
+My font I actually created prior to the website, it was a project where I wanted to use my actual handwriting as a font for use in documents.
+I created it with a web app called calligraphr, and went through tons of iterations creating variations of the lettering that would make it as natural looking as possible.
+My intent was to have it published as a Google Font, but unfortunately fonts created through Calligraphr are not supported because they don't have the component files.
+
+My intent is to one day return to this project, because I would love to have it publicly available and use it on my googledocs. 
+But it will require starting almost completely from scratch, so it's definitely on the backburner for now.
+
+However, it's still available as is for personal use, and I love that I can inscribe my actual handwriting onto the internet.
+Tyrowo Inked is available at [github]
+
+
+Procrastination Buster
+
+Published and publicly available [chrome store link]
+
+After publishing my website I wanted to create something that was more Javascript oriented.
+I had a personal need for a product - I was spending too much time on endless-content websites like reddit and twitch, and I wanted to manage my time more efficiently so I could focus on my studies.
+However, the built in website blocker in Chrome wasn't enough. I knew that if the website was Always blocked, then I would simply circumnavigate my own barriers by either using incognito mode or another browser.
+So I decided to design a sort of child-protection web blocker that allowed a trickle feed of content at a customizable rate.
+For example, once I completed the project I used it to allow myself a half hour of reddit every 24 hours.
+Since developing this Chrome extension there have been many more sophisticated tools that accomplish the same goal more effectively, but at the time I was working on this Chrome Manifest v3 had just come out.
+The new APIs and restrictions of Manifest v3 prevented a lot of extensions from working the way they had before, and so there weren't any extensions on the chrome store yet that accomplished what I needed.
+
+It was difficult working through the service worker based system that Manifest v3 implemented to create more permanent states in my Chrome extension, but working with the APIs and using the Chromium forums taught me a lot.
+Many others on the forums were working through the same newfound struggles with Manifest v3 that I was, and collaborating with them on solutions to our issues proved to be very satisfying.
+Furthermore, the work I had done on my website project made the UI implementation easy, so I could focus almost entirely on Javascript for this project.
+
+[github link]
+
+
+Equidistant
+
+Published and publically available on the [ios store], [play store], and [web].
+
+Following my work on the Procrastination Buster I was confident that my development skills had reached a point where I felt ready to apply for work.
+I was hired to Birlasoft Solutions Inc as a software developer, and for a year and a half I focused on improving my proficiency at Java so that I would be more successful professionally, and taking care of my physical health (primarily by going out and playing disc golf).
+But during that time I kept a list of ideas for projects I wanted to work on. I wanted to dip my toes into phone app development, because our phones are a constant tool we use in our lives, even moreso than computers for most.
+
+At Birlasoft we worked remote, but many of us were local to the area. So we had a tradition where we would meet up for lunch on Fridays to socialize a bit.
+However, I noticed that my coworker who was planning the lunches tended to pick restaurants that were extremely close to his house, and that often left me excluded. I was a little further from town, so while most people had a 5-15 minute drive to the restaurant, I would often have to drive 45 minutes, which meant usually I was unable to come.
+I thought "what if there were a way to pick out a nice restaurant somewhere where we could all meet?"
+
+Eventually I would revisit this idea, and found that although some web apps had a similar idea, they were always restricted to only two addresses.
+I found that it wasn't too hard to calculate a position using more addresses, and that it would be a more satisfying solution to my problem.
+On top of that I thought of another problem - what if the people didn't want to share their home addresses with each other?
+Coworkers, first dates, social clubs, ecommerce. There are many situations in which you need to meet up with people somewhere convenient, but can't expose yourself to some random person showing up at your house.
+
+So to address these issues I created Equidistant.
+
+Initially my plan was to learn Kotlin, but heard more and more about Flutter and loved the idea of releasing to multiple platforms. The write-once-run-anywhere design was very appealing, as was the fact that it is supported by Google.
+So I spent nearly two months watching through an intro-to-Flutter project creation video, and going through a video explaining ~215 widgets that might be useful to me.
+After doing all that this project was my first real hands-on experience with Flutter, and it was a real treat with all of the preperation I had done.
+
+After all my preperation, everything started clicking into place. I had to do some extra learning on how to implement Google Cloud APIs, as well as how to use Firebase database to effectively implement CRUD operations for the Privacy Mode of the app.
+My partner Jill was a huge help - she had completed a Google UX Design course, and used her knowledge to help consult with me on design decisions and make sure that the UX was intuitive.
+Since I felt confident in myself from my profession, I also brought on two of my friends who have been learning to code so that I could give them the chance to work with a group repository and broaden their experiences.
+I also felt like it was a great opportunity for me to learn how to delegate manageable project tasks, since I'm still one of the most junior developers on my team at work.
+
+As a retrospective for the project, I adore working with Flutter. 
+The syntax is very readable to me because it feels like a midway between my experiences with Java and Javascript. 
+Flutter's VSCode IDE implementation is exceptional, and the hot reload feature is stunning after my professional experiences with Java.
+Although some features need to be a little platform specific (I was coding for Android, but on iOS certain Google links did not work natively, and on Web I ran into issues with CORS preventing some of my Cloud API calls to Google Maps),
+overall there was minimal work to build to all three platforms. It almost feels like putting a cool Lego set together.
+
+I'm very happy to be an official developer on both the Play and App stores, and quite proud of this project.
+If you think it may be of use to you, please consider giving it a download!
+

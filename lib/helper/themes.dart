@@ -190,9 +190,9 @@ TextTheme tyTextTheme(Color color) {
     labelLarge: tyFont(18, color),
     labelMedium: tyFont(16, color),
     labelSmall: tyFont(15, color),
-    bodyLarge: tyFont(20, color, false),
-    bodyMedium: tyFont(18, color, false),
-    bodySmall: tyFont(16, color, false),
+    bodyLarge: tyFont(20, color),
+    bodyMedium: tyFont(18, color),
+    bodySmall: tyFont(16, color),
   );
 }
 

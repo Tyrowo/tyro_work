@@ -12,6 +12,13 @@ though i guess i'm being a little hypocritical because I don't want to learn how
 
 add stackoverflow profile to socials if I get enough karma that it's not just a fresh account
 
+should I make text selectable or no? - https://stackoverflow.com/questions/73057700/flutter-make-text-images-selectable-in-whole-web-app
+
+I don't think you can make the overlay button materialproperty alternate between two colors, but at least I got some stackoverflow karma - https://stackoverflow.com/questions/77467214/flutter-can-i-make-my-materialstatepropertycolor-alternate-between-colors-on
+maybe one day someone will respond a solution
+
+page transitions seem outside the scope of this project (mostly because it's primarily a one-page website), but page transitions might be neat especially to go to the resume page - https://api.flutter.dev/flutter/material/PageTransitionsTheme-class.html
+
 ## Deployment To-Do
 done - set up nameservers for webhosting
 
@@ -131,6 +138,10 @@ done - shimmer on Rockstar Developer text, test that or maybe wipe-across color 
   -- had to add shadow effect to text for visibility on light mode
 
 ## Phase 3 - Content
+
+do i put fittedbox or scrollbar into text fields?
+
+damn i really just can't figure this out. - set up scroll controllers so whenever you click on one of the fields it makes it the top of the screen. kind of annoyig to open the section below but whatever, passing the scrollbar around sucks. and I can't get it to find a position
 
 update resume
 make a link to my resume
