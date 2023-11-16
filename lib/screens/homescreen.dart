@@ -304,7 +304,7 @@ class _HomescreenState extends State<Homescreen>
                           const ProjectBanner(
                               largeBanner: 'assets/equidistant_1080x100.png',
                               smallBanner: 'assets/equidistant_700x50.png',
-                              description: Text('hi this is the description'),
+                              description: EquidistantProjectDescription(),
                               index: 0),
                           SizedBox(height: deviceHeight(context) * 0.03),
                           const ProjectBanner(
