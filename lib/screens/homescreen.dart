@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:rainbow_color/rainbow_color.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tyro_work/data/article_data.dart';
-import 'package:tyro_work/data/probuster_project_description.dart';
+import 'package:tyro_work/data/project_descriptions.dart';
 import 'package:tyro_work/helper/project_banner.dart';
 import 'package:tyro_work/helper/socials_button.dart';
 import 'package:tyro_work/helper/themes.dart';

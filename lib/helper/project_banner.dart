@@ -69,7 +69,7 @@ class _ProjectBannerState extends State<ProjectBanner> {
                 ? deviceWidth(context) < 1000
                     ? 50
                     : 150
-                : deviceHeight(context) * 0.8,
+                : deviceHeight(context) * 0.9,
             padding: state == 'closed'
                 ? EdgeInsets.fromLTRB(
                     deviceWidth(context) * 0.1,
@@ -98,7 +98,15 @@ class _ProjectBannerState extends State<ProjectBanner> {
                         ),
                       ),
                       Expanded(
-                        child: SingleChildScrollView(child: widget.description),
+                        child: Padding(
+                          padding: EdgeInsets.fromLTRB(
+                              deviceWidth(context) * 0.05,
+                              deviceHeight(context) * 0.025,
+                              deviceWidth(context) * 0.05,
+                              deviceHeight(context) * 0.025),
+                          child:
+                              SingleChildScrollView(child: widget.description),
+                        ),
                       ),
                     ],
                   )
