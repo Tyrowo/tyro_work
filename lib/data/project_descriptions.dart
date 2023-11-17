@@ -187,3 +187,177 @@ class EquidistantProjectDescription extends StatelessWidget {
     );
   }
 }
+
+class Web1Description extends StatelessWidget {
+  const Web1Description({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Wrap(
+          crossAxisAlignment: WrapCrossAlignment.center,
+          children: [
+            const Text('Published and available for free on the'),
+            TextButton(
+              onPressed: () async {
+                final Uri url = Uri.parse(
+                    'https://apps.apple.com/us/app/equidistant/id6470894389?platform=iphone%E2%80%A6');
+                if (!await launchUrl(url)) {
+                  throw Exception('Could not launch $url');
+                }
+              },
+              child: const Text(
+                'iOS App Store,',
+              ),
+            ),
+            const Text('the'),
+            TextButton(
+              onPressed: () async {
+                final Uri url = Uri.parse(
+                    'https://play.google.com/store/apps/details?id=com.equidistant');
+                if (!await launchUrl(url)) {
+                  throw Exception('Could not launch $url');
+                }
+              },
+              child: const Text(
+                'Google Play Store,',
+              ),
+            ),
+            const Text('and'),
+            TextButton(
+              onPressed: () async {
+                final Uri url = Uri.parse('https://equidistant.app');
+                if (!await launchUrl(url)) {
+                  throw Exception('Could not launch $url');
+                }
+              },
+              child: const Text(
+                'on the Web.',
+              ),
+            ),
+          ],
+        ),
+        const Text(''),
+        const Text(
+            "When I started learning how to code I wasn't sure if I wanted to be more of a front end developer or back end developer."),
+        const Text(
+            "I decided to try out everything, and to do so I started learning how to code in Javascript."),
+        const Text(
+            'When I asked a friend whether I should learn a framework like React, he gave me the advice "sure, just don\'t start coding anything in react that you wouldn\'t know how to make in vanilla js."'),
+        const Text(
+            "I may have gone a little overboard, because I decided to code a website as a little sandbox area to test javascript projects, and decided to do it in 100% vanilla html/css + js."),
+        const Text(
+            "The results were basic, and the project convinced me I would prefer to be more of a backend developer than a front end developer. 😹"),
+        const Text(
+            "But it was nice to build something to start with, and learning the core design of css properties has made my life a lot easier working on other projects since."),
+        const Text(''),
+        const Text(
+            "While it was a little basic, I put a lot of love into some of the components."),
+        const Text(
+            "In particular, I designed the notepad sheet sections to represent the piles of notebooks I had filled during my coding self-study over the previous months."),
+        const Text(''),
+        const Text(
+            "My font I actually created prior to the website, it was a project where I wanted to use my actual handwriting as a font for use in documents."),
+        const Text(
+            "I created it with a web app called calligraphr, and went through tons of iterations creating variations of the lettering that would make it as natural looking as possible."),
+        const Text(
+            "My intent was to have it published as a Google Font, but unfortunately fonts created through Calligraphr are not supported because they don't have the component files."),
+        const Text(''),
+        const Text(
+            "My intent is to one day return to this project, because I would love to have it publicly available and use it on my googledocs. "),
+        const Text(
+            "But it will require starting almost completely from scratch, so it's definitely on the backburner for now."),
+        const Text(''),
+        const Text(
+            "However, it's still available as is for personal use, and I love that I can inscribe my actual handwriting onto the internet."),
+        const Text(''),
+        const Wrap(
+          children: [
+            Text('Tyrowo Inked is available at'),
+            ElevatedButton(
+              onPressed: null,
+              child: Text(
+                'Github Repository',
+                style: TextStyle(color: Colors.grey),
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+class Web2Description extends StatelessWidget {
+  const Web2Description({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    // need device width and height in these to change pic size
+    double deviceWidth(BuildContext context) =>
+        MediaQuery.of(context).size.width;
+    double deviceHeight(BuildContext context) =>
+        MediaQuery.of(context).size.height;
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Wrap(
+          crossAxisAlignment: WrapCrossAlignment.center,
+          children: [
+            const Text('Published and available for free on the'),
+            TextButton(
+              onPressed: () async {
+                final Uri url = Uri.parse(
+                    'https://apps.apple.com/us/app/equidistant/id6470894389?platform=iphone%E2%80%A6');
+                if (!await launchUrl(url)) {
+                  throw Exception('Could not launch $url');
+                }
+              },
+              child: const Text(
+                'iOS App Store,',
+              ),
+            ),
+            const Text('the'),
+            TextButton(
+              onPressed: () async {
+                final Uri url = Uri.parse(
+                    'https://play.google.com/store/apps/details?id=com.equidistant');
+                if (!await launchUrl(url)) {
+                  throw Exception('Could not launch $url');
+                }
+              },
+              child: const Text(
+                'Google Play Store,',
+              ),
+            ),
+            const Text('and'),
+            TextButton(
+              onPressed: () async {
+                final Uri url = Uri.parse('https://equidistant.app');
+                if (!await launchUrl(url)) {
+                  throw Exception('Could not launch $url');
+                }
+              },
+              child: const Text(
+                'on the Web.',
+              ),
+            ),
+          ],
+        ),
+        const Text(''),
+        const Text(''),
+        const ElevatedButton(
+          onPressed: null,
+          child: Text(
+            'Github Repository',
+            style: TextStyle(color: Colors.grey),
+          ),
+        ),
+      ],
+    );
+  }
+}

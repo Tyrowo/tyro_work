@@ -316,7 +316,7 @@ class _HomescreenState extends State<Homescreen>
                           const ProjectBanner(
                               largeBanner: 'assets/web1_1080x100.png',
                               smallBanner: 'assets/web1_700x50.png',
-                              description: Text('hi this is the description'),
+                              description: Web1Description(),
                               index: 0),
                           SizedBox(height: deviceHeight(context) * 0.03),
                           const ProjectBanner(

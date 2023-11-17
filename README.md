@@ -151,6 +151,8 @@ fill the descriptions of the projects
 project articles {
 procrastination buster - https://chrome.google.com/webstore/detail/tyrowos-procrastination-b/ecdedcllldeigficjfdbjgepojogaepe?hl=en-GB
 
+make pictures zoomable on tap, so that it pops out to like an alert when you click on it
+
 website 2.0 thoughts - talk about leopard, talk about flutter limitations (seo, no middle mouse button clickscrolling)
 }
 
