@@ -193,54 +193,14 @@ class Web1Description extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double deviceWidth(BuildContext context) =>
+        MediaQuery.of(context).size.width;
+    double deviceHeight(BuildContext context) =>
+        MediaQuery.of(context).size.height;
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Wrap(
-          crossAxisAlignment: WrapCrossAlignment.center,
-          children: [
-            const Text('Published and available for free on the'),
-            TextButton(
-              onPressed: () async {
-                final Uri url = Uri.parse(
-                    'https://apps.apple.com/us/app/equidistant/id6470894389?platform=iphone%E2%80%A6');
-                if (!await launchUrl(url)) {
-                  throw Exception('Could not launch $url');
-                }
-              },
-              child: const Text(
-                'iOS App Store,',
-              ),
-            ),
-            const Text('the'),
-            TextButton(
-              onPressed: () async {
-                final Uri url = Uri.parse(
-                    'https://play.google.com/store/apps/details?id=com.equidistant');
-                if (!await launchUrl(url)) {
-                  throw Exception('Could not launch $url');
-                }
-              },
-              child: const Text(
-                'Google Play Store,',
-              ),
-            ),
-            const Text('and'),
-            TextButton(
-              onPressed: () async {
-                final Uri url = Uri.parse('https://equidistant.app');
-                if (!await launchUrl(url)) {
-                  throw Exception('Could not launch $url');
-                }
-              },
-              child: const Text(
-                'on the Web.',
-              ),
-            ),
-          ],
-        ),
-        const Text(''),
         const Text(
             "When I started learning how to code I wasn't sure if I wanted to be more of a front end developer or back end developer."),
         const Text(
@@ -274,14 +234,36 @@ class Web1Description extends StatelessWidget {
         const Text(
             "However, it's still available as is for personal use, and I love that I can inscribe my actual handwriting onto the internet."),
         const Text(''),
-        const Wrap(
+        Wrap(
           children: [
-            Text('Tyrowo Inked is available at'),
+            const Text('Tyrowo Inked font '),
             ElevatedButton(
-              onPressed: null,
-              child: Text(
+              onPressed: () async {
+                final Uri url =
+                    Uri.parse('https://github.com/Tyrowo/TyrowoInked');
+                if (!await launchUrl(url)) {
+                  throw Exception('Could not launch $url');
+                }
+              },
+              child: const Text(
                 'Github Repository',
-                style: TextStyle(color: Colors.grey),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 10),
+        Wrap(
+          children: [
+            const Text('Website 1.0 '),
+            ElevatedButton(
+              onPressed: () async {
+                final Uri url = Uri.parse('https://github.com/Tyrowo/website');
+                if (!await launchUrl(url)) {
+                  throw Exception('Could not launch $url');
+                }
+              },
+              child: const Text(
+                'Github Repository',
               ),
             ),
           ],
@@ -305,56 +287,104 @@ class Web2Description extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Wrap(
-          crossAxisAlignment: WrapCrossAlignment.center,
-          children: [
-            const Text('Published and available for free on the'),
-            TextButton(
-              onPressed: () async {
-                final Uri url = Uri.parse(
-                    'https://apps.apple.com/us/app/equidistant/id6470894389?platform=iphone%E2%80%A6');
-                if (!await launchUrl(url)) {
-                  throw Exception('Could not launch $url');
-                }
-              },
-              child: const Text(
-                'iOS App Store,',
-              ),
-            ),
-            const Text('the'),
-            TextButton(
-              onPressed: () async {
-                final Uri url = Uri.parse(
-                    'https://play.google.com/store/apps/details?id=com.equidistant');
-                if (!await launchUrl(url)) {
-                  throw Exception('Could not launch $url');
-                }
-              },
-              child: const Text(
-                'Google Play Store,',
-              ),
-            ),
-            const Text('and'),
-            TextButton(
-              onPressed: () async {
-                final Uri url = Uri.parse('https://equidistant.app');
-                if (!await launchUrl(url)) {
-                  throw Exception('Could not launch $url');
-                }
-              },
-              child: const Text(
-                'on the Web.',
-              ),
-            ),
-          ],
-        ),
+        const Text(
+            "When I decided that I would learn how to use Flutter, it was exciting to have a new framework under my belt that I could apply to updating my portfolio."),
+        const Text(
+            "Not that I wasn't ... proud of what I was able to accomplish with vanilla html+css+js, but the results also weren't anything I was very excited to show off, either. 😹"),
         const Text(''),
+        const Text(
+            "Working with Flutter on a second project was an awesome experience, because I was able to pull in a lot of work that I had done on Equidistant, and had already researched some of the features I wanted to implement."),
+        const Text(
+            "It made development a breeze, and all in all it only took about two weeks (despite a concurrent stay in the hospital) to develop the page you're looking at now."),
+        const Text(
+            "I also felt like my coding through this project was more clean and organized, because I was more confident in how Flutter allows stateful widgets to be self contained into their own classes rather."),
         const Text(''),
-        const ElevatedButton(
-          onPressed: null,
-          child: Text(
+        const Text(
+            "Flutter is really a pleasure to work with, and I really enjoyed creating class based components that I could resuse throughout the page. "),
+        const Text(
+            "Customizing properties is a breeze, and simple ternaries were enough to create breakpoints to ensure responsive design on various device widths."),
+        const Text(''),
+        const Text(
+            "However, Flutter Web has some notable drawbacks that I've discovered."),
+        const Text(
+            "The primary issue is that it's not compatible with webcrawlers, which heavily impairs its SEO potential and prevents pages from coming up on Google search results without any extra effort."),
+        const Text(
+            "I'm in the process of researching how I can correct this, but it being a hurdle at all is a major shortcoming for development."),
+        const Text(
+            "There are also some random issues with Flutter UI that I've noticed - it seems that Flutter is pretty Mac oriented. I say that because, as a Windows user, I noticed that you can't use the middle mouse button to click-scroll, and without a designated package (most of which are very poorly reviewed) there is no workaround for this."),
+        const Text(
+            "Finally, although I don't really mind the bootup time to run Flutter, and have found it to be pretty comparable to webtool created portfolio sites, it's a little excessive for a small page like mine."),
+        const Text(''),
+        const Text(
+            "For these reasons this will probably be my final web-only Flutter project."),
+        const Text("No surprise, it's an app framework."),
+        const Text(
+            "However, I'm sure the experience with class based web development will be invaluable working with other frameworks in the future, and I'm very happy with the results."),
+        const Text(''),
+        const Text(
+            "Speaking to the themes of this project, my biggest feedback with my last website design was that it was too loud."),
+        const Text(
+            "However, I loved the color scheme as accent colors for a more light/dark theme that wouldn't be as gaudy."),
+        const Text(
+            "I also to experiment with customization, allowing users to be able to toggle off my font if it wasn't readable enough for them, as well as toggle light/dark."),
+        const Text(''),
+        const Text(
+            "In classic Tyler fashion I wanted to create a really personal feel to this website, and that's where the leopard print theme comes into play."),
+        const Text(
+            "With the rise of AI, I was impressed with image generation tools available for public use, and one thing that I've noticed in the commercial sector is that many leopard prints are excessively simplistic and unrealistic in design."),
+        const Text(
+            "They're too consistent in pattern, where real leopard print is a camoflauge of varied patterns across the head, back, sides of the cat."),
+        const Text(
+            "So what I wanted to accomplish was to create a more realistic leopard print pattern using Midjourney. I chose Midjourney in particular because they explicitly state that you own the rights to any images produced with the tool."),
+        const Text(
+            "To do that I tested the potential by using some publicly available images of snow leopards on the internet, but my issues with using these images were that they were poor models for the AI, they were low resolution, and ethically they weren't my images to use and base My designs off of."),
+        const Text(
+            "So on a trip to visit some friends in San Francisco, I took a trip to the zoo."),
+        const Text(
+            "It was my first opportunity to see a snow leopard in person, so I spent the day there trying to shoot pictures on my Pixel 4."),
+        const Text(
+            "What a journey that was. I navigated the public transit and arrived just past noon to an empty exhibit. But after a while of looking I discovered the cat asleep by the wall interior, barely visible."),
+        const Text(
+            "I snapped some pics of his back, but I knew they were barely useable."),
+        const Text(
+            "So I waited. I sat outside the snow leopard exhibit until 5 PM, patiently rationing my phone battery life to mitigate my boredom."),
+        const Text(
+            "Surely he would leave the interior area to use the bathroom or something? No."),
+        const Text(
+            "I learned from a zookeeper that the cat's name was Jimmy G, and at 5 PM when another zookeeper came to bring him his food Jimmy finally woke up."),
+        const Text("He ate his food, and began to do laps around his exhibit."),
+        const Text(
+            "I ran alongside him, furiously snapping as many pictures as I could in as many poses as I could, with a focus on trying to get a broad view of his side for an optimal look at the print on his side."),
+        const Text(
+            "I took pictures until my phone died, watched him until he finished his rounds, and he promptly went back to sleep."),
+        const Text(''),
+        const Text(
+            "With those pictures I selected the cleanest I could find, cropped them to focus on the print, and used them as a model for Midjourney to base the results of my prompt on."),
+        const Text(
+            "Creating a smooth tiling image was difficult with an inconsistent design, but after generating a hundred images or so, I had 6 perfect images to use for this project."),
+        const Text(
+            "See, I didn't want just one tiled image. If you haven't noticed yet, I wanted to create a background that randomized every time you load this page."),
+        const Text(
+            "As modern web design moves towards simple plain backgrounds, I wanted mine to be a little more subtly dynamic and engaging to repeat visitors."),
+        const Text(
+            "I think the results speak for themselves. I find it very visually appealing, and found that it served as a great basis for the off-black and off-white color scheme. "),
+// [color palette references]
+        const Text(''),
+        const Text(
+            "So shouts out to my model and basis for this website, Jimmy G."),
+        const Text(
+            "Thanks for allowing me the opportunity to ethically source the images myself. "),
+        const Text("Hope you're doing well. 💕"),
+        const Text(''),
+        ElevatedButton(
+          onPressed: () async {
+            final Uri url = Uri.parse('https://github.com/Tyrowo/tyro_work');
+            if (!await launchUrl(url)) {
+              throw Exception('Could not launch $url');
+            }
+          },
+          child: const Text(
             'Github Repository',
-            style: TextStyle(color: Colors.grey),
           ),
         ),
       ],

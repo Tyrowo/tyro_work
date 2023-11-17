@@ -153,6 +153,8 @@ procrastination buster - https://chrome.google.com/webstore/detail/tyrowos-procr
 
 make pictures zoomable on tap, so that it pops out to like an alert when you click on it
 
+get the right github links set on the project descriptions
+
 website 2.0 thoughts - talk about leopard, talk about flutter limitations (seo, no middle mouse button clickscrolling)
 }
 
