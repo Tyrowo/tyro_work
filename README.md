@@ -150,13 +150,12 @@ done - project articles {
 }
 done - get the right github links set on the project descriptions
 
-do i put fittedbox or scrollbar into text fields?
-
 done - update resume
-get resume peer revised and edited
-make a link to my resume
--- can your resume just take up a whole screen? with a download and share link? ooh that'd be tight
+done - get resume peer revised and edited
+done - make a link to my resume
+just linking directly -- can your resume just take up a whole screen? with a download and share link? ooh that'd be tight
 
+do i put fittedbox or scrollbar into text fields?
 
 add pictures to project descriptions
 make pictures responsive

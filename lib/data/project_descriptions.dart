@@ -293,7 +293,7 @@ class Web2Description extends StatelessWidget {
             "Not that I wasn't ... proud of what I was able to accomplish with vanilla html+css+js, but the results also weren't anything I was very excited to show off, either. 😹"),
         const Text(''),
         const Text(
-            "Working with Flutter on a second project was an awesome experience, because I was able to pull in a lot of work that I had done on Equidistant, and had already researched some of the features I wanted to implement."),
+            "Working with Flutter on a second project was an awesome experience, because I was able to pull in a lot of work that I had done on Equidistant, I had researched some of the features I wanted to implement, and I already knew how to deploy my code to web."),
         const Text(
             "It made development a breeze, and all in all it only took about two weeks (despite a concurrent stay in the hospital) to develop the page you're looking at now."),
         const Text(
