@@ -157,6 +157,8 @@ just linking directly -- can your resume just take up a whole screen? with a dow
 
 do i put fittedbox or scrollbar into text fields?
 
+add dates to project descriptions
+
 add pictures to project descriptions
 make pictures responsive
 make pictures zoomable on tap, so that it pops out to like an alert when you click on it

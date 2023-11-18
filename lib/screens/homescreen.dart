@@ -123,8 +123,7 @@ class _HomescreenState extends State<Homescreen>
               const SizedBox(width: 10),
               ElevatedButton(
                   onPressed: () async {
-                    final Uri url =
-                        Uri.parse('https://tyro.work/crewsresume.pdf');
+                    final Uri url = Uri.parse('https://tyro.work/resume');
                     if (!await launchUrl(url)) {
                       throw Exception('Could not launch $url');
                     }
