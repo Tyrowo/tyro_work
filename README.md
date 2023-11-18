@@ -19,6 +19,8 @@ maybe one day someone will respond a solution
 
 page transitions seem outside the scope of this project (mostly because it's primarily a one-page website), but page transitions might be neat especially to go to the resume page - https://api.flutter.dev/flutter/material/PageTransitionsTheme-class.html
 
+think pieces - grill guide algorithm lol - definitely not for now but maybe one day
+
 ## Deployment To-Do
 done - set up nameservers for webhosting
 
@@ -139,26 +141,30 @@ done - shimmer on Rockstar Developer text, test that or maybe wipe-across color 
 
 ## Phase 3 - Content
 
+damn i really just can't figure this out. - set up scroll controllers so whenever you click on one of the fields it makes it the top of the screen. kind of annoyig to open the section below but whatever, passing the scrollbar around sucks. and I can't get it to find a position
+done - -- will need to figure out how to set the texttheme for the article since it's a widget that can't access the context currently -- just passed the context into the description widget
+done - fill the descriptions of the projects
+done - project articles {
+  procrastination buster - https://chrome.google.com/webstore/detail/tyrowos-procrastination-b/ecdedcllldeigficjfdbjgepojogaepe?hl=en-GB
+  website 2.0 thoughts - talk about leopard, talk about flutter limitations (seo, no middle mouse button clickscrolling)
+}
+done - get the right github links set on the project descriptions
+
 do i put fittedbox or scrollbar into text fields?
 
-damn i really just can't figure this out. - set up scroll controllers so whenever you click on one of the fields it makes it the top of the screen. kind of annoyig to open the section below but whatever, passing the scrollbar around sucks. and I can't get it to find a position
-
-update resume
+done - update resume
+get resume peer revised and edited
 make a link to my resume
 -- can your resume just take up a whole screen? with a download and share link? ooh that'd be tight
 
-fill the descriptions of the projects
-project articles {
-procrastination buster - https://chrome.google.com/webstore/detail/tyrowos-procrastination-b/ecdedcllldeigficjfdbjgepojogaepe?hl=en-GB
 
+add pictures to project descriptions
+make pictures responsive
 make pictures zoomable on tap, so that it pops out to like an alert when you click on it
+ -- https://api.flutter.dev/flutter/widgets/InteractiveViewer-class.html
+ -- https://stackoverflow.com/questions/43651708/how-do-i-pan-and-zoom-an-image
 
-get the right github links set on the project descriptions
-
-website 2.0 thoughts - talk about leopard, talk about flutter limitations (seo, no middle mouse button clickscrolling)
-}
+go through revisions of project descriptions, making cuts to length where possible.
 
 think pieces - work more on magic time complexity
-think pieces - grill guide algorithm lol - definitely not for now but maybe one day
 think pieces - A Year of Leetcode
--- will need to figure out how to set the texttheme for the article since it's a widget that can't access the context currently

@@ -298,6 +298,8 @@ class Web2Description extends StatelessWidget {
             "It made development a breeze, and all in all it only took about two weeks (despite a concurrent stay in the hospital) to develop the page you're looking at now."),
         const Text(
             "I also felt like my coding through this project was more clean and organized, because I was more confident in how Flutter allows stateful widgets to be self contained into their own classes rather."),
+        const Text(
+            "I did add a sort of handicap though - I wanted to work with as much ootb content as possible, and minimize the use of packages sourced from pub.dev. That way I could rely on my own widget composition skills a little more."),
         const Text(''),
         const Text(
             "Flutter is really a pleasure to work with, and I really enjoyed creating class based components that I could resuse throughout the page. "),
