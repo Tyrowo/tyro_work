@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:rainbow_color/rainbow_color.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:tyro_work/data/article_data.dart';
+import 'package:tyro_work/data/think_pieces.dart';
 import 'package:tyro_work/data/project_descriptions.dart';
 import 'package:tyro_work/helper/project_banner.dart';
 import 'package:tyro_work/helper/socials_button.dart';
@@ -361,7 +361,14 @@ class _HomescreenState extends State<Homescreen>
                               height: deviceHeight(context) * 0.03,
                             ),
                             ThoughtPieces(
-                                previewText: tedhPreview, article: tedhArticle)
+                                previewText: tedhPreview,
+                                article: const TEDHPiece()),
+                            SizedBox(
+                              height: deviceHeight(context) * 0.03,
+                            ),
+                            ThoughtPieces(
+                                previewText: leetCodePreview,
+                                article: const LeetCodePiece()),
                           ],
                         ),
                       ),

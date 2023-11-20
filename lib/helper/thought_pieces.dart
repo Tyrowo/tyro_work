@@ -50,7 +50,7 @@ class _ThoughtPiecesState extends State<ThoughtPieces> {
       },
       child: GestureDetector(
         onTap: () {
-          if (curHeight == 225.0 && curWidth == 425.0) {
+          if (!selected) {
             setState(() {
               curHeight = deviceHeight(context) * 0.95;
               curWidth = deviceWidth(context) * 0.95;
