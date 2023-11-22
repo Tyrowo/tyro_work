@@ -155,20 +155,19 @@ done - get resume peer revised and edited
 done - make a link to my resume
 just linking directly -- can your resume just take up a whole screen? with a download and share link? ooh that'd be tight
 
-do i put fittedbox or scrollbar into text fields?
+looks fine - do i put fittedbox or scrollbar into text fields?
+nah - add dates to project descriptions
+done - think pieces - work more on magic time complexity
+done - think pieces - A Year of Leetcode
 
-add dates to project descriptions
 
-add pictures to project descriptions
+add pictures to project descriptions and articles
 make pictures responsive
 make pictures zoomable on tap, so that it pops out to like an alert when you click on it
  -- https://api.flutter.dev/flutter/widgets/InteractiveViewer-class.html
  -- https://stackoverflow.com/questions/43651708/how-do-i-pan-and-zoom-an-image
 
-go through revisions of project descriptions, making cuts to length where possible.
-
-think pieces - work more on magic time complexity
-think pieces - A Year of Leetcode
+go through revisions of project descriptions and articles, making cuts to length where possible.
 
 write a plain html page for the tEDH rules to link publicly on reddit and stuff
 do a better job in the magic article of conveying the subsequent permutations of planning your turn, so that you know whether you'll have the right land drops in the future. That way it's more accurate to be logarithmically reduced.

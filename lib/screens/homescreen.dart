@@ -3,12 +3,12 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:rainbow_color/rainbow_color.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:tyro_work/data/think_pieces.dart';
+import 'package:tyro_work/data/think_piece_articles.dart';
 import 'package:tyro_work/data/project_descriptions.dart';
 import 'package:tyro_work/helper/project_banner.dart';
 import 'package:tyro_work/helper/socials_button.dart';
 import 'package:tyro_work/helper/themes.dart';
-import 'package:tyro_work/helper/thought_pieces.dart';
+import 'package:tyro_work/helper/think_pieces.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Homescreen extends StatefulWidget {
@@ -360,15 +360,30 @@ class _HomescreenState extends State<Homescreen>
                             SizedBox(
                               height: deviceHeight(context) * 0.03,
                             ),
-                            ThoughtPieces(
-                                previewText: tedhPreview,
-                                article: const TEDHPiece()),
-                            SizedBox(
-                              height: deviceHeight(context) * 0.03,
+                            Wrap(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(
+                                      deviceWidth(context) * 0.015,
+                                      deviceHeight(context) * 0.015,
+                                      deviceWidth(context) * 0.015,
+                                      deviceHeight(context) * 0.015),
+                                  child: ThoughtPieces(
+                                      previewText: tedhPreview,
+                                      article: const TEDHPiece()),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(
+                                      deviceWidth(context) * 0.015,
+                                      deviceHeight(context) * 0.015,
+                                      deviceWidth(context) * 0.015,
+                                      deviceHeight(context) * 0.015),
+                                  child: ThoughtPieces(
+                                      previewText: leetCodePreview,
+                                      article: const LeetCodePiece()),
+                                ),
+                              ],
                             ),
-                            ThoughtPieces(
-                                previewText: leetCodePreview,
-                                article: const LeetCodePiece()),
                           ],
                         ),
                       ),

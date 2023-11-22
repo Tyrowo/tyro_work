@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 String tedhPreview =
-    'TEDH: \nRefactoring the rules of Magic: The Gathering to improve time complexity for the casual participant.';
+    'tEDH\nRefactoring the rules of Magic: The Gathering to improve time complexity for the casual participant.';
 
-String leetCodePreview = 'My year of LeetCode Every Day in review.';
+String leetCodePreview =
+    'LeetCode Every Day\nA reflection on the results of my 2023 New Year\'s resolution.';
 
 // Year of Leetcode
 class LeetCodePiece extends StatelessWidget {
@@ -109,13 +111,11 @@ class TEDHPiece extends StatelessWidget {
             "Inconsistent and dramatic swings in power based off a lucky ramp draw in the first two turns of the game."),
         const Text(
             "Polarized matches when a player misses a land drop, and the unsettling feeling of watching a person waste upwards of 45 minutes playing from behind in a group environment and/or getting knocked out early."),
-
         const Text(''),
         const Text(
             "These aren't issues unique to EDH, it's part of Magic's core ruleset."),
         const Text(
             "But I'm not trying to play competitive Magic, I want a game that's fun for my table and easier to pick up for newcomers."),
-
         const Text(''),
         const Text(
             "I was thinking about the rate of play issues from a programming viewpoint, and wanted to break it down in terms of its time complexity."),
@@ -133,7 +133,6 @@ class TEDHPiece extends StatelessWidget {
             "S is shuffling time, the amount of time it takes you to shuffle your remaining deck."),
         const Text(
             "E is execution time, the amount of time it takes you to actually play out your turn."),
-
         const Text(''),
         const Text("Preparation Time - Multithreading vs Turning in sequence."),
         const Text(
@@ -141,7 +140,9 @@ class TEDHPiece extends StatelessWidget {
         const Text(
             "Not everyone is a pro player and able to perfectly navigate the nigh infinite amount of sequences that can occur, but the two main cases All players need to consider is what they'll be doing if they hit their land drop, and what they're doing if they don't hit their land drop."),
         const Text(
-            "Unfortunately, this determination is revealed at the beginning of your next turn, and there's no way you can casually check the top card of your library to see what it will be, because it will determine your play on other players' turns."),
+            "What's more is it doesn't stop at your next turn. To make the correct play for this current turn, more skilled players will be planning for future turns so that they are making the correct move now."),
+        const Text(
+            "Unfortunately, regardless of skill level or how far down the road you're considering, this determination is revealed at the beginning of your next turn, and there's no way you can casually check the top card of your library to see what it will be, because it will determine your play on other players' turns."),
         const Text(
             "This requires turns to be planned out in sequence, which wastes all of the time that planning could be occuring on other players' turns."),
         const Text(
@@ -150,7 +151,6 @@ class TEDHPiece extends StatelessWidget {
             "Moreover, with consistent land drops all players should be able to accomplish multithreading in their turns."),
         const Text(
             "Having the ability to more accurately plan what you will be doing during your turn is paramount to creating good flow in a game of Magic, and is paramount to everyone enjoying themselves."),
-
         const Text(''),
         const Text("Reading Comprehension"),
         const Text(
@@ -173,7 +173,6 @@ class TEDHPiece extends StatelessWidget {
             "However, impromptu creation of tokens can dramatically increase the Execution time and stall play."),
         const Text(
             "For this reason it's vital to not only encourage, but require all the tokens that players create to be represented, and be prepared before the game in order to reduce the reading complexity of the board state."),
-
         const Text(''),
         const Text("Searching"),
         const Text(
@@ -187,7 +186,6 @@ class TEDHPiece extends StatelessWidget {
             'In lieu of "tutoring" (searching through the deck), I also wanted to enable Wishing instead. Wishing pulls a specific card from a smaller side pool of cards that do not need to be shuffled.'),
         const Text(
             "It's a little strange that EDH doesn't allow a sideboard in the first place, so I included 9 slots for a wishboard for every deck. Searching a deck of 9 presorted cards is a constant time function and can be ignored for time complexity."),
-
         const Text(''),
         const Text(
             "Thusly, I have created a ruleset that I feel solves these main issues with EDH that I've laid out."),
@@ -195,14 +193,14 @@ class TEDHPiece extends StatelessWidget {
         const Text("Required tokens."),
         const Text("Guaranteed land drops."),
         const Text(
-            "With these principles I've created a ruleset that reduces the time complexity down to O((R - A) + log(P)** + E)"),
+            "With these principles I've created a ruleset that reduces the time complexity down to"),
+        const Text("O((R - A) + log(P)** + E)"),
         const Text(
             "where Reading time is reduced by A, the amount of time that it takes to ask what something is or does or how it works."),
         const Text(
-            "Prep time is logarithmically reduced, and (**) is multithreading enabled (as multithreading does not decrease time complexity, but improves execution time of a function),"),
+            "Prep time is logarithmically reduced because you no longer have to consider binary options (of making land drops or not making land drops) on the current and all future turns, and is also multithreading enabled(**). (Asterisked because multithreading does not decrease time complexity, but improves execution time of the function.)"),
         const Text(
-            "and all this allows you to focus on E - Executing your gameplan."),
-
+            "All this allows you to focus on E - Executing your gameplan."),
         const Text(''),
         const Text(
             "I did make one more rule change that was unrelated to the time complexity thought project, and it is a pretty radical take on the fundamental commander design."),
@@ -219,7 +217,6 @@ class TEDHPiece extends StatelessWidget {
         const Text('I call it your "Signature Spell."'),
         const Text(
             "It may prove to be too powerful a change, but for now I'm excited to see what kind of wacky decks it can bring to the table."),
-
         const Text(''),
         const Text("I've started playing this ruleset with my friend group."),
         const Text(
@@ -230,19 +227,16 @@ class TEDHPiece extends StatelessWidget {
             "Even creating a token deck has been a really novel deckbuilding problem to work around, and has changed the way I look at a lot of high powered cards."),
         const Text(
             "If you give it a shot, I really hope you and your friends have as great a time as we have."),
-
         const Text(''),
         const Text(
             "All that being said, here are the rules to tEDH, in case you want to try it out yourself!"),
-
         const Text(''),
         const Text("tEDH decks must be composed of the following 100 cards:"),
         const Text("20 lands"),
         const Text("50 cards"),
-        const Text("1 signature spell (traditionally known as your commander)"),
+        const Text("1 signature spell"),
         const Text("9 wishboard cards"),
         const Text("20 tokens and emblems"),
-
         const Text(''),
         const Text("Rules:"),
         const Text("1. Drawing"),
@@ -258,7 +252,6 @@ class TEDHPiece extends StatelessWidget {
             '1e. When deciding whether to draw/effect the top card of your library, you must announce if you\'re choosing from "main"/"M" or "land"/L for each. When deciding on multiple cards you may choose to shortcut and announce them all at once (ex starting hand - 3 lands, 4 main), or you may announce one at a time as you draw/remove cards (ex M, L, M, M, L, L, 1M)'),
         const Text(
             "1f. if a card's effect would cause exiling from opponents libraries (eg Ragavan) - the person in control of the effect chooses the deck it takes from, unless there were already cards designated as the top of the library"),
-
         const Text(''),
         const Text("2. Searching"),
         const Text(
@@ -267,7 +260,6 @@ class TEDHPiece extends StatelessWidget {
             "2b. However, if an effect an opponent controls would cause you to search your library, you may do so. (e.g. if a card would destroy a land you control and allow you to search your library for a basic land to replace it)"),
         const Text(
             "2c. If a card would allow all players to search their libraries for a card, then the opponents of the card's controller may search, but the player who played the card cannot."),
-
         const Text(''),
         const Text("3. Tokens"),
         const Text(
@@ -286,7 +278,6 @@ class TEDHPiece extends StatelessWidget {
             "3g. Copy tokens - any card that would create a copy must be assigned a Copy token from the token deck. If the copies will survive past the end of the turn (i.e. when they do not have sacrifice at end of combat triggers like myriad and similar abilities) it is encouraged to bring some kind of paper to write and mark what the copies are representing. Because copy tokens cannot be prepared beforehand (other than saying copy), it is the best scenario to use dry erase tokens or blank tokens, allowing you to provide more detail about what the copy is. As such any blank/dry erase tokens in a player's token deck are designated as Copy tokens, and can only represent Copies. Other tokens that are specified as non-copies cannot be redesignated as copies, and vice versa."),
         const Text(
             "3h. Copying spells clarification - copy tokens are only needed to represent permanents on the board, if a spell is being copied it is not necessary to have a representative copy token for any spells on the stack."),
-
         const Text(''),
         const Text("4. Your Signature Spell"),
         const Text(
@@ -301,26 +292,36 @@ class TEDHPiece extends StatelessWidget {
             "4e. Signature spells may change zones and accrue casting cost in the same way that commanders do. When an instant or sorcery spell is cast it goes from the stack to the graveyard, and may re enter the command zone from the graveyard. When a signature spell enters the command zone it costs 2 more to cast cumulatively. If a spell has multiple ways to cast it, the cumulative cost applies to each of them."),
         const Text(
             "4f. Cards with the ability Partner are still valid as signature spells. If a partner is used as a signature spell the second deck slot to include it is taken from the Wishboard rather than the Main deck. Thus, there are two signature spell cards, the wishboard deck is reduced to 8, and the main deck remains 50 cards."),
-
         const Text(''),
         const Text("5. General"),
         const Text(
             "5a. Decks are required to have 5 different sleeve colors for the different types of cards (Signature Spell, Main, Land, Wishboard, Tokens), so that they are visibly distinguished from each other. This facilitates shuffling and returning cards to their proper zones when removed from play. This also causes lands and main deck cards to be differentiable in players' hands, but that helps everyone to keep track of known information, as all draws should have been announced in accordance with rule 1e."),
         const Text(
             "5b. Companion clarification - cards with the Companion ability may be used from the Wishboard, so long as the deck satisfies their companion restriction. At the start of the game players with companions should reveal them in their wishboard in accordance to the Magic the Gathering Comprehensive Rules on Companions."),
-
         const Text(''),
-        const Text(
-            "The ban list of tEDH follows the EDH banlist. Unless specified here as an explicitly allowed or banned card, you can check the Commander banned list here."),
-// [link]
-
+        Wrap(
+          crossAxisAlignment: WrapCrossAlignment.center,
+          children: [
+            const Text(
+                "The ban list of tEDH follows the EDH banlist. Unless specified here as an explicitly allowed or banned card, you can check the official Commander banned list directly"),
+            TextButton(
+              onPressed: () async {
+                final Uri url = Uri.parse(
+                    'https://mtgcommander.net/index.php/banned-list/');
+                if (!await launchUrl(url)) {
+                  throw Exception('Could not launch $url');
+                }
+              },
+              child: const Text('on the official website.'),
+            ),
+          ],
+        ),
         const Text(''),
         const Text("Banned Cards outside of the EDH standard banlist - "),
         const Text(
             '• "Nuisance" cards - cards that interrupt the flow of play with consistently appearing triggers that break the active player\'s train of thought, or otherwise slows the flow of play down Substantially (without impacting the board state).'),
         const Text(
             "• • Rhystic Study, Smothering Tithe, Esper Sentinel, Mystic Remora, Sensei's Divining top"),
-
         const Text(''),
         const Text(
             "• Unhealthy ramp - Primarily 0 and 1 mana permanent cards that give a non-sacrificial mana advantage, but also any cards that provide a disproportionate amount of mana compared to their casting/effectivity requirements."),
@@ -328,7 +329,6 @@ class TEDHPiece extends StatelessWidget {
             "• • Anything with Mox in the name, Sol Ring, Mana Crypt, Ancient Tomb, Gaea's Cradle, Mana Vault, Dockside Extortionist, Mana Drain"),
         const Text(
             "• • watchlist: Grim Monolith, Basalt Monolith, Lotus Petal, Explore, Growth Spiral, Priest of Titania"),
-
         const Text(''),
         const Text(
             "TBD: Cards that allow the player to cast cards off the top of their library."),
@@ -336,7 +336,6 @@ class TEDHPiece extends StatelessWidget {
             "-- this needs further testing before I can make a final decision, but cards with this mechanic are extremely potent in this format."),
         const Text(
             "• • watchlist: Winota, Demonic Consultation, Bolas's Citadel, Experimental Frenzy, Oracle of Mul Daya, Urza, Goblin Charbelcher"),
-
         const Text(''),
         const Text("Allowed Cards in tEDH - "),
         const Text("• Primeval Titan (Colossal Dreadmaw :) )"),
@@ -344,38 +343,32 @@ class TEDHPiece extends StatelessWidget {
             "• Coalition Victory - Coalition Victory has not had an updated ruling since 2006, but I feel that the wording should invoke a coalition with the same rules of the Party mechanic. A Coalition is 10 permanents. A single multi-typed land or multi-colored creature can count for any of their types, but only counts as one member of the coalition."),
         const Text(
             "• • However, with it's allowed use it will be under testing and on the watchlist."),
-
         const Text(''),
         const Text("General Watchlist:"),
         const Text("• Companions, Cyclonic Rift"),
-
         const Text(''),
         const Text("The current EDH banlist as of 11/20/23 is as follows:"),
-        const Text("Ancestral Recall, Balance, Biorhythm, Black Lotus"),
-        const Text("Braids, Cabal Minion"),
-        const Text("Channel, Chaos Orb, Coalition Victory"),
-        const Text("Emrakul, the Aeons Torn"),
-        const Text("Erayo, Soratami Ascendant"),
-        const Text("Falling Star, Fastbond, Flash, Gifts Ungiven"),
-        const Text("Golos, Tireless Pilgrim"),
-        const Text("Griselbrand, Hullbreacher"),
-        const Text("Iona, Shield of Emeria"),
-        const Text("Karakas"),
-        const Text("Leovold, Emissary of Trest"),
-        const Text('Library of Alexandria, Limited Resources'),
-        const Text("Lutri, the Spellchaser"),
-        const Text("Mox Emerald, Mox Jet, Mox Pearl, Mox Ruby, Mox Sapphire"),
-        const Text("Panoptic Mirror, Paradox Engine"),
-        const Text("Primeval Titan, Prophet of Kruphix, Recurring Nightmare"),
-        const Text("Rofellos, Llanowar Emissary"),
         const Text(
-            "Shahrazad, Sway of the Stars, Sundering Titan, Sylvan Primordial, Time Vault"),
+            "• Ancestral Recall • Balance • Biorhythm • Black Lotus • Braids, Cabal Minion • Channel •  Chaos Orb • Coalition Victory"),
         const Text(
-            "Time Walk, Tinker, Tolarian Academy, Trade Secrets, Upheaval, Yawgmoth’s Bargain"),
-
+            "• Emrakul, the Aeons Torn • Erayo, Soratami Ascendant • Falling Star • Fastbond • Flash • Gifts Ungiven"),
+        const Text(
+            "• Golos, Tireless Pilgrim • Griselbrand • Hullbreacher • Iona, Shield of Emeria • Karakas"),
+        const Text(
+            "• Leovold, Emissary of Trest • Library of Alexandria • Limited Resources • Lutri, the Spellchaser"),
+        const Text(
+            "• Mox Emerald • Mox Jet • Mox Pearl • Mox Ruby • Mox Sapphire • Panoptic Mirror • Paradox Engine"),
+        const Text(
+            "• Primeval Titan • Prophet of Kruphix • Recurring Nightmare • Rofellos, Llanowar Emissary"),
+        const Text(
+            "• Shahrazad • Sway of the Stars • Sundering Titan • Sylvan Primordial • Time Vault • Time Walk • Tinker"),
+        const Text(
+            "• Tolarian Academy • Trade Secrets • Upheaval • Yawgmoth’s Bargain"),
         const Text(''),
         const Text(
-            "If you have any ideas for ways to improve the format or append the ban list or change a rule, I'm happy to hear it! Feel free to email me at tylerpcrews@gmail.com."),
+            "If you have any ideas for ways to improve the format or append the ban list or change a rule, I'm happy to hear it! Feel free to email me."),
+        const Text(
+            "And if you've made it this far and are curious about the name, tEDH is a kind of play on cEDH. Where cEDH is competitive EDH, and is a format full of tutors and searching, tEDH is tyro (meaning \"a beginner\") EDH - a format designed for novice players that explicitly bans searching."),
       ],
     );
   }
