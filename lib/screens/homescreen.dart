@@ -73,8 +73,17 @@ class _HomescreenState extends State<Homescreen>
       const Color.fromRGBO(28, 146, 245, 1),
       const Color.fromRGBO(251, 80, 201, 1),
       const Color.fromRGBO(251, 80, 201, 1),
+      const Color.fromRGBO(251, 80, 201, 1),
+      const Color.fromRGBO(251, 80, 201, 1),
+      const Color.fromRGBO(251, 80, 201, 1),
       const Color.fromRGBO(7, 214, 105, 1),
       const Color.fromRGBO(7, 214, 105, 1),
+      const Color.fromRGBO(7, 214, 105, 1),
+      const Color.fromRGBO(7, 214, 105, 1),
+      const Color.fromRGBO(7, 214, 105, 1),
+      const Color.fromRGBO(28, 146, 245, 1),
+      const Color.fromRGBO(28, 146, 245, 1),
+      const Color.fromRGBO(28, 146, 245, 1),
       const Color.fromRGBO(28, 146, 245, 1),
       const Color.fromRGBO(28, 146, 245, 1),
     ]).animate(controller)
@@ -262,7 +271,7 @@ class _HomescreenState extends State<Homescreen>
                                             color: _colorAnim.value,
                                             shadows: [
                                           const Shadow(
-                                            blurRadius: 3.0,
+                                            blurRadius: 1.1,
                                             color: Colors.black,
                                           )
                                         ]),
