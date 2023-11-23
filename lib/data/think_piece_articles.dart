@@ -14,10 +14,6 @@ class LeetCodePiece extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double deviceWidth(BuildContext context) =>
-        MediaQuery.of(context).size.width;
-    double deviceHeight(BuildContext context) =>
-        MediaQuery.of(context).size.height;
     return const Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,

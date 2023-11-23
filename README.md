@@ -173,3 +173,5 @@ go through revisions of project descriptions and articles, making cuts to length
 
 write a plain html page for the tEDH rules to link publicly on reddit and stuff
 do a better job in the magic article of conveying the subsequent permutations of planning your turn, so that you know whether you'll have the right land drops in the future. That way it's more accurate to be logarithmically reduced.
+
+make scrollbar of articles and descriptions not overlap the text
