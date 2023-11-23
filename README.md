@@ -162,10 +162,12 @@ done - think pieces - A Year of Leetcode
 
 
 add pictures to project descriptions and articles
-make pictures responsive
 make pictures zoomable on tap, so that it pops out to like an alert when you click on it
  -- https://api.flutter.dev/flutter/widgets/InteractiveViewer-class.html
  -- https://stackoverflow.com/questions/43651708/how-do-i-pan-and-zoom-an-image
+also added a gesture detector to pull up the picture in a fitted dialog box to show the image overtop of everything on tap
+
+make initial picture container responsive
 
 go through revisions of project descriptions and articles, making cuts to length where possible.
 

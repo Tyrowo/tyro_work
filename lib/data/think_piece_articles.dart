@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tyro_work/helper/resizeable_image.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 String tedhPreview =
@@ -17,11 +18,11 @@ class LeetCodePiece extends StatelessWidget {
         MediaQuery.of(context).size.width;
     double deviceHeight(BuildContext context) =>
         MediaQuery.of(context).size.height;
-    return Column(
+    return const Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image.asset('tyrowo.jpg'),
+        const ResizeableImage(asset: 'tyrowo.jpg'),
         const Text("Closing out my year competing in challenges"),
         const Text(''),
         const Text(
@@ -89,7 +90,7 @@ class TEDHPiece extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image.asset('tyrowo.jpg'),
+        const ResizeableImage(asset: 'tyrowo.jpg'),
         const Text(
             "I've loved Magic the Gathering since I was a child, though I had a falling out with it for many years due to some disagreements with how it is monetized and the secondary market in general."),
         const Text(
