@@ -1,11 +1,17 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-class ResizeableImage extends StatelessWidget {
+class ResizeableImage extends StatefulWidget {
   final String asset;
   const ResizeableImage({super.key, required this.asset});
 
+  @override
+  State<ResizeableImage> createState() => _ResizeableImageState();
+}
+
+class _ResizeableImageState extends State<ResizeableImage> {
   @override
   Widget build(BuildContext context) {
     double deviceWidth(BuildContext context) =>
@@ -16,7 +22,8 @@ class ResizeableImage extends StatelessWidget {
       height: deviceHeight(context) * 0.3,
       width: deviceWidth(context) * 0.3,
       child: GestureDetector(
-          onTap: () => showPicFullscreen(context), child: Image.asset(asset)),
+          onTap: () => showPicFullscreen(context),
+          child: Image.asset(widget.asset)),
     );
   }
 
@@ -25,33 +32,49 @@ class ResizeableImage extends StatelessWidget {
         MediaQuery.of(context).size.width;
     double deviceHeight(BuildContext context) =>
         MediaQuery.of(context).size.height;
-    return await showDialog(
-      context: context,
-      builder: (BuildContext context) => Dialog(
-        child: SizedBox(
-          height:
-              // this doesn't work it reds out becaue the .height property is null. can't figure out how to get the image's height and width to compare to the screen width
-              min(deviceHeight(context) * 0.975, Image.asset(asset).height!),
-          width: deviceWidth(context) * 0.975,
-          child: Stack(
-            alignment: AlignmentDirectional.topEnd,
-            children: <Widget>[
-              Center(
-                  child: InteractiveViewer(
-                      child: Image.asset(asset, fit: BoxFit.cover))),
-              IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: const Icon(
-                  Icons.close,
-                  size: 30.0,
+    List<double> picDimensions = await getPicSize(widget.asset);
+    double picHeight = picDimensions[0];
+    double picWidth = picDimensions[1];
+    // cannot use buildcontext across async gaps requires this mounted check, which requires the whole widget to be stateful
+    if (mounted) {
+      return await showDialog(
+        context: context,
+        builder: (BuildContext context) => Dialog(
+          elevation: 0.0,
+          shadowColor: const Color.fromRGBO(100, 100, 100, 0),
+          backgroundColor: const Color.fromRGBO(100, 100, 100, 0),
+          surfaceTintColor: const Color.fromRGBO(100, 100, 100, 0),
+          child: SizedBox(
+            height:
+                // this doesn't work it reds out becaue the .height property is null. can't figure out how to get the image's height and width to compare to the screen width
+                min(deviceHeight(context) * 0.975, picHeight + 75),
+            width: min(deviceWidth(context) * 0.975, picWidth + 75),
+            child: Stack(
+              alignment: AlignmentDirectional.topEnd,
+              children: <Widget>[
+                Center(
+                    child: InteractiveViewer(
+                        child: Image.asset(widget.asset, fit: BoxFit.cover))),
+                IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(
+                    Icons.close,
+                    size: 30.0,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
-      ),
-    );
+      );
+    }
+  }
+
+  Future<List<double>> getPicSize(String asset) async {
+    final ByteData bytes = await rootBundle.load(asset);
+    var decodedImage = await decodeImageFromList(bytes.buffer.asUint8List());
+    return [decodedImage.height.toDouble(), decodedImage.width.toDouble()];
   }
 }
