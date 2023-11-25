@@ -18,9 +18,13 @@ class LeetCodePiece extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        ResizeableImage(
+        Center(
+          child: ResizeableImage(
             asset: 'assets/pics/leetcodeCurrent.png',
-            label: 'My current LeetCode profile/stats page'),
+            label: 'My current LeetCode profile/stats page',
+            imagesInWrap: 1,
+          ),
+        ),
         Text(''),
         Text("Closing out my year competing in challenges"),
         Text(''),
@@ -226,16 +230,25 @@ class TEDHPiece extends StatelessWidget {
         const Text(''),
         const Wrap(
           crossAxisAlignment: WrapCrossAlignment.center,
+          alignment: WrapAlignment.center,
+          runSpacing: 15.0,
+          spacing: 15.0,
           children: [
             ResizeableImage(
-                asset: 'assets/pics/mtg01setup.jpg',
-                label: 'A table full of Magic the Gathering cards'),
+              asset: 'assets/pics/mtg01setup.jpg',
+              label: 'A table full of Magic the Gathering cards',
+              imagesInWrap: 3,
+            ),
             ResizeableImage(
-                asset: 'assets/pics/mtg02table.jpg',
-                label: 'A table full of Magic the Gathering cards'),
+              asset: 'assets/pics/mtg02table.jpg',
+              label: 'A table full of Magic the Gathering cards',
+              imagesInWrap: 3,
+            ),
             ResizeableImage(
-                asset: 'assets/pics/mtg03board.jpg',
-                label: 'A table full of Magic the Gathering cards'),
+              asset: 'assets/pics/mtg03board.jpg',
+              label: 'A table full of Magic the Gathering cards',
+              imagesInWrap: 3,
+            ),
           ],
         ),
         const Text(''),

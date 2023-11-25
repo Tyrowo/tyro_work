@@ -32,10 +32,14 @@ class ProBusterProjectDescription extends StatelessWidget {
           ],
         ),
         const Text(''),
-        const ResizeableImage(
+        const Center(
+          child: ResizeableImage(
             asset: 'assets/pics/probuster.jpg',
             label:
-                'Screenshot of my Chrome Extension called The Procrastination Buster'),
+                'Screenshot of my Chrome Extension called The Procrastination Buster',
+            imagesInWrap: 1,
+          ),
+        ),
         const Text(''),
         const Text(
             "After publishing my website I wanted to create something that was more Javascript oriented."),
@@ -128,16 +132,25 @@ class EquidistantProjectDescription extends StatelessWidget {
         const Text(''),
         const Wrap(
           crossAxisAlignment: WrapCrossAlignment.center,
+          alignment: WrapAlignment.center,
+          runSpacing: 15.0,
+          spacing: 15.0,
           children: [
             ResizeableImage(
-                asset: 'assets/pics/eqScreenshot01.png',
-                label: 'Homepage of my app called Equidistant'),
+              asset: 'assets/pics/eqScreenshot01.png',
+              label: 'Homepage of my app called Equidistant',
+              imagesInWrap: 3,
+            ),
             ResizeableImage(
-                asset: 'assets/pics/eqScreenshot02.png',
-                label: 'Privacy mode screen of the app Equidistant'),
+              asset: 'assets/pics/eqScreenshot02.png',
+              label: 'Privacy mode screen of the app Equidistant',
+              imagesInWrap: 3,
+            ),
             ResizeableImage(
-                asset: 'assets/pics/eqScreenshot03.png',
-                label: 'Results screen of the app Equidistant'),
+              asset: 'assets/pics/eqScreenshot03.png',
+              label: 'Results screen of the app Equidistant',
+              imagesInWrap: 3,
+            ),
           ],
         ),
         const Text(''),
@@ -218,16 +231,24 @@ class Web1Description extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Wrap(
-          crossAxisAlignment: WrapCrossAlignment.center,
-          children: [
-            ResizeableImage(
+        const Center(
+          child: Wrap(
+            crossAxisAlignment: WrapCrossAlignment.center,
+            alignment: WrapAlignment.center,
+            runSpacing: 15.0,
+            spacing: 15.0,
+            children: [
+              ResizeableImage(
                 asset: 'assets/pics/firstWebsite01.png',
-                label: 'Screenshot of the homepage of my first website'),
-            ResizeableImage(
-                asset: 'assets/pics/firstWebsite02.png',
-                label: 'Screenshot of my first website'),
-          ],
+                label: 'Screenshot of the homepage of my first website',
+                imagesInWrap: 2,
+              ),
+              ResizeableImage(
+                  asset: 'assets/pics/firstWebsite02.png',
+                  label: 'Screenshot of my first website',
+                  imagesInWrap: 2),
+            ],
+          ),
         ),
         const Text(''),
         const Text(
@@ -253,9 +274,13 @@ class Web1Description extends StatelessWidget {
         const Text(
             "I created it with a web app called calligraphr, and went through tons of iterations creating variations of the lettering that would make it as natural looking as possible. In all I created over 116 of these handwritten character sheets."),
         const Text(''),
-        const ResizeableImage(
+        const Center(
+          child: ResizeableImage(
             asset: 'assets/pics/handwritingCharacters.jpg',
-            label: 'A sheet of handwritten characters'),
+            label: 'A sheet of handwritten characters',
+            imagesInWrap: 1,
+          ),
+        ),
         const Text(''),
         const Text(
             "My intent was to have it published as a Google Font, but unfortunately fonts created through Calligraphr are not supported because they don't have the component files."),
@@ -362,16 +387,25 @@ class Web2Description extends StatelessWidget {
         const Text(
             "I also to experiment with customization, allowing users to be able to toggle off my font if it wasn't readable enough for them, as well as toggle light/dark."),
         const Text(''),
-        const Wrap(
-          crossAxisAlignment: WrapCrossAlignment.center,
-          children: [
-            ResizeableImage(
+        const Center(
+          child: Wrap(
+            crossAxisAlignment: WrapCrossAlignment.center,
+            alignment: WrapAlignment.center,
+            runSpacing: 15.0,
+            spacing: 15.0,
+            children: [
+              ResizeableImage(
                 asset: 'assets/pics/lightModeColor.png',
-                label: 'Light mode color palette from snow leopard print'),
-            ResizeableImage(
+                label: 'Light mode color palette from snow leopard print',
+                imagesInWrap: 2,
+              ),
+              ResizeableImage(
                 asset: 'assets/pics/darkModeColor.png',
-                label: 'Dark mode color palette from snow leopard print'),
-          ],
+                label: 'Dark mode color palette from snow leopard print',
+                imagesInWrap: 2,
+              ),
+            ],
+          ),
         ),
         const Text(''),
         const Text(
@@ -393,9 +427,13 @@ class Web2Description extends StatelessWidget {
         const Text(
             "Any time he shifted positions I snapped some pics of his back, but I knew they were barely useable."),
         const Text(''),
-        const ResizeableImage(
+        const Center(
+          child: ResizeableImage(
             asset: 'assets/pics/cat01waiting.jpg',
-            label: 'Snow leopard from a distance inside a building'),
+            label: 'Snow leopard from a distance inside a building',
+            imagesInWrap: 1,
+          ),
+        ),
         const Text(''),
         const Text(
             "So I waited. I sat outside the snow leopard exhibit until 5 PM, patiently rationing my phone battery life to mitigate my boredom."),
@@ -407,25 +445,38 @@ class Web2Description extends StatelessWidget {
         const Text(''),
         const Wrap(
           crossAxisAlignment: WrapCrossAlignment.center,
+          alignment: WrapAlignment.center,
+          runSpacing: 15.0,
+          spacing: 15.0,
           children: [
             ResizeableImage(
-                asset: 'assets/pics/cat03face.jpg',
-                label: 'Snow leopard facing the camera'),
+              asset: 'assets/pics/cat03face.jpg',
+              label: 'Snow leopard facing the camera',
+              imagesInWrap: 3,
+            ),
             ResizeableImage(
-                asset: 'assets/pics/cat04walking.jpg',
-                label: 'Snow leopard walking through his habitat'),
+              asset: 'assets/pics/cat04walking.jpg',
+              label: 'Snow leopard walking through his habitat',
+              imagesInWrap: 3,
+            ),
             ResizeableImage(
-                asset: 'assets/pics/cat05crouching.jpg',
-                label: 'Snow leopard crouched against a wall'),
+              asset: 'assets/pics/cat05crouching.jpg',
+              label: 'Snow leopard crouched against a wall',
+              imagesInWrap: 3,
+            ),
           ],
         ),
         const Text(''),
         const Text(
             "I ran alongside him, furiously snapping as many pictures as I could in as many poses as I could, with a focus on trying to get a broad view of his side for an optimal look at the print on his side."),
         const Text(''),
-        const ResizeableImage(
+        const Center(
+          child: ResizeableImage(
             asset: 'assets/pics/cat02body.jpg',
-            label: 'Broadside of a snow leopard'),
+            label: 'Broadside of a snow leopard',
+            imagesInWrap: 1,
+          ),
+        ),
         const Text(''),
         const Text(
             "I took pictures until my phone died, watched him until he finished his rounds, and he promptly went back to sleep."),
@@ -433,16 +484,25 @@ class Web2Description extends StatelessWidget {
         const Text(
             "When I got home I selected the cleanest pictures I could find of the print, cropped them, and used them as a model for Midjourney to base the results of my prompt on."),
         const Text(''),
-        const Wrap(
-          crossAxisAlignment: WrapCrossAlignment.center,
-          children: [
-            ResizeableImage(
+        const Center(
+          child: Wrap(
+            crossAxisAlignment: WrapCrossAlignment.center,
+            alignment: WrapAlignment.center,
+            runSpacing: 15.0,
+            spacing: 15.0,
+            children: [
+              ResizeableImage(
                 asset: 'assets/pics/training1.jpg',
-                label: 'Cropped body of a snow leopard'),
-            ResizeableImage(
+                label: 'Cropped body of a snow leopard',
+                imagesInWrap: 2,
+              ),
+              ResizeableImage(
                 asset: 'assets/pics/training2.jpg',
-                label: 'Cropped body of a snow leopard'),
-          ],
+                label: 'Cropped body of a snow leopard',
+                imagesInWrap: 2,
+              ),
+            ],
+          ),
         ),
         const Text(''),
         const Text(
@@ -457,26 +517,40 @@ class Web2Description extends StatelessWidget {
 
         const Wrap(
           crossAxisAlignment: WrapCrossAlignment.center,
+          alignment: WrapAlignment.center,
           runSpacing: 15.0,
+          spacing: 15.0,
           children: [
             ResizeableImage(
-                asset: 'assets/1.png',
-                label: 'Tiled snow leopard pattern image'),
+              asset: 'assets/1.png',
+              label: 'Tiled snow leopard pattern image',
+              imagesInWrap: 3,
+            ),
             ResizeableImage(
-                asset: 'assets/2.png',
-                label: 'Tiled snow leopard pattern image'),
+              asset: 'assets/2.png',
+              label: 'Tiled snow leopard pattern image',
+              imagesInWrap: 3,
+            ),
             ResizeableImage(
-                asset: 'assets/3.png',
-                label: 'Tiled snow leopard pattern image'),
+              asset: 'assets/3.png',
+              label: 'Tiled snow leopard pattern image',
+              imagesInWrap: 3,
+            ),
             ResizeableImage(
-                asset: 'assets/4.png',
-                label: 'Tiled snow leopard pattern image'),
+              asset: 'assets/4.png',
+              label: 'Tiled snow leopard pattern image',
+              imagesInWrap: 3,
+            ),
             ResizeableImage(
-                asset: 'assets/5.png',
-                label: 'Tiled snow leopard pattern image'),
+              asset: 'assets/5.png',
+              label: 'Tiled snow leopard pattern image',
+              imagesInWrap: 3,
+            ),
             ResizeableImage(
-                asset: 'assets/6.png',
-                label: 'Tiled snow leopard pattern image'),
+              asset: 'assets/6.png',
+              label: 'Tiled snow leopard pattern image',
+              imagesInWrap: 3,
+            ),
           ],
         ),
 // [color palette references]
@@ -486,9 +560,13 @@ class Web2Description extends StatelessWidget {
         const Text(
             "Thanks for allowing me the opportunity to ethically source the images myself. "),
         const Text("Hope you're doing well. 💕"), const Text(''),
-        const ResizeableImage(
+        const Center(
+          child: ResizeableImage(
             asset: 'assets/pics/cat06posed.jpg',
-            label: 'Snow leopard sitting on a large rock'),
+            label: 'Snow leopard sitting on a large rock',
+            imagesInWrap: 1,
+          ),
+        ),
         const Text(''),
         ElevatedButton(
           onPressed: () async {

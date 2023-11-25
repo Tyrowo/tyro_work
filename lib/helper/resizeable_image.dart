@@ -6,7 +6,12 @@ import 'package:flutter/services.dart';
 class ResizeableImage extends StatefulWidget {
   final String asset;
   final String label;
-  const ResizeableImage({super.key, required this.asset, required this.label});
+  final int imagesInWrap;
+  const ResizeableImage(
+      {super.key,
+      required this.asset,
+      required this.label,
+      required this.imagesInWrap});
 
   @override
   State<ResizeableImage> createState() => _ResizeableImageState();
@@ -20,8 +25,8 @@ class _ResizeableImageState extends State<ResizeableImage> {
     double deviceHeight(BuildContext context) =>
         MediaQuery.of(context).size.height;
     return SizedBox(
-      height: deviceHeight(context) * 0.25,
-      width: deviceWidth(context) * 0.25,
+      height: deviceHeight(context) * (1 / (widget.imagesInWrap + 1)),
+      width: deviceWidth(context) * (1 / (widget.imagesInWrap + 1)),
       child: GestureDetector(
           onTap: () => showPicFullscreen(context),
           child: Image.asset(widget.asset)),
