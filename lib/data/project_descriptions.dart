@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tyro_work/helper/resizeable_image.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProBusterProjectDescription extends StatelessWidget {
@@ -30,6 +31,11 @@ class ProBusterProjectDescription extends StatelessWidget {
                 '(You may be required to log in to a Google account to see the page.)')
           ],
         ),
+        const Text(''),
+        const ResizeableImage(
+            asset: 'assets/pics/probuster.jpg',
+            label:
+                'Screenshot of my Chrome Extension called The Procrastination Buster'),
         const Text(''),
         const Text(
             "After publishing my website I wanted to create something that was more Javascript oriented."),
@@ -120,6 +126,21 @@ class EquidistantProjectDescription extends StatelessWidget {
           ],
         ),
         const Text(''),
+        const Wrap(
+          crossAxisAlignment: WrapCrossAlignment.center,
+          children: [
+            ResizeableImage(
+                asset: 'assets/pics/eqScreenshot01.png',
+                label: 'Homepage of my app called Equidistant'),
+            ResizeableImage(
+                asset: 'assets/pics/eqScreenshot02.png',
+                label: 'Privacy mode screen of the app Equidistant'),
+            ResizeableImage(
+                asset: 'assets/pics/eqScreenshot03.png',
+                label: 'Results screen of the app Equidistant'),
+          ],
+        ),
+        const Text(''),
         const Text(
             "Following my work on the Procrastination Buster I was confident that my development skills had reached a point where I felt ready to apply for work."),
         const Text(
@@ -193,14 +214,21 @@ class Web1Description extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double deviceWidth(BuildContext context) =>
-        MediaQuery.of(context).size.width;
-    double deviceHeight(BuildContext context) =>
-        MediaQuery.of(context).size.height;
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        const Wrap(
+          crossAxisAlignment: WrapCrossAlignment.center,
+          children: [
+            ResizeableImage(
+                asset: 'assets/pics/firstWebsite01.png',
+                label: 'Screenshot of the homepage of my first website'),
+            ResizeableImage(
+                asset: 'assets/pics/firstWebsite02.png',
+                label: 'Screenshot of my first website'),
+          ],
+        ),
         const Text(
             "When I started learning how to code I wasn't sure if I wanted to be more of a front end developer or back end developer."),
         const Text(
@@ -222,7 +250,10 @@ class Web1Description extends StatelessWidget {
         const Text(
             "My font I actually created prior to the website, it was a project where I wanted to use my actual handwriting as a font for use in documents."),
         const Text(
-            "I created it with a web app called calligraphr, and went through tons of iterations creating variations of the lettering that would make it as natural looking as possible."),
+            "I created it with a web app called calligraphr, and went through tons of iterations creating variations of the lettering that would make it as natural looking as possible. In all I created over 116 of these handwritten character sheets."),
+        const ResizeableImage(
+            asset: 'assets/pics/handwritingCharacters.jpg',
+            label: 'A sheet of handwritten characters'),
         const Text(
             "My intent was to have it published as a Google Font, but unfortunately fonts created through Calligraphr are not supported because they don't have the component files."),
         const Text(''),
@@ -279,10 +310,6 @@ class Web2Description extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // need device width and height in these to change pic size
-    double deviceWidth(BuildContext context) =>
-        MediaQuery.of(context).size.width;
-    double deviceHeight(BuildContext context) =>
-        MediaQuery.of(context).size.height;
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -291,6 +318,8 @@ class Web2Description extends StatelessWidget {
             "When I decided that I would learn how to use Flutter, it was exciting to have a new framework under my belt that I could apply to updating my portfolio."),
         const Text(
             "Not that I wasn't ... proud of what I was able to accomplish with vanilla html+css+js, but the results also weren't anything I was very excited to show off, either. 😹"),
+        const Text(
+            "As a web-only project, this was also a great opportunity to experiment with Flutter's WASM (web assembly) build option. It doesn't seem totally fleshed out yet but could be even more interesting as it advances in the coming years."),
         const Text(''),
         const Text(
             "Working with Flutter on a second project was an awesome experience, because I was able to pull in a lot of work that I had done on Equidistant, I had researched some of the features I wanted to implement, and I already knew how to deploy my code to web."),
@@ -318,8 +347,8 @@ class Web2Description extends StatelessWidget {
             "Finally, although I don't really mind the bootup time to run Flutter, and have found it to be pretty comparable to webtool created portfolio sites, it's a little excessive for a small page like mine."),
         const Text(''),
         const Text(
-            "For these reasons this will probably be my final web-only Flutter project."),
-        const Text("No surprise, it's an app framework."),
+            "For these reasons this will probably be my final web-only Flutter project, at least until some substantial WASM improvements are made."),
+        const Text("Surprise surprise, Flutter is an app framework."),
         const Text(
             "However, I'm sure the experience with class based web development will be invaluable working with other frameworks in the future, and I'm very happy with the results."),
         const Text(''),
@@ -330,6 +359,17 @@ class Web2Description extends StatelessWidget {
         const Text(
             "I also to experiment with customization, allowing users to be able to toggle off my font if it wasn't readable enough for them, as well as toggle light/dark."),
         const Text(''),
+        const Wrap(
+          crossAxisAlignment: WrapCrossAlignment.center,
+          children: [
+            ResizeableImage(
+                asset: 'assets/pics/lightModeColor.png',
+                label: 'Light mode color palette from snow leopard print'),
+            ResizeableImage(
+                asset: 'assets/pics/darkModeColor.png',
+                label: 'Dark mode color palette from snow leopard print'),
+          ],
+        ),
         const Text(
             "In classic Tyler fashion I wanted to create a really personal feel to this website, and that's where the leopard print theme comes into play."),
         const Text(
@@ -347,21 +387,52 @@ class Web2Description extends StatelessWidget {
         const Text(
             "What a journey that was. I navigated the public transit and arrived just past noon to an empty exhibit. But after a while of looking I discovered the cat asleep by the wall interior, barely visible."),
         const Text(
-            "I snapped some pics of his back, but I knew they were barely useable."),
+            "Any time he shifted positions I snapped some pics of his back, but I knew they were barely useable."),
+        const ResizeableImage(
+            asset: 'assets/pics/cat01waiting.jpg',
+            label: 'Snow leopard from a distance inside a building'),
         const Text(
             "So I waited. I sat outside the snow leopard exhibit until 5 PM, patiently rationing my phone battery life to mitigate my boredom."),
         const Text(
-            "Surely he would leave the interior area to use the bathroom or something? No."),
+            "I thought, 'Surely he would leave the interior area to use the bathroom eventually.' But no."),
         const Text(
             "I learned from a zookeeper that the cat's name was Jimmy G, and at 5 PM when another zookeeper came to bring him his food Jimmy finally woke up."),
         const Text("He ate his food, and began to do laps around his exhibit."),
+        const Wrap(
+          crossAxisAlignment: WrapCrossAlignment.center,
+          children: [
+            ResizeableImage(
+                asset: 'assets/pics/cat03face.jpg',
+                label: 'Snow leopard facing the camera'),
+            ResizeableImage(
+                asset: 'assets/pics/cat04walking.jpg',
+                label: 'Snow leopard walking through his habitat'),
+            ResizeableImage(
+                asset: 'assets/pics/cat05crouching.jpg',
+                label: 'Snow leopard crouched against a wall'),
+          ],
+        ),
         const Text(
             "I ran alongside him, furiously snapping as many pictures as I could in as many poses as I could, with a focus on trying to get a broad view of his side for an optimal look at the print on his side."),
+        const ResizeableImage(
+            asset: 'assets/pics/cat02body.jpg',
+            label: 'Broadside of a snow leopard'),
         const Text(
             "I took pictures until my phone died, watched him until he finished his rounds, and he promptly went back to sleep."),
         const Text(''),
         const Text(
-            "With those pictures I selected the cleanest I could find, cropped them to focus on the print, and used them as a model for Midjourney to base the results of my prompt on."),
+            "When I got home I selected the cleanest pictures I could find of the print, cropped them, and used them as a model for Midjourney to base the results of my prompt on."),
+        const Wrap(
+          crossAxisAlignment: WrapCrossAlignment.center,
+          children: [
+            ResizeableImage(
+                asset: 'assets/pics/training1.jpg',
+                label: 'Cropped body of a snow leopard'),
+            ResizeableImage(
+                asset: 'assets/pics/training2.jpg',
+                label: 'Cropped body of a snow leopard'),
+          ],
+        ),
         const Text(
             "Creating a smooth tiling image was difficult with an inconsistent design, but after generating a hundred images or so, I had 6 perfect images to use for this project."),
         const Text(
@@ -369,14 +440,19 @@ class Web2Description extends StatelessWidget {
         const Text(
             "As modern web design moves towards simple plain backgrounds, I wanted mine to be a little more subtly dynamic and engaging to repeat visitors."),
         const Text(
-            "I think the results speak for themselves. I find it very visually appealing, and found that it served as a great basis for the off-black and off-white color scheme. "),
+            "I think the results speak for themselves. I find it very visually appealing, and it served as a great basis for the off-black and off-white color scheme."),
+        const ResizeableImage(
+            asset: 'assets/4.png', label: 'Tiled snow leopard pattern image'),
 // [color palette references]
         const Text(''),
         const Text(
-            "So shouts out to my model and basis for this website, Jimmy G."),
+            "So here's a quick shoutout to my model and basis for this website, Jimmy G."),
         const Text(
             "Thanks for allowing me the opportunity to ethically source the images myself. "),
         const Text("Hope you're doing well. 💕"),
+        const ResizeableImage(
+            asset: 'assets/pics/cat06posed.jpg',
+            label: 'Snow leopard sitting on a large rock'),
         const Text(''),
         ElevatedButton(
           onPressed: () async {

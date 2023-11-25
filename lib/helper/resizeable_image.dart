@@ -20,8 +20,8 @@ class _ResizeableImageState extends State<ResizeableImage> {
     double deviceHeight(BuildContext context) =>
         MediaQuery.of(context).size.height;
     return SizedBox(
-      height: deviceHeight(context) * 0.3,
-      width: deviceWidth(context) * 0.3,
+      height: deviceHeight(context) * 0.25,
+      width: deviceWidth(context) * 0.25,
       child: GestureDetector(
           onTap: () => showPicFullscreen(context),
           child: Image.asset(widget.asset)),
@@ -48,8 +48,8 @@ class _ResizeableImageState extends State<ResizeableImage> {
           child: SizedBox(
             height:
                 // this doesn't work it reds out becaue the .height property is null. can't figure out how to get the image's height and width to compare to the screen width
-                min(deviceHeight(context) * 0.975, picHeight + 75),
-            width: min(deviceWidth(context) * 0.975, picWidth + 75),
+                min(deviceHeight(context) * 0.95, picHeight + 75),
+            width: min(deviceWidth(context) * 0.95, picWidth + 75),
             child: Stack(
               alignment: AlignmentDirectional.topEnd,
               children: <Widget>[
