@@ -101,6 +101,29 @@ flutter:
     - assets/socials/linkedin.png
     - assets/socials/x_dark.png
     - assets/socials/x_light.png
+  # pics for the project descriptions and think pieces
+    - assets/pics/cat01waiting.jpg
+    - assets/pics/cat02body.jpg
+    - assets/pics/cat03face.jpg
+    - assets/pics/cat04walking.jpg
+    - assets/pics/cat05crouching.jpg
+    - assets/pics/cat06posed.jpg
+    - assets/pics/darkModeColor.png
+    - assets/pics/eqScreenshot01.png
+    - assets/pics/eqScreenshot02.png
+    - assets/pics/eqScreenshot03.png
+    - assets/pics/firstWebsite01.png
+    - assets/pics/firstWebsite02.png
+    - assets/pics/handwritingCharacters.jpg
+    - assets/pics/leetcodeCurrent.png
+    - assets/pics/lightModeColor.png
+    - assets/pics/mtg01setup.jpg
+    - assets/pics/mtg02table.jpg
+    - assets/pics/mtg03board.jpg
+    - assets/pics/probuster.jpg
+    - assets/pics/training1.jpg
+    - assets/pics/training2.jpg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

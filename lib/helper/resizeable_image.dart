@@ -5,7 +5,8 @@ import 'package:flutter/services.dart';
 
 class ResizeableImage extends StatefulWidget {
   final String asset;
-  const ResizeableImage({super.key, required this.asset});
+  final String label;
+  const ResizeableImage({super.key, required this.asset, required this.label});
 
   @override
   State<ResizeableImage> createState() => _ResizeableImageState();
@@ -54,7 +55,11 @@ class _ResizeableImageState extends State<ResizeableImage> {
               children: <Widget>[
                 Center(
                     child: InteractiveViewer(
-                        child: Image.asset(widget.asset, fit: BoxFit.cover))),
+                        child: Image.asset(
+                  widget.asset,
+                  semanticLabel: widget.label,
+                  fit: BoxFit.cover,
+                ))),
                 IconButton(
                   onPressed: () {
                     Navigator.pop(context);

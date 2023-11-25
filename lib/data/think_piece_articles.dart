@@ -18,55 +18,55 @@ class LeetCodePiece extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const ResizeableImage(asset: 'tyrowo.jpg'),
-        const Text("Closing out my year competing in challenges"),
-        const Text(''),
-        const Text(
+        ResizeableImage(asset: 'tyrowo.jpg', label: 'me'),
+        Text("Closing out my year competing in challenges"),
+        Text(''),
+        Text(
             "After beginning work on a new contract at work, I decided I wanted to become more confident at coding in Java."),
-        const Text(
+        Text(
             "I felt like to become a proficient member of the team I wanted to relearn how to do algorithms, because I had learned them in Javascript originally."),
-        const Text(
+        Text(
             'However, I also wanted to become more "conversationally fluent," because day to day job responsibilities aren\'t necessarily going to require large data structures.'),
-        const Text(''),
-        const Text("So I set two goals for the year:"),
-        const Text(
+        Text(''),
+        Text("So I set two goals for the year:"),
+        Text(
             "The first was to relearn all of the general data structures and algorithms, becoming familiar at working with their respective Java classes."),
-        const Text(
+        Text(
             "The other was to complete at least one problem a day for the entire year, even if it was an easy problem, to become more comfortable with completing simple tasks without having to Google them."),
-        const Text(''),
-        const Text(
+        Text(''),
+        Text(
             "Today I've made it through most of the year, and have completed the 300 days required to get the 2023-year achievement on Leetcode."),
-        const Text(
+        Text(
             "Didn't quite make it to 365, but the goal was more to build it as a habit rather than ignore everything in life that came up."),
-        const Text(''),
-        const Text(
+        Text(''),
+        Text(
             "I also had some ancillary goals that I did through parts of the year, like for a few months I was completing an additional SQL easy problem every day."),
-        const Text(
+        Text(
             "Another goal was to try to complete the full body of easy problems."),
-        const Text(''),
-        const Text("My takeaways from the project - "),
-        const Text(
+        Text(''),
+        Text("My takeaways from the project - "),
+        Text(
             "• Going through a data structures and algorithms study plan is a great way to start practice. It should take you through easy problems to get warmed up first and give a good handle of the built in methods of your language's class"),
-        const Text(
+        Text(
             "• Doing both a regular problem and a SQL problem was a little more difficult than I expected, since I was having to do a bunch of lookup time for basic concepts in SQL. It is something I want to pick up again in the future, but had to be axed to focus on other personal projects."),
-        const Text(
+        Text(
             "• Doing all of the easy's was definitely one of the best things I could've done for myself, but has some diminishing returns. Once I became fluent in easy syntax and started looking for my 250+ new easy problem, I fell into a bad habit of cherry picking for easy string manipulation problems just to get my dailies done."),
-        const Text(
+        Text(
             "• • However, my latest peak in Leetcode Weekly Challenges (1645) came from being able to quickly use the built in methods and strategies from my easy mode problems without second guessing myself. I think doing a thorough breadth of easies is important to build confidence in the language and think it's still more of a worthwhile experience to do one easy than completely stagnate."),
-        const Text(
+        Text(
             "• I noticed a limited capacity in my ability to do problems on days where I was also learning Flutter, and when I was building my project was when I stopped doing problems on Fridays. Leetcode is great, but shouldn't prioritize learning and creating."),
-        const Text(
+        Text(
             "• Although I'm pretty confident in most medium problems, I still consistently have a hard time with the third and fourth problems in any given Leetcode Weekly Challenge (high mediums and hards). There's a skill gap and maybe even a bit of a mental block on this eschelon of problems that simply cannot be overcome by doing easies and mediums. You definitely need to just take the plunge at some point."),
-        const Text(
+        Text(
             "• Having a routine (even of doing an easy problem) definitely at least prevents concerns that I'm stagnating and made me a confident coder professionally."),
-        const Text(''),
-        const Text(
+        Text(''),
+        Text(
             "All in all, although it's easy to get sucked into 'taking it easy,' I've found this to be a worthwhile exercise and believe that I will continue the project inevitably. I may even switch languages so that I can also be more conversational with Dart if I continue to use Flutter."),
-        const Text(
+        Text(
             "My primary goal for the upcoming year is to start doing a hard problem a week to break through the mental barrier I have with them now."),
-        const Text(
+        Text(
             "If I'm successful, then my secondary goal is to improve my Challenge ranking, and hopefully get a Leetcode Knight badge."),
-        const Text("Wish me luck! 😽"),
+        Text("Wish me luck! 😽"),
       ],
     );
   }
@@ -78,15 +78,11 @@ class TEDHPiece extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double deviceWidth(BuildContext context) =>
-        MediaQuery.of(context).size.width;
-    double deviceHeight(BuildContext context) =>
-        MediaQuery.of(context).size.height;
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const ResizeableImage(asset: 'tyrowo.jpg'),
+        const ResizeableImage(asset: 'tyrowo.jpg', label: 'me'),
         const Text(
             "I've loved Magic the Gathering since I was a child, though I had a falling out with it for many years due to some disagreements with how it is monetized and the secondary market in general."),
         const Text(
