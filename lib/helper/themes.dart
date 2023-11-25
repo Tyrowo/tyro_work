@@ -11,6 +11,7 @@ ThemeData lightTheme(bool tyFontOff) {
       iconTheme: IconThemeData(color: Colors.black),
       foregroundColor: Colors.black,
     ),
+    scaffoldBackgroundColor: const Color.fromRGBO(66, 65, 62, 1),
     cardTheme: const CardTheme(color: Color.fromRGBO(191, 194, 183, 0.69)),
     scrollbarTheme: ScrollbarThemeData(
       thumbColor:

@@ -167,9 +167,13 @@ done - wrote widget to contain all these things into one easy to use responsive 
 
 ## Phase 4 - Deployment
 done - set up nameservers for webhosting
+done - make background set to gray so that while background is loading it isn't blank white
+done - -- it's not on index, because that's only the splash screen after that it's the scaffold background
 
 investigate this concept of deploying to webassembly instead of javascript. (build web --wasm) Since this is a simple page maybe web assembly would be able to improve performance? If it has a shorter boot up time then hell yeah.
 https://docs.flutter.dev/platform-integration/web/wasm
+https://github.com/flutter/flutter/wiki/Flutter-build-release-channels
+// search master // Compiling to WebAssembly (wasm) is only available on the master channel.
 
 go through revisions of project descriptions and articles, making cuts to length where possible.
 
