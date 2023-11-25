@@ -34,6 +34,25 @@ class _HomescreenState extends State<Homescreen>
   bool titleOpacity = false;
   late AnimationController controller;
   late Animation<Color> _colorAnim;
+// store precached background images
+  late Image background1;
+  late Image background2;
+  late Image background3;
+  late Image background4;
+  late Image background5;
+  late Image background6;
+
+// add precaching to background images so they load before everything else
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    precacheImage(background1.image, context);
+    precacheImage(background2.image, context);
+    precacheImage(background3.image, context);
+    precacheImage(background4.image, context);
+    precacheImage(background5.image, context);
+    precacheImage(background6.image, context);
+  }
 
   void _randomizeBackground() {
     setState(() {
@@ -63,6 +82,12 @@ class _HomescreenState extends State<Homescreen>
   @override
   void initState() {
     super.initState();
+    background1 = Image.asset('assets/1.png');
+    background2 = Image.asset('assets/2.png');
+    background3 = Image.asset('assets/3.png');
+    background4 = Image.asset('assets/4.png');
+    background5 = Image.asset('assets/5.png');
+    background6 = Image.asset('assets/6.png');
     checkPrefsFont();
     checkPrefsLight();
     _randomizeBackground();

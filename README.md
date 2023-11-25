@@ -170,6 +170,10 @@ done - set up nameservers for webhosting
 done - make background set to gray so that while background is loading it isn't blank white
 done - -- it's not on index, because that's only the splash screen after that it's the scaffold background
 
+
+done - set body of main page to be gray until image finishes loading
+done - set up redirect for tyrowo.com and tyrowo.work to go to tyro.work
+
 investigate this concept of deploying to webassembly instead of javascript. (build web --wasm) Since this is a simple page maybe web assembly would be able to improve performance? If it has a shorter boot up time then hell yeah.
 https://docs.flutter.dev/platform-integration/web/wasm
 https://github.com/flutter/flutter/wiki/Flutter-build-release-channels
@@ -178,3 +182,7 @@ https://github.com/flutter/flutter/wiki/Flutter-build-release-channels
 go through revisions of project descriptions and articles, making cuts to length where possible.
 
 write a plain html page for the tEDH rules to link publicly on reddit and stuff
+
+pics are a little small, maybe could make them more responsive and/or based on how many in wrap
+ -- pass in wrap # of children to set proportion of the screen it should take up
+ -- 100% of deviceWidth / (n + 1) 
