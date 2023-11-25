@@ -17,6 +17,13 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   bool tyFontOff = false;
   bool darkMode = false;
+// store precached background images
+  late Image background1;
+  late Image background2;
+  late Image background3;
+  late Image background4;
+  late Image background5;
+  late Image background6;
 
   void _updateFont(bool tyOff) async {
     setState(() => tyFontOff = tyOff);
@@ -47,16 +54,45 @@ class _MyAppState extends State<MyApp> {
     super.initState();
     checkPrefsFont();
     checkPrefsLight();
+    background1 = Image.asset('assets/1.png', repeat: ImageRepeat.repeat);
+    background2 = Image.asset('assets/2.png', repeat: ImageRepeat.repeat);
+    background3 = Image.asset('assets/3.png', repeat: ImageRepeat.repeat);
+    background4 = Image.asset('assets/4.png', repeat: ImageRepeat.repeat);
+    background5 = Image.asset('assets/5.png', repeat: ImageRepeat.repeat);
+    background6 = Image.asset('assets/6.png', repeat: ImageRepeat.repeat);
+  }
+
+// add precaching to background images so they load before everything else
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    precacheImage(background1.image, context);
+    precacheImage(background2.image, context);
+    precacheImage(background3.image, context);
+    precacheImage(background4.image, context);
+    precacheImage(background5.image, context);
+    precacheImage(background6.image, context);
   }
 
   @override
   Widget build(BuildContext context) {
+    List<Image> backgrounds = [
+      background1,
+      background2,
+      background3,
+      background4,
+      background5,
+      background6
+    ];
     return MaterialApp(
       scrollBehavior: AllowDragScroll(),
       debugShowCheckedModeBanner: false,
       title: 'Tyro Work',
       theme: darkMode ? darkTheme(tyFontOff) : lightTheme(tyFontOff),
-      home: Homescreen(updateLight: _updateLight, updateFont: _updateFont),
+      home: Homescreen(
+          updateLight: _updateLight,
+          updateFont: _updateFont,
+          backgrounds: backgrounds),
     );
   }
 }
