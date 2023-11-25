@@ -186,3 +186,8 @@ write a plain html page for the tEDH rules to link publicly on reddit and stuff
 pics are a little small, maybe could make them more responsive and/or based on how many in wrap
  -- pass in wrap # of children to set proportion of the screen it should take up
  -- 100% of deviceWidth / (n + 1) 
+
+need to make a third banner size for projects on mobile
+image sizes are breaking on mobile
+
+precache didn't seem to fix the loading issues? maybe it improved though

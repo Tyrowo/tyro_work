@@ -64,14 +64,24 @@ class _MyAppState extends State<MyApp> {
 
 // add precaching to background images so they load before everything else
   @override
-  void didChangeDependencies() {
+  void didChangeDependencies() async {
     super.didChangeDependencies();
-    precacheImage(background1.image, context);
-    precacheImage(background2.image, context);
-    precacheImage(background3.image, context);
-    precacheImage(background4.image, context);
-    precacheImage(background5.image, context);
-    precacheImage(background6.image, context);
+    await precacheImage(background1.image, context);
+    if (mounted) {
+      await precacheImage(background2.image, context);
+    }
+    if (mounted) {
+      await precacheImage(background3.image, context);
+    }
+    if (mounted) {
+      await precacheImage(background4.image, context);
+    }
+    if (mounted) {
+      await precacheImage(background5.image, context);
+    }
+    if (mounted) {
+      await precacheImage(background6.image, context);
+    }
   }
 
   @override
