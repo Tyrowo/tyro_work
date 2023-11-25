@@ -229,6 +229,7 @@ class Web1Description extends StatelessWidget {
                 label: 'Screenshot of my first website'),
           ],
         ),
+        const Text(''),
         const Text(
             "When I started learning how to code I wasn't sure if I wanted to be more of a front end developer or back end developer."),
         const Text(
@@ -251,9 +252,11 @@ class Web1Description extends StatelessWidget {
             "My font I actually created prior to the website, it was a project where I wanted to use my actual handwriting as a font for use in documents."),
         const Text(
             "I created it with a web app called calligraphr, and went through tons of iterations creating variations of the lettering that would make it as natural looking as possible. In all I created over 116 of these handwritten character sheets."),
+        const Text(''),
         const ResizeableImage(
             asset: 'assets/pics/handwritingCharacters.jpg',
             label: 'A sheet of handwritten characters'),
+        const Text(''),
         const Text(
             "My intent was to have it published as a Google Font, but unfortunately fonts created through Calligraphr are not supported because they don't have the component files."),
         const Text(''),
@@ -370,6 +373,7 @@ class Web2Description extends StatelessWidget {
                 label: 'Dark mode color palette from snow leopard print'),
           ],
         ),
+        const Text(''),
         const Text(
             "In classic Tyler fashion I wanted to create a really personal feel to this website, and that's where the leopard print theme comes into play."),
         const Text(
@@ -388,9 +392,11 @@ class Web2Description extends StatelessWidget {
             "What a journey that was. I navigated the public transit and arrived just past noon to an empty exhibit. But after a while of looking I discovered the cat asleep by the wall interior, barely visible."),
         const Text(
             "Any time he shifted positions I snapped some pics of his back, but I knew they were barely useable."),
+        const Text(''),
         const ResizeableImage(
             asset: 'assets/pics/cat01waiting.jpg',
             label: 'Snow leopard from a distance inside a building'),
+        const Text(''),
         const Text(
             "So I waited. I sat outside the snow leopard exhibit until 5 PM, patiently rationing my phone battery life to mitigate my boredom."),
         const Text(
@@ -398,6 +404,7 @@ class Web2Description extends StatelessWidget {
         const Text(
             "I learned from a zookeeper that the cat's name was Jimmy G, and at 5 PM when another zookeeper came to bring him his food Jimmy finally woke up."),
         const Text("He ate his food, and began to do laps around his exhibit."),
+        const Text(''),
         const Wrap(
           crossAxisAlignment: WrapCrossAlignment.center,
           children: [
@@ -412,16 +419,20 @@ class Web2Description extends StatelessWidget {
                 label: 'Snow leopard crouched against a wall'),
           ],
         ),
+        const Text(''),
         const Text(
             "I ran alongside him, furiously snapping as many pictures as I could in as many poses as I could, with a focus on trying to get a broad view of his side for an optimal look at the print on his side."),
+        const Text(''),
         const ResizeableImage(
             asset: 'assets/pics/cat02body.jpg',
             label: 'Broadside of a snow leopard'),
+        const Text(''),
         const Text(
             "I took pictures until my phone died, watched him until he finished his rounds, and he promptly went back to sleep."),
         const Text(''),
         const Text(
             "When I got home I selected the cleanest pictures I could find of the print, cropped them, and used them as a model for Midjourney to base the results of my prompt on."),
+        const Text(''),
         const Wrap(
           crossAxisAlignment: WrapCrossAlignment.center,
           children: [
@@ -433,6 +444,7 @@ class Web2Description extends StatelessWidget {
                 label: 'Cropped body of a snow leopard'),
           ],
         ),
+        const Text(''),
         const Text(
             "Creating a smooth tiling image was difficult with an inconsistent design, but after generating a hundred images or so, I had 6 perfect images to use for this project."),
         const Text(
@@ -441,15 +453,39 @@ class Web2Description extends StatelessWidget {
             "As modern web design moves towards simple plain backgrounds, I wanted mine to be a little more subtly dynamic and engaging to repeat visitors."),
         const Text(
             "I think the results speak for themselves. I find it very visually appealing, and it served as a great basis for the off-black and off-white color scheme."),
-        const ResizeableImage(
-            asset: 'assets/4.png', label: 'Tiled snow leopard pattern image'),
+        const Text(''),
+
+        const Wrap(
+          crossAxisAlignment: WrapCrossAlignment.center,
+          runSpacing: 15.0,
+          children: [
+            ResizeableImage(
+                asset: 'assets/1.png',
+                label: 'Tiled snow leopard pattern image'),
+            ResizeableImage(
+                asset: 'assets/2.png',
+                label: 'Tiled snow leopard pattern image'),
+            ResizeableImage(
+                asset: 'assets/3.png',
+                label: 'Tiled snow leopard pattern image'),
+            ResizeableImage(
+                asset: 'assets/4.png',
+                label: 'Tiled snow leopard pattern image'),
+            ResizeableImage(
+                asset: 'assets/5.png',
+                label: 'Tiled snow leopard pattern image'),
+            ResizeableImage(
+                asset: 'assets/6.png',
+                label: 'Tiled snow leopard pattern image'),
+          ],
+        ),
 // [color palette references]
         const Text(''),
         const Text(
             "So here's a quick shoutout to my model and basis for this website, Jimmy G."),
         const Text(
             "Thanks for allowing me the opportunity to ethically source the images myself. "),
-        const Text("Hope you're doing well. 💕"),
+        const Text("Hope you're doing well. 💕"), const Text(''),
         const ResizeableImage(
             asset: 'assets/pics/cat06posed.jpg',
             label: 'Snow leopard sitting on a large rock'),

@@ -21,12 +21,6 @@ page transitions seem outside the scope of this project (mostly because it's pri
 
 think pieces - grill guide algorithm lol - definitely not for now but maybe one day
 
-## Deployment To-Do
-done - set up nameservers for webhosting
-
-investigate this concept of deploying to webassembly instead of javascript. (build web --wasm) Since this is a simple page maybe web assembly would be able to improve performance? If it has a shorter boot up time then hell yeah.
-https://docs.flutter.dev/platform-integration/web/wasm
-
 ## Getting Started To Do - Groundwork
 done - import image assets
 done - set up favicon 
@@ -160,18 +154,23 @@ nah - add dates to project descriptions
 done - think pieces - work more on magic time complexity
 done - think pieces - A Year of Leetcode
 
-
-add pictures to project descriptions and articles
-make pictures zoomable on tap, so that it pops out to like an alert when you click on it
+nah - make scrollbar of articles and descriptions not overlap the text
+done - do a better job in the magic article of conveying the subsequent permutations of planning your turn, so that you know whether you'll have the right land drops in the future. That way it's more accurate to be logarithmically reduced.
+done - add pictures to project descriptions and articles
+done - make pictures zoomable on tap, so that it pops out to like an alert when you click on it
  -- https://api.flutter.dev/flutter/widgets/InteractiveViewer-class.html
  -- https://stackoverflow.com/questions/43651708/how-do-i-pan-and-zoom-an-image
-also added a gesture detector to pull up the picture in a fitted dialog box to show the image overtop of everything on tap
+done - also added a gesture detector to pull up the picture in a fitted dialog box to show the image overtop of everything on tap
+done - make initial picture container responsive
+done - wrote widget to contain all these things into one easy to use responsive piece
 
-make initial picture container responsive
+
+## Phase 4 - Deployment
+done - set up nameservers for webhosting
+
+investigate this concept of deploying to webassembly instead of javascript. (build web --wasm) Since this is a simple page maybe web assembly would be able to improve performance? If it has a shorter boot up time then hell yeah.
+https://docs.flutter.dev/platform-integration/web/wasm
 
 go through revisions of project descriptions and articles, making cuts to length where possible.
 
 write a plain html page for the tEDH rules to link publicly on reddit and stuff
-do a better job in the magic article of conveying the subsequent permutations of planning your turn, so that you know whether you'll have the right land drops in the future. That way it's more accurate to be logarithmically reduced.
-
-make scrollbar of articles and descriptions not overlap the text

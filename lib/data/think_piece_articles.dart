@@ -18,7 +18,10 @@ class LeetCodePiece extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        ResizeableImage(asset: 'tyrowo.jpg', label: 'me'),
+        ResizeableImage(
+            asset: 'assets/pics/leetcodeCurrent.png',
+            label: 'My current LeetCode profile/stats page'),
+        Text(''),
         Text("Closing out my year competing in challenges"),
         Text(''),
         Text(
@@ -82,7 +85,6 @@ class TEDHPiece extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const ResizeableImage(asset: 'tyrowo.jpg', label: 'me'),
         const Text(
             "I've loved Magic the Gathering since I was a child, though I had a falling out with it for many years due to some disagreements with how it is monetized and the secondary market in general."),
         const Text(
@@ -211,7 +213,8 @@ class TEDHPiece extends StatelessWidget {
         const Text(
             "It may prove to be too powerful a change, but for now I'm excited to see what kind of wacky decks it can bring to the table."),
         const Text(''),
-        const Text("I've started playing this ruleset with my friend group."),
+        const Text(
+            "I've started exclusively playing this ruleset with my friend group."),
         const Text(
             "I designed the deck composition such that unless a deck is completely reliant on tutoring, or has a gimmick that it's all lands/no lands, almost any EDH deck can be converted into a tEDH deck, so my friends that have decks have been able to play with their cards without any issue. Usually all it takes is pulling out the tutors, fetches, sol rings, and trimming down a few cards."),
         const Text(
@@ -220,6 +223,21 @@ class TEDHPiece extends StatelessWidget {
             "Even creating a token deck has been a really novel deckbuilding problem to work around, and has changed the way I look at a lot of high powered cards."),
         const Text(
             "If you give it a shot, I really hope you and your friends have as great a time as we have."),
+        const Text(''),
+        const Wrap(
+          crossAxisAlignment: WrapCrossAlignment.center,
+          children: [
+            ResizeableImage(
+                asset: 'assets/pics/mtg01setup.jpg',
+                label: 'A table full of Magic the Gathering cards'),
+            ResizeableImage(
+                asset: 'assets/pics/mtg02table.jpg',
+                label: 'A table full of Magic the Gathering cards'),
+            ResizeableImage(
+                asset: 'assets/pics/mtg03board.jpg',
+                label: 'A table full of Magic the Gathering cards'),
+          ],
+        ),
         const Text(''),
         const Text(
             "All that being said, here are the rules to tEDH, in case you want to try it out yourself!"),
