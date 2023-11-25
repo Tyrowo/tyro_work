@@ -93,6 +93,7 @@ ThemeData darkTheme(bool tyFontOff) {
       iconTheme: IconThemeData(color: Colors.white),
       foregroundColor: Colors.white,
     ),
+    scaffoldBackgroundColor: const Color.fromRGBO(66, 65, 62, 1),
     cardTheme: const CardTheme(
       color: Color.fromRGBO(66, 65, 62, 0.69),
     ),
