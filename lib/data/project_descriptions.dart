@@ -522,32 +522,32 @@ class Web2Description extends StatelessWidget {
           spacing: 15.0,
           children: [
             ResizeableImage(
-              asset: 'assets/1.png',
+              asset: 'assets/1.jpg',
               label: 'Tiled snow leopard pattern image',
               imagesInWrap: 3,
             ),
             ResizeableImage(
-              asset: 'assets/2.png',
+              asset: 'assets/2.jpg',
               label: 'Tiled snow leopard pattern image',
               imagesInWrap: 3,
             ),
             ResizeableImage(
-              asset: 'assets/3.png',
+              asset: 'assets/3.jpg',
               label: 'Tiled snow leopard pattern image',
               imagesInWrap: 3,
             ),
             ResizeableImage(
-              asset: 'assets/4.png',
+              asset: 'assets/4.jpg',
               label: 'Tiled snow leopard pattern image',
               imagesInWrap: 3,
             ),
             ResizeableImage(
-              asset: 'assets/5.png',
+              asset: 'assets/5.jpg',
               label: 'Tiled snow leopard pattern image',
               imagesInWrap: 3,
             ),
             ResizeableImage(
-              asset: 'assets/6.png',
+              asset: 'assets/6.jpg',
               label: 'Tiled snow leopard pattern image',
               imagesInWrap: 3,
             ),

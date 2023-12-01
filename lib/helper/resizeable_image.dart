@@ -51,9 +51,7 @@ class _ResizeableImageState extends State<ResizeableImage> {
           backgroundColor: const Color.fromRGBO(100, 100, 100, 0),
           surfaceTintColor: const Color.fromRGBO(100, 100, 100, 0),
           child: SizedBox(
-            height:
-                // this doesn't work it reds out becaue the .height property is null. can't figure out how to get the image's height and width to compare to the screen width
-                min(deviceHeight(context) * 0.95, picHeight + 75),
+            height: min(deviceHeight(context) * 0.95, picHeight + 75),
             width: min(deviceWidth(context) * 0.95, picWidth + 75),
             child: Stack(
               alignment: AlignmentDirectional.topEnd,

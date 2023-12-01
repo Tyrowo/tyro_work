@@ -170,9 +170,18 @@ done - set up nameservers for webhosting
 done - make background set to gray so that while background is loading it isn't blank white
 done - -- it's not on index, because that's only the splash screen after that it's the scaffold background
 
-
 done - set body of main page to be gray until image finishes loading
 done - set up redirect for tyrowo.com and tyrowo.work to go to tyro.work
+
+done - pics are a little small, maybe could make them more responsive and/or based on how many in wrap
+ -- pass in wrap # of children to set proportion of the screen it should take up
+ -- 100% of deviceWidth / (n + 1) 
+ 
+done - precache didn't seem to fix the loading issues? maybe it improved though
+done - -- awaiting the precache calls improved loading dramatically
+
+## Phase 5 - Improvements
+done - Convert all the background images from .pngs to .jpgs for better loading times
 
 investigate this concept of deploying to webassembly instead of javascript. (build web --wasm) Since this is a simple page maybe web assembly would be able to improve performance? If it has a shorter boot up time then hell yeah.
 https://docs.flutter.dev/platform-integration/web/wasm
@@ -183,11 +192,21 @@ go through revisions of project descriptions and articles, making cuts to length
 
 write a plain html page for the tEDH rules to link publicly on reddit and stuff
 
-pics are a little small, maybe could make them more responsive and/or based on how many in wrap
- -- pass in wrap # of children to set proportion of the screen it should take up
- -- 100% of deviceWidth / (n + 1) 
+nah - need to make a third banner size for projects on mobile
+not sure - image sizes are breaking on mobile
 
-need to make a third banner size for projects on mobile
-image sizes are breaking on mobile
+elevated buttons on app bar need to be reduced on mobile
+make profile picture resizeable image (darlin was tapping on it)
+make light/dark pallets stack (in column, no wrap) instead of go wide
 
-precache didn't seem to fix the loading issues? maybe it improved though
+
+replace the list of background images with one small precached image to go underneath the randomized one that lazy loads in later.
+need to create a low res version of one of the patterns 
+
+add drop shadow to the resizeable image class so they don't look so plain by themselves
+
+add shadow around profile pic and headline?
+
+write in leetcode think piece about how I was trying to convert dailies mindset from videogames to something productive
+
+People (mom and jill) have repeated criticism that paragraphs of articles are breaking at odd points. Not sure if it would work putting them in wraps, but either need to do that or expand the text blocks into paragraphs instead of sentences.

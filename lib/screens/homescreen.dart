@@ -135,22 +135,32 @@ class _HomescreenState extends State<Homescreen>
               const Spacer(),
               const SizedBox(width: 10),
               ElevatedButton(
-                  onPressed: () async {
-                    final Uri url = Uri.parse('https://tyro.work/resume');
-                    if (!await launchUrl(url)) {
-                      throw Exception('Could not launch $url');
-                    }
-                  },
-                  child: const Text('Resume')),
+                onPressed: () async {
+                  final Uri url = Uri.parse('https://tyro.work/resume');
+                  if (!await launchUrl(url)) {
+                    throw Exception('Could not launch $url');
+                  }
+                },
+                child: Text(
+                  'Resume',
+                  textScaleFactor:
+                      max(ScaleSize.textScaleFactor(context), 0.69),
+                ),
+              ),
               const SizedBox(width: 10),
               ElevatedButton(
-                  onPressed: () {
-                    setState(() => scrollController.animateTo(
-                        scrollController.position.maxScrollExtent,
-                        duration: const Duration(milliseconds: 1200),
-                        curve: Curves.ease));
-                  },
-                  child: const Text('Contact')),
+                onPressed: () {
+                  setState(() => scrollController.animateTo(
+                      scrollController.position.maxScrollExtent,
+                      duration: const Duration(milliseconds: 1200),
+                      curve: Curves.ease));
+                },
+                child: Text(
+                  'Contact',
+                  textScaleFactor:
+                      max(ScaleSize.textScaleFactor(context), 0.69),
+                ),
+              ),
               const SizedBox(width: 20),
               SizedBox(
                 width: 65,

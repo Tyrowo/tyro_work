@@ -54,12 +54,12 @@ class _MyAppState extends State<MyApp> {
     super.initState();
     checkPrefsFont();
     checkPrefsLight();
-    background1 = Image.asset('assets/1.png', repeat: ImageRepeat.repeat);
-    background2 = Image.asset('assets/2.png', repeat: ImageRepeat.repeat);
-    background3 = Image.asset('assets/3.png', repeat: ImageRepeat.repeat);
-    background4 = Image.asset('assets/4.png', repeat: ImageRepeat.repeat);
-    background5 = Image.asset('assets/5.png', repeat: ImageRepeat.repeat);
-    background6 = Image.asset('assets/6.png', repeat: ImageRepeat.repeat);
+    background1 = Image.asset('assets/1.jpg', repeat: ImageRepeat.repeat);
+    background2 = Image.asset('assets/2.jpg', repeat: ImageRepeat.repeat);
+    background3 = Image.asset('assets/3.jpg', repeat: ImageRepeat.repeat);
+    background4 = Image.asset('assets/4.jpg', repeat: ImageRepeat.repeat);
+    background5 = Image.asset('assets/5.jpg', repeat: ImageRepeat.repeat);
+    background6 = Image.asset('assets/6.jpg', repeat: ImageRepeat.repeat);
   }
 
 // add precaching to background images so they load before everything else
