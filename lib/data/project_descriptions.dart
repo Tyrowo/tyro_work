@@ -130,28 +130,30 @@ class EquidistantProjectDescription extends StatelessWidget {
           ],
         ),
         const Text(''),
-        const Wrap(
-          crossAxisAlignment: WrapCrossAlignment.center,
-          alignment: WrapAlignment.center,
-          runSpacing: 15.0,
-          spacing: 15.0,
-          children: [
-            ResizeableImage(
-              asset: 'assets/pics/eqScreenshot01.png',
-              label: 'Homepage of my app called Equidistant',
-              imagesInWrap: 3,
-            ),
-            ResizeableImage(
-              asset: 'assets/pics/eqScreenshot02.png',
-              label: 'Privacy mode screen of the app Equidistant',
-              imagesInWrap: 3,
-            ),
-            ResizeableImage(
-              asset: 'assets/pics/eqScreenshot03.png',
-              label: 'Results screen of the app Equidistant',
-              imagesInWrap: 3,
-            ),
-          ],
+        const Center(
+          child: Wrap(
+            crossAxisAlignment: WrapCrossAlignment.center,
+            alignment: WrapAlignment.center,
+            runSpacing: 15.0,
+            spacing: 15.0,
+            children: [
+              ResizeableImage(
+                asset: 'assets/pics/eqScreenshot01.png',
+                label: 'Homepage of my app called Equidistant',
+                imagesInWrap: 3,
+              ),
+              ResizeableImage(
+                asset: 'assets/pics/eqScreenshot02.png',
+                label: 'Privacy mode screen of the app Equidistant',
+                imagesInWrap: 3,
+              ),
+              ResizeableImage(
+                asset: 'assets/pics/eqScreenshot03.png',
+                label: 'Results screen of the app Equidistant',
+                imagesInWrap: 3,
+              ),
+            ],
+          ),
         ),
         const Text(''),
         const Text(
@@ -443,28 +445,30 @@ class Web2Description extends StatelessWidget {
             "I learned from a zookeeper that the cat's name was Jimmy G, and at 5 PM when another zookeeper came to bring him his food Jimmy finally woke up."),
         const Text("He ate his food, and began to do laps around his exhibit."),
         const Text(''),
-        const Wrap(
-          crossAxisAlignment: WrapCrossAlignment.center,
-          alignment: WrapAlignment.center,
-          runSpacing: 15.0,
-          spacing: 15.0,
-          children: [
-            ResizeableImage(
-              asset: 'assets/pics/cat03face.jpg',
-              label: 'Snow leopard facing the camera',
-              imagesInWrap: 3,
-            ),
-            ResizeableImage(
-              asset: 'assets/pics/cat04walking.jpg',
-              label: 'Snow leopard walking through his habitat',
-              imagesInWrap: 3,
-            ),
-            ResizeableImage(
-              asset: 'assets/pics/cat05crouching.jpg',
-              label: 'Snow leopard crouched against a wall',
-              imagesInWrap: 3,
-            ),
-          ],
+        const Center(
+          child: Wrap(
+            crossAxisAlignment: WrapCrossAlignment.center,
+            alignment: WrapAlignment.center,
+            runSpacing: 15.0,
+            spacing: 15.0,
+            children: [
+              ResizeableImage(
+                asset: 'assets/pics/cat03face.jpg',
+                label: 'Snow leopard facing the camera',
+                imagesInWrap: 3,
+              ),
+              ResizeableImage(
+                asset: 'assets/pics/cat04walking.jpg',
+                label: 'Snow leopard walking through his habitat',
+                imagesInWrap: 3,
+              ),
+              ResizeableImage(
+                asset: 'assets/pics/cat05crouching.jpg',
+                label: 'Snow leopard crouched against a wall',
+                imagesInWrap: 3,
+              ),
+            ],
+          ),
         ),
         const Text(''),
         const Text(
@@ -515,43 +519,45 @@ class Web2Description extends StatelessWidget {
             "I think the results speak for themselves. I find it very visually appealing, and it served as a great basis for the off-black and off-white color scheme."),
         const Text(''),
 
-        const Wrap(
-          crossAxisAlignment: WrapCrossAlignment.center,
-          alignment: WrapAlignment.center,
-          runSpacing: 15.0,
-          spacing: 15.0,
-          children: [
-            ResizeableImage(
-              asset: 'assets/1.jpg',
-              label: 'Tiled snow leopard pattern image',
-              imagesInWrap: 3,
-            ),
-            ResizeableImage(
-              asset: 'assets/2.jpg',
-              label: 'Tiled snow leopard pattern image',
-              imagesInWrap: 3,
-            ),
-            ResizeableImage(
-              asset: 'assets/3.jpg',
-              label: 'Tiled snow leopard pattern image',
-              imagesInWrap: 3,
-            ),
-            ResizeableImage(
-              asset: 'assets/4.jpg',
-              label: 'Tiled snow leopard pattern image',
-              imagesInWrap: 3,
-            ),
-            ResizeableImage(
-              asset: 'assets/5.jpg',
-              label: 'Tiled snow leopard pattern image',
-              imagesInWrap: 3,
-            ),
-            ResizeableImage(
-              asset: 'assets/6.jpg',
-              label: 'Tiled snow leopard pattern image',
-              imagesInWrap: 3,
-            ),
-          ],
+        const Center(
+          child: Wrap(
+            crossAxisAlignment: WrapCrossAlignment.center,
+            alignment: WrapAlignment.center,
+            runSpacing: 15.0,
+            spacing: 15.0,
+            children: [
+              ResizeableImage(
+                asset: 'assets/1.jpg',
+                label: 'Tiled snow leopard pattern image',
+                imagesInWrap: 3,
+              ),
+              ResizeableImage(
+                asset: 'assets/2.jpg',
+                label: 'Tiled snow leopard pattern image',
+                imagesInWrap: 3,
+              ),
+              ResizeableImage(
+                asset: 'assets/3.jpg',
+                label: 'Tiled snow leopard pattern image',
+                imagesInWrap: 3,
+              ),
+              ResizeableImage(
+                asset: 'assets/4.jpg',
+                label: 'Tiled snow leopard pattern image',
+                imagesInWrap: 3,
+              ),
+              ResizeableImage(
+                asset: 'assets/5.jpg',
+                label: 'Tiled snow leopard pattern image',
+                imagesInWrap: 3,
+              ),
+              ResizeableImage(
+                asset: 'assets/6.jpg',
+                label: 'Tiled snow leopard pattern image',
+                imagesInWrap: 3,
+              ),
+            ],
+          ),
         ),
 // [color palette references]
         const Text(''),

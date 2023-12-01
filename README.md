@@ -181,7 +181,11 @@ done - precache didn't seem to fix the loading issues? maybe it improved though
 done - -- awaiting the precache calls improved loading dramatically
 
 ## Phase 5 - Improvements
+alternative fix - replace the list of background images with one small precached image to go underneath the randomized one that lazy loads in later. need to create a low res version of one of the patterns 
 done - Convert all the background images from .pngs to .jpgs for better loading times
+done - elevated buttons on app bar need to be reduced on mobile
+done - image sizes are breaking on mobile
+done - add drop shadow to the resizeable image class so they don't look so plain by themselves
 
 investigate this concept of deploying to webassembly instead of javascript. (build web --wasm) Since this is a simple page maybe web assembly would be able to improve performance? If it has a shorter boot up time then hell yeah.
 https://docs.flutter.dev/platform-integration/web/wasm
@@ -193,17 +197,9 @@ go through revisions of project descriptions and articles, making cuts to length
 write a plain html page for the tEDH rules to link publicly on reddit and stuff
 
 nah - need to make a third banner size for projects on mobile
-not sure - image sizes are breaking on mobile
 
-elevated buttons on app bar need to be reduced on mobile
 make profile picture resizeable image (darlin was tapping on it)
 make light/dark pallets stack (in column, no wrap) instead of go wide
-
-
-replace the list of background images with one small precached image to go underneath the randomized one that lazy loads in later.
-need to create a low res version of one of the patterns 
-
-add drop shadow to the resizeable image class so they don't look so plain by themselves
 
 add shadow around profile pic and headline?
 

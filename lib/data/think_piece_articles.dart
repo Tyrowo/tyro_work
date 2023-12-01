@@ -228,28 +228,30 @@ class TEDHPiece extends StatelessWidget {
         const Text(
             "If you give it a shot, I really hope you and your friends have as great a time as we have."),
         const Text(''),
-        const Wrap(
-          crossAxisAlignment: WrapCrossAlignment.center,
-          alignment: WrapAlignment.center,
-          runSpacing: 15.0,
-          spacing: 15.0,
-          children: [
-            ResizeableImage(
-              asset: 'assets/pics/mtg01setup.jpg',
-              label: 'A table full of Magic the Gathering cards',
-              imagesInWrap: 3,
-            ),
-            ResizeableImage(
-              asset: 'assets/pics/mtg02table.jpg',
-              label: 'A table full of Magic the Gathering cards',
-              imagesInWrap: 3,
-            ),
-            ResizeableImage(
-              asset: 'assets/pics/mtg03board.jpg',
-              label: 'A table full of Magic the Gathering cards',
-              imagesInWrap: 3,
-            ),
-          ],
+        const Center(
+          child: Wrap(
+            crossAxisAlignment: WrapCrossAlignment.center,
+            alignment: WrapAlignment.center,
+            runSpacing: 15.0,
+            spacing: 15.0,
+            children: [
+              ResizeableImage(
+                asset: 'assets/pics/mtg01setup.jpg',
+                label: 'A table full of Magic the Gathering cards',
+                imagesInWrap: 3,
+              ),
+              ResizeableImage(
+                asset: 'assets/pics/mtg02table.jpg',
+                label: 'A table full of Magic the Gathering cards',
+                imagesInWrap: 3,
+              ),
+              ResizeableImage(
+                asset: 'assets/pics/mtg03board.jpg',
+                label: 'A table full of Magic the Gathering cards',
+                imagesInWrap: 3,
+              ),
+            ],
+          ),
         ),
         const Text(''),
         const Text(

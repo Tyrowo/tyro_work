@@ -24,12 +24,28 @@ class _ResizeableImageState extends State<ResizeableImage> {
         MediaQuery.of(context).size.width;
     double deviceHeight(BuildContext context) =>
         MediaQuery.of(context).size.height;
-    return SizedBox(
-      height: deviceHeight(context) * (1 / (widget.imagesInWrap + 1)),
-      width: deviceWidth(context) * (1 / (widget.imagesInWrap + 1)),
+    return Container(
+      decoration: const BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Color.fromRGBO(0, 0, 0, 0.15),
+            blurRadius: 4,
+            offset: Offset(10, 15),
+          )
+        ],
+      ),
+      constraints: BoxConstraints(
+          maxHeight: deviceHeight(context) * (1 / (widget.imagesInWrap + 1)),
+          maxWidth: deviceWidth(context) * (1 / (widget.imagesInWrap + 1))),
+      // height: deviceHeight(context) * (1 / (widget.imagesInWrap)),
+      // width: deviceWidth(context) * (1 / (widget.imagesInWrap + 1)),
       child: GestureDetector(
           onTap: () => showPicFullscreen(context),
-          child: Image.asset(widget.asset)),
+          child: Image.asset(
+            widget.asset,
+            semanticLabel: widget.label,
+            fit: BoxFit.fitWidth,
+          )),
     );
   }
 
