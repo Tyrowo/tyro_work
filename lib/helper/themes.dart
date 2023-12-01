@@ -37,6 +37,8 @@ ThemeData lightTheme(bool tyFontOff) {
             borderRadius: BorderRadius.all(Radius.circular(8.0)),
           ),
         ),
+        padding:
+            MaterialStateProperty.all(const EdgeInsets.fromLTRB(10, 2, 10, 2)),
       ),
     ),
     textButtonTheme: TextButtonThemeData(
@@ -127,6 +129,8 @@ ThemeData darkTheme(bool tyFontOff) {
             borderRadius: BorderRadius.all(Radius.circular(8.0)),
           ),
         ),
+        padding:
+            MaterialStateProperty.all(const EdgeInsets.fromLTRB(10, 2, 10, 2)),
       ),
     ),
     textButtonTheme: TextButtonThemeData(
