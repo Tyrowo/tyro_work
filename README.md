@@ -21,6 +21,7 @@ page transitions seem outside the scope of this project (mostly because it's pri
 
 think pieces - grill guide algorithm lol - definitely not for now but maybe one day
 
+
 ## Getting Started To Do - Groundwork
 done - import image assets
 done - set up favicon 
@@ -189,21 +190,21 @@ done - add drop shadow to the resizeable image class so they don't look so plain
 alternative fix - make light/dark pallets stack (in column, no wrap) instead of go wide
 done - made the close button for fullscreen vers of resizeable image a little more responsive to image size
 done - make profile picture resizeable image (darlin was tapping on it), converted the alert dialog function from the resizeable image to a universal version not hidden in the private _classState class
+done - write in leetcode think piece about how I was trying to convert dailies mindset from videogames to something productive
 
 investigate this concept of deploying to webassembly instead of javascript. (build web --wasm) Since this is a simple page maybe web assembly would be able to improve performance? If it has a shorter boot up time then hell yeah.
 https://docs.flutter.dev/platform-integration/web/wasm
 https://github.com/flutter/flutter/wiki/Flutter-build-release-channels
 // search master // Compiling to WebAssembly (wasm) is only available on the master channel.
 
-go through revisions of project descriptions and articles, making cuts to length where possible.
+need to make a third banner size for projects on mobile
 
-write a plain html page for the tEDH rules to link publicly on reddit and stuff
-
+nah - add shadow around profile pic and headline?
 nah - need to make a third banner size for projects on mobile
 
 
-add shadow around profile pic and headline?
+write a plain html page for the tEDH rules to link publicly on reddit and stuff
 
-write in leetcode think piece about how I was trying to convert dailies mindset from videogames to something productive
+go through revisions of project descriptions and articles, making cuts to length where possible.
 
 People (mom and jill) have repeated criticism that paragraphs of articles are breaking at odd points. Not sure if it would work putting them in wraps, but either need to do that or expand the text blocks into paragraphs instead of sentences.

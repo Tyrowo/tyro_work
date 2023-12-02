@@ -31,15 +31,15 @@ class LeetCodePiece extends StatelessWidget {
         Text(
             "After beginning work on a new contract at work, I decided I wanted to become more confident at coding in Java."),
         Text(
-            "I felt like to become a proficient member of the team I wanted to relearn how to do algorithms, because I had learned them in Javascript originally."),
+            "To become a proficient member of the team I wanted to relearn how to create basic data structures and algorithms, because I had learned them in Javascript originally."),
         Text(
-            'However, I also wanted to become more "conversationally fluent," because day to day job responsibilities aren\'t necessarily going to require large data structures.'),
+            'However, I also wanted to become more "conversationally fluent," because day to day job responsibilities aren\'t usually going to require large data structures. Instead I wanted to be more aware of simple elegant solutions to common problems and improve my code literacy in general for code reviews.'),
         Text(''),
         Text("So I set two goals for the year:"),
         Text(
             "The first was to relearn all of the general data structures and algorithms, becoming familiar at working with their respective Java classes."),
         Text(
-            "The other was to complete at least one problem a day for the entire year, even if it was an easy problem, to become more comfortable with completing simple tasks without having to Google them."),
+            "The other was to complete at least one problem a day for the entire year, even if it was an easy problem, to become more comfortable with completing simple tasks without having to Google them. You see, the modern day video game free-to-play / battle pass incentivization model had wired my brain to compulsively complete minimum daily challenges for a number of games, and I realized if I could restructure my studying in a way that took advantage of these carved out dopamine pathways I would be magnitudes more productive."),
         Text(''),
         Text(
             "Today I've made it through most of the year, and have completed the 300 days required to get the 2023-year achievement on Leetcode."),
