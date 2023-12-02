@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tyro_work/data/think_piece_articles.dart';
 import 'package:tyro_work/data/project_descriptions.dart';
 import 'package:tyro_work/helper/project_banner.dart';
+import 'package:tyro_work/helper/resizeable_image.dart';
 import 'package:tyro_work/helper/socials_button.dart';
 import 'package:tyro_work/helper/themes.dart';
 import 'package:tyro_work/helper/think_pieces.dart';
@@ -239,11 +240,15 @@ class _HomescreenState extends State<Homescreen>
                               ),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(40.0),
-                                child: Image.asset(
-                                  'assets/tyrowo.webp',
-                                  width:
-                                      max(0.69, deviceWidth(context) / 1080) *
-                                          200,
+                                child: GestureDetector(
+                                  onTap: () => universalShowPicFullscreen(
+                                      context, 'assets/tyrowo.webp'),
+                                  child: Image.asset(
+                                    'assets/tyrowo.webp',
+                                    width:
+                                        max(0.69, deviceWidth(context) / 1080) *
+                                            200,
+                                  ),
                                 ),
                               ),
                             ),

@@ -186,6 +186,9 @@ done - Convert all the background images from .pngs to .jpgs for better loading 
 done - elevated buttons on app bar need to be reduced on mobile
 done - image sizes are breaking on mobile
 done - add drop shadow to the resizeable image class so they don't look so plain by themselves
+alternative fix - make light/dark pallets stack (in column, no wrap) instead of go wide
+done - made the close button for fullscreen vers of resizeable image a little more responsive to image size
+done - make profile picture resizeable image (darlin was tapping on it), converted the alert dialog function from the resizeable image to a universal version not hidden in the private _classState class
 
 investigate this concept of deploying to webassembly instead of javascript. (build web --wasm) Since this is a simple page maybe web assembly would be able to improve performance? If it has a shorter boot up time then hell yeah.
 https://docs.flutter.dev/platform-integration/web/wasm
@@ -198,8 +201,6 @@ write a plain html page for the tEDH rules to link publicly on reddit and stuff
 
 nah - need to make a third banner size for projects on mobile
 
-make profile picture resizeable image (darlin was tapping on it)
-make light/dark pallets stack (in column, no wrap) instead of go wide
 
 add shadow around profile pic and headline?
 
