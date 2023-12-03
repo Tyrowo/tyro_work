@@ -42,26 +42,16 @@ class ProBusterProjectDescription extends StatelessWidget {
         ),
         const Text(''),
         const Text(
-            "After publishing my website I wanted to create something that was more Javascript oriented."),
+            "After publishing my website I wanted to create something that was more Javascript oriented to act as my first \"real\" project as a developer."),
         const Text(
-            "I had a personal need for a product - I was spending too much time on endless-content websites like reddit and twitch, and I wanted to manage my time more efficiently so I could focus on my studies."),
-        const Text(
-            "However, the built in website blocker in Chrome wasn't enough. I knew that if the website was Always blocked, then I would simply circumnavigate my own barriers by either using incognito mode or another browser."),
-        const Text(
-            "So I decided to design a sort of child-protection web blocker that allowed a trickle feed of content at a customizable rate."),
-        const Text(
-            "For example, once I completed the project I used it to allow myself a half hour of reddit every 24 hours."),
+            "At the time I was spending too much time on endless-content websites like Reddit and Twitch, and I wanted to manage my time more efficiently so I could focus on my studies. However, the built-in website blocker in Chrome wasn't satisfying. I knew that if the website was Always blocked, then I would simply circumnavigate my own barriers by either using incognito mode or another browser. So I wanted to design a sort of child-protection web blocker that would allow a trickle feed of content at a customizable rate. (Once I completed the project I used the extension to allow myself a half hour of Reddit or Twitch every 24 hours.)"),
         const Text(''),
         const Text(
-            "Since developing this Chrome extension there have been many more sophisticated tools that accomplish the same goal more effectively, but at the time I was working on this Chrome Manifest v3 had just come out."),
+            "Since developing this Chrome extension there have been many more sophisticated tools that accomplish the same goal more effectively, but at the time I was working on this Chrome Manifest v3 had just released. The new APIs and restrictions of Manifest v3 prevented a lot of extensions from working the way they had before, and so there weren't any extensions on the Chrome Store that accomplished what I wanted with the new platform."),
         const Text(
-            "The new APIs and restrictions of Manifest v3 prevented a lot of extensions from working the way they had before, and so there weren't any extensions on the chrome store yet that accomplished what I needed."),
+            "It was difficult working through the Service Worker based system that Manifest v3 implemented to create more permanent states in my Chrome extension, but working with the APIs and using the Chromium forums taught me a lot. Many other developers were working through the same newfound struggles with Manifest v3 that I was. Collaborating with them on solutions to our issues proved to be very satisfying."),
         const Text(
-            "It was difficult working through the service worker based system that Manifest v3 implemented to create more permanent states in my Chrome extension, but working with the APIs and using the Chromium forums taught me a lot."),
-        const Text(
-            "Many others on the forums were working through the same newfound struggles with Manifest v3 that I was, and collaborating with them on solutions to our issues proved to be very satisfying."),
-        const Text(
-            "Furthermore, the work I had done on my website project made the UI implementation easy, so I was able to focus almost entirely on improving my Javascript skills on this project."),
+            "Ultimately I created a solution where users customize a list of websites that created listeners that would be active while the extension was on. If the user accessed a website on their block list it would set up a Manifest v3 Alarm for the amount of time they had specified. At the end of the alarm it would block the website using Declarative Net Request website prohibition. Another alarm would be set up that would disable the prohibition. While this solution worked in most use cases, it was definitely a fight with the Manifest v3 service worker system. For long periods of time (like if you only allowed yourself once per week) the service workers would 'forget' their own existence and drop alarms or blockers if you stopped using Chrome. The experience made me understand why most browser extensions to this day rely on the Manifest v2 platform instead, and I'm interested in what will happen to Chrome once v2 is officially deprecated in a few months."),
         const Text(''),
         ElevatedButton(
             onPressed: () async {
@@ -86,6 +76,32 @@ class EquidistantProjectDescription extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        /** 
+         * this format lets you have guaranteed in-line link text, but unfortunately it doesn't have the nice hover animation for the text links
+        RichText(
+          text: TextSpan(
+            children: [
+              TextSpan(
+                  style: Theme.of(context).textTheme.bodyMedium,
+                  text: 'Published and available for free on the'),
+              TextSpan(
+                style: Theme.of(context).textButtonTheme
+                    .bodyMedium!
+                    .copyWith(color: const Color.fromRGBO(28, 146, 245, 1)),
+                text: ' iOS App Store, ',
+                recognizer: TapGestureRecognizer()
+                  ..onTap = () async {
+                    final Uri url = Uri.parse(
+                        'https://apps.apple.com/us/app/equidistant/id6470894389?platform=iphone%E2%80%A6');
+                    if (!await launchUrl(url)) {
+                      throw Exception('Could not launch $url');
+                    }
+                  },
+              ),
+            ],
+          ),
+        ),
+        */
         Wrap(
           crossAxisAlignment: WrapCrossAlignment.center,
           children: [
@@ -157,62 +173,85 @@ class EquidistantProjectDescription extends StatelessWidget {
         ),
         const Text(''),
         const Text(
-            "Following my work on the Procrastination Buster I was confident that my development skills had reached a point where I felt ready to apply for work."),
-        const Text(
-            "I was hired to Birlasoft Solutions Inc as a software developer, and for a year and a half I focused on improving my proficiency at Java so that I would be more successful professionally, and taking care of my physical health (primarily by going out and playing disc golf)."),
-        const Text(
-            "But during that time I kept a list of ideas for projects I wanted to work on. I wanted to dip my toes into phone app development, because our phones are a constant tool we use in our lives, even moreso than computers for most."),
+            "I was hired to Birlasoft Solutions Inc as a backend developer, and for a year and a half I focused on improving my Java skills so that I would be successful at work. However, app development was something I was interested in learning for a long time. Almost every person in the world uses a smart phone in their daily lives, and working on ways to make these tools more useful is immensely appealing to me."),
         const Text(''),
         const Text(
-            "At Birlasoft we worked remote, but many of us were local to the area. So we had a tradition where we would meet up for lunch on Fridays to socialize a bit."),
-        const Text(
-            "However, I noticed that my coworker who was planning the lunches tended to pick restaurants that were extremely close to his house, and that often left me excluded. I was a little further from town, so while most people had a 5-15 minute drive to the restaurant, I would often have to drive 45 minutes, which meant usually I was unable to come."),
-        const Text(
-            'I thought "what if there were a way to pick out a nice restaurant somewhere where we could all meet?"'),
+            "At Birlasoft we work remote, but many of us are local to the area. So we try to meet up for lunch on Fridays to socialize a bit. Unfortunately I live a little further out of town, so I noticed that when my coworkers would pick restaurants close to their houses, the 45 minute commute for me usually meant that I was unable to come. So I thought, \"What if there was an easy way to pick out a restaurant that was convenient to meet at for all of us?\""),
         const Text(''),
         const Text(
-            "Eventually I would revisit this idea, and found that although some web apps had a similar idea, they were always restricted to only two addresses."),
-        const Text(
-            "I found that it wasn't too hard to calculate a position using more addresses, and that it would be a more satisfying solution to my problem."),
-        const Text(
-            "On top of that I thought of another problem - what if the people didn't want to share their home addresses with each other?"),
-        const Text(
-            "Coworkers, first dates, social clubs, ecommerce. There are many situations in which you need to meet up with people somewhere convenient, but can't expose yourself to some random person showing up at your house."),
-        const Text(''),
-        const Text("So to address these issues I created Equidistant."),
+            "It was a simple idea, but when I explored the internet for existing web apps I found that existing tools like meetways.com and whatshalfway.com are restricted to only two addresses. That doesn't really work for meeting up with a group of people, so I was excited that my idea would actually be worth developing for this use case. On top of that I thought of another problem - what if the people using the app didn't want to share their home addresses with each other? When meeting up with coworkers, Tinder dates, social clubs, or ecommerce like Craigslist you don't want to expose yourself to some random person knowing where you live. So I expanded the scope to have a Privacy Mode in which you could calculate a meetup point without directly sharing information."),
         const Text(''),
         const Text(
-            "Initially my plan was to learn Kotlin, but heard more and more about Flutter and loved the idea of releasing to multiple platforms. The write-once-run-anywhere design was very appealing, as was the fact that it is supported by Google."),
+            "It took a few months of planning, learning, and development, but ultimately I was able to publish Equidistant to accomplish my vision."),
+        const Text(''),
+        Wrap(
+          crossAxisAlignment: WrapCrossAlignment.center,
+          children: [
+            const Text(
+                'As an Android purist I initially started learning Kotlin, but caught wind of Flutter and loved the its write-once-run-anywhere design, the thorough documentation in written and video form, and the fact that it is officially supported by Google. I spent nearly two months preparing by watching through an'),
+            TextButton(
+              onPressed: () async {
+                final Uri url = Uri.parse(
+                    'https://www.youtube.com/watch?v=IfUjHNODRoM&list=PL6yRaaP0WPkVtoeNIGqILtRAgd3h2CNpT&index=1');
+                if (!await launchUrl(url)) {
+                  throw Exception('Could not launch $url');
+                }
+              },
+              child: const Text(
+                'intro-to-Flutter',
+              ),
+            ),
+            const Text(
+                'project creation video series, as well as a video detailing'),
+            TextButton(
+              onPressed: () async {
+                final Uri url =
+                    Uri.parse('https://www.youtube.com/watch?v=kj_tldMmu4w');
+                if (!await launchUrl(url)) {
+                  throw Exception('Could not launch $url');
+                }
+              },
+              child: const Text(
+                '~215 widgets',
+              ),
+            ),
+            const Text(
+                'that might be useful. I knew it would be much easier to design my product if I knew all the tools I had available to me.')
+          ],
+        ),
         const Text(
-            "So I spent nearly two months watching through an intro-to-Flutter project creation video, and going through a video explaining ~215 widgets that might be useful to me."),
+            "I only took notes on the videos I watched, so Equidistant was my first real hands-on experience with Flutter. But thanks to all my preparation and how fluidly VSCode provides documentation while you're coding, putting together the pieces was easy. I felt like a kid using a big pool of Legos to build something from my imagination."),
+        Wrap(
+          crossAxisAlignment: WrapCrossAlignment.center,
+          children: [
+            const Text(
+                'After doing the groundwork for the app, I had to do a little extra learning on how to implement Google Cloud APIs, as well as how to use Firebase Realtime Database to effectively implement CRUD operations I had envisioned for the Privacy Mode. But again, I love working with Google products for the extremely helpful'),
+            TextButton(
+              onPressed: () async {
+                final Uri url =
+                    Uri.parse('https://www.youtube.com/watch?v=sXBJZD0fBa4');
+                if (!await launchUrl(url)) {
+                  throw Exception('Could not launch $url');
+                }
+              },
+              child: const Text(
+                'video documentation.',
+              ),
+            ),
+          ],
+        ),
         const Text(
-            "After doing all that this project was my first real hands-on experience with Flutter."),
+            "Another huge facilitator was my partner Jill, who acted as my UX Designer for the project. She had completed a Google UX Design course, so I was able to offload many of the UX and design decisions to her so that I could leave my mental capacity open to focus on developing the code."),
+        const Text(
+            "I also brought on two of my friends as junior developers: Steven and Flare. They'd both been learning to code the year prior to me starting the project, and I wanted to give them the opportunity to work with a group repository and broaden their experiences. But working on a team rather than completely on my own was a great opportunity for me as well. At work I'm still one of the most junior developers on my team, so I'm glad I had the chance to learn how to delegate manageable project tasks and get more practice in code reviewing their solutions."),
         const Text(''),
         const Text(
-            "After all my preperation, putting together the pieces was easy. It felt like putting together a Lego set that I had written all the instructions for."),
+            "As a retrospective for the project, I adore working with Flutter. The Dart syntax is very intelligible to me because it feels like a midway between my experiences with Java and Javascript. Flutter's VSCode IDE implementation is exceptional, and the hot reload feature is a huge breath of fresh air as a developer. Although a few of my features required platform-specific solutions (I was coding for Android, but on iOS certain Google links did not work natively, and on Web I ran into issues with CORS preventing some of my Cloud API calls to Google Maps), overall there was minimal work in building to all three platforms. Submission to the App and Play stores proceeded smoothly, which was a huge relief after hearing some discouraging anecdotes from friends who had worked in React Native."),
         const Text(
-            "I had to do a little extra learning on how to implement Google Cloud APIs, as well as how to use Firebase database to effectively implement CRUD operations for the Privacy Mode of the app."),
-        const Text(
-            "My partner Jill was a huge help - she had completed a Google UX Design course, and used her knowledge to help consult with me on design decisions and make sure that the UX was intuitive."),
-        const Text(
-            "Since I felt confident in myself from my profession, I also brought on two of my friends who have been learning to code so that I could give them the chance to work with a group repository and broaden their experiences."),
-        const Text(
-            "It was a great opportunity for me as well, learning how to delegate manageable project tasks to them, since at work I'm still one of the most junior developers on my team."),
+            "All in all the experience left me very impressed with the framework, and happy I had taken the time to learn it."),
         const Text(''),
         const Text(
-            "As a retrospective for the project, I adore working with Flutter. "),
-        const Text(
-            "The Dart syntax is very readable to me because it feels like a midway between my experiences with Java and Javascript. "),
-        const Text(
-            "Flutter's VSCode IDE implementation is exceptional, and the hot reload feature is a huge breath of fresh air as a developer."),
-        const Text(
-            "Although some features need to be a little platform specific (I was coding for Android, but on iOS certain Google links did not work natively, and on Web I ran into issues with CORS preventing some of my Cloud API calls to Google Maps), overall there was minimal work to build to all three platforms, and submission to the stores proceeded smoothly."),
-        const Text("All in all it left me very impressed with the framework."),
-        const Text(''),
-        const Text(
-            "I'm very happy to be an official developer on both the Play and App stores, and quite proud of this project."),
-        const Text(
-            "If you think it may be of use to you, please consider giving it a download!"),
+            "I'm very proud to be an official developer on both the Play and App stores, and quite proud of this project. So if you think it may be of use to you, please consider giving it a download!"),
         const Text(''),
         const ElevatedButton(
             onPressed: null,
