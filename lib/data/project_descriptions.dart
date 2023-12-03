@@ -365,7 +365,7 @@ class Web2Description extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text(
-            "After learning how to use Flutter to make Equidistant, applying the things I had learned towards making a more sophisticated portfolio website was an obvious followup project for me."),
+            "After learning how to use Flutter to make Equidistant, applying the things I had learned towards making a more sophisticated portfolio website was an obvious followup project."),
         const Text(
             "Working with Flutter on a second project was an awesome experience. I was able to pull in a lot of work that I had done on Equidistant, I had already researched some of the features I wanted to implement, and I already knew how to deploy my code to web. All of that and plenty of forethought on how I wanted to design the site made development a breeze. Despite a concurrent stay in the hospital, it only took about two weeks to launch the first draft of the page. I also felt like my coding through this project was more clean and organized, and I was much more confident in how I could spread my work into reusable self contained classes and components. I also added a sort of handicap to my work - I wanted to work with as much ootb content as possible, and minimize the use of packages sourced from pub.dev. That way I could rely on my own widget composition skills a little more. Customizing properties is a breeze, and simple ternaries were enough to create breakpoints to ensure responsive design on various device widths."),
         const Text(''),
@@ -377,51 +377,15 @@ class Web2Description extends StatelessWidget {
             "Ultimately Flutter is an app framework, so these shortcomings were to be expected. And in fact, they actually were not as bad as I expected from reading Flutter forums. Regardless, I'm sure the experience with class based web development will be invaluable working with other frameworks in the future, and I'm very happy with the results."),
         const Text(''),
         const Text(
-            "Speaking to the themes of this project, my biggest feedback with my last website design was that it was too loud."),
+            "My main goal with the design was to create a really personal feel to this website. Something that is clearly outside the realm of \"normal,\" without being obnoxious. Modern web design has universally embraced image-free off-white backgrounds that remind me of the American Psycho business card scene. Snow leopards are my favorite animal, so to stand apart from this trend I wanted to use AI image generation to create a number of similar-but-different leopard print tiled patterns that would be randomized and create a subtle difference whenever the page was viewed."),
         const Text(
-            "However, I loved the color scheme as accent colors for a more light/dark theme that wouldn't be as gaudy."),
+            "I would hazard to say that every stock leopard print previously in existence has been too simplistic in design to capture the beauty of a leopard's natural camoflauge. It's a difficult thing to accomplish, because prints tend to be too consistent, where real leopards have a variety of patterns across their head, back, and sides. With advancements in AI image generation, I believed it would be possible to create a much more complex pattern that would be able to seamlessly tile but still look more natural than existing patterns."),
         const Text(
-            "I also to experiment with customization, allowing users to be able to toggle off my font if it wasn't readable enough for them, as well as toggle light/dark."),
-        const Text(''),
-        const Center(
-          child: Wrap(
-            crossAxisAlignment: WrapCrossAlignment.center,
-            alignment: WrapAlignment.center,
-            runSpacing: 15.0,
-            spacing: 15.0,
-            children: [
-              ResizeableImage(
-                asset: 'assets/pics/lightModeColor.png',
-                label: 'Light mode color palette from snow leopard print',
-                imagesInWrap: 2,
-              ),
-              ResizeableImage(
-                asset: 'assets/pics/darkModeColor.png',
-                label: 'Dark mode color palette from snow leopard print',
-                imagesInWrap: 2,
-              ),
-            ],
-          ),
-        ),
-        const Text(''),
+            "I chose to work with the AI image tool Midjourney because in their terms of service they explicitly state that with a paid membership you own the rights to any images produced with the tool in perpetuity. In my initial testing I observed how the AI handles text prompts alone, and then tested my idea using publicly available images on the internet as seeds. Although these tests did act as a successful proof-of-concept, the publicly available images were poor models for the AI - they were low resolution, and were too focused on the whole cat rather than the pattern itself. Beyond that, I also felt ethical concerns of whether I could even consider a product \"mine\" if I explicitly did not own the seeded content that my images were based off of."),
         const Text(
-            "In classic Tyler fashion I wanted to create a really personal feel to this website, and that's where the leopard print theme comes into play."),
+            "A few months after these tests I found myself in San Francisco, visiting some friends for a housewarming party. I had a day to myself where I planned on roaming the city, but it struck me that in my research finding pictures I had learned that the San Francisco zoo had one of the only snow leopard exhibits in the world. It was my first opportunity to see a snow leopard in person, so I ran off to the zoo to try to shoot some pictures on my Pixel 4."),
         const Text(
-            "With the rise of AI, I was impressed with image generation tools available for public use, and one thing that I've noticed in the commercial sector is that many leopard prints are excessively simplistic and unrealistic in design."),
-        const Text(
-            "They're too consistent in pattern, where real leopard print is a camoflauge of varied patterns across the head, back, sides of the cat."),
-        const Text(
-            "So what I wanted to accomplish was to create a more realistic leopard print pattern using Midjourney. I chose Midjourney in particular because they explicitly state that you own the rights to any images produced with the tool."),
-        const Text(
-            "To do that I tested the potential by using some publicly available images of snow leopards on the internet, but my issues with using these images were that they were poor models for the AI, they were low resolution, and ethically they weren't my images to use and base My designs off of."),
-        const Text(
-            "So on a trip to visit some friends in San Francisco, I took a trip to the zoo."),
-        const Text(
-            "It was my first opportunity to see a snow leopard in person, so I spent the day there trying to shoot pictures on my Pixel 4."),
-        const Text(
-            "What a journey that was. I navigated the public transit and arrived just past noon to an empty exhibit. But after a while of looking I discovered the cat asleep by the wall interior, barely visible."),
-        const Text(
-            "Any time he shifted positions I snapped some pics of his back, but I knew they were barely useable."),
+            "After navigating the public transit, I arrived just past noon to a seemingly empty exhibit. Looking intently, I discovered the cat asleep by the wall interior, barely visible. I waited there for hours, watching hundreds of disappointed faces walk by the 'empty' exhibit, and desperately snapped barely-useable pictures of the cat's back whenever he would shift positions and worried that might be the best results I get out of the trip."),
         const Text(''),
         const Center(
           child: ResizeableImage(
@@ -432,12 +396,7 @@ class Web2Description extends StatelessWidget {
         ),
         const Text(''),
         const Text(
-            "So I waited. I sat outside the snow leopard exhibit until 5 PM, patiently rationing my phone battery life to mitigate my boredom."),
-        const Text(
-            "I thought, 'Surely he would leave the interior area to use the bathroom eventually.' But no."),
-        const Text(
-            "I learned from a zookeeper that the cat's name was Jimmy G, and at 5 PM when another zookeeper came to bring him his food Jimmy finally woke up."),
-        const Text("He ate his food, and began to do laps around his exhibit."),
+            "I thought, \"Surely he will leave the interior area to use the bathroom eventually.\" But no. He did not. And as 5 PM rolled around my patiently rationed battery life was starting to dwindle to a point where I had to consider how I would navigate back home. But just when I was about to give up hope and leave, a zookeeper came to bring him a meal! And much to my relief, after eating his food the cat began to do laps around his exhibit. I ran alongside him, furiously snapping as many pictures as I could in as many poses as I could, with a focus on trying to get a broad view of his side to get a good sample of the print."),
         const Text(''),
         const Center(
           child: Wrap(
@@ -465,9 +424,6 @@ class Web2Description extends StatelessWidget {
           ),
         ),
         const Text(''),
-        const Text(
-            "I ran alongside him, furiously snapping as many pictures as I could in as many poses as I could, with a focus on trying to get a broad view of his side for an optimal look at the print on his side."),
-        const Text(''),
         const Center(
           child: ResizeableImage(
             asset: 'assets/pics/cat02body.jpg',
@@ -477,10 +433,7 @@ class Web2Description extends StatelessWidget {
         ),
         const Text(''),
         const Text(
-            "I took pictures until my phone died, watched him until he finished his rounds, and he promptly went back to sleep."),
-        const Text(''),
-        const Text(
-            "When I got home I selected the cleanest pictures I could find of the print, cropped them, and used them as a model for Midjourney to base the results of my prompt on."),
+            "I took pictures until my phone died, and gleefully watched him until he finished his rounds and promptly went back to sleep. A resounding success! When I got home I selected the cleanest pictures I could find of the print, cropped them, and used them as seed images for my Midjourney prompts."),
         const Text(''),
         const Center(
           child: Wrap(
@@ -504,13 +457,7 @@ class Web2Description extends StatelessWidget {
         ),
         const Text(''),
         const Text(
-            "Creating a smooth tiling image was difficult with an inconsistent design, but after generating a hundred images or so, I had 6 perfect images to use for this project."),
-        const Text(
-            "See, I didn't want just one tiled image. If you haven't noticed yet, I wanted to create a background that randomized every time you load this page."),
-        const Text(
-            "As modern web design moves towards simple plain backgrounds, I wanted mine to be a little more subtly dynamic and engaging to repeat visitors."),
-        const Text(
-            "I think the results speak for themselves. I find it very visually appealing, and it served as a great basis for the off-black and off-white color scheme."),
+            "Creating a smooth tiling image was difficult with an inconsistent design, but after generating a hundred images or so with a variety of different variations of seed images and prompts, I had procured 6 perfect images to use for this project. I think the results speak for themselves, because I find them very visually appealing. Finally, to make sure the theme didn't feel too busy/gaudy, I used the images to choose nice clean complimentary off-black and off-white color schemes to temper the layout."),
         const Text(''),
 
         const Center(
@@ -555,11 +502,30 @@ class Web2Description extends StatelessWidget {
         ),
 // [color palette references]
         const Text(''),
+        const Center(
+          child: Wrap(
+            crossAxisAlignment: WrapCrossAlignment.center,
+            alignment: WrapAlignment.center,
+            runSpacing: 15.0,
+            spacing: 15.0,
+            children: [
+              ResizeableImage(
+                asset: 'assets/pics/lightModeColor.png',
+                label: 'Light mode color palette from snow leopard print',
+                imagesInWrap: 2,
+              ),
+              ResizeableImage(
+                asset: 'assets/pics/darkModeColor.png',
+                label: 'Dark mode color palette from snow leopard print',
+                imagesInWrap: 2,
+              ),
+            ],
+          ),
+        ),
+        const Text(''),
         const Text(
-            "So here's a quick shoutout to my model and basis for this website, Jimmy G."),
-        const Text(
-            "Thanks for allowing me the opportunity to ethically source the images myself. "),
-        const Text("Hope you're doing well. 💕"), const Text(''),
+            "One of the zookeepers told me the snow leopard's name is Jimmy G. So here's a quick shoutout to my model and basis for this website. Thanks for showing up and making my project a success, Jimmy. Hope you're doing well. 💕"),
+        const Text(''),
         const Center(
           child: ResizeableImage(
             asset: 'assets/pics/cat06posed.jpg',
