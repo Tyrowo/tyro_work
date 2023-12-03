@@ -365,42 +365,16 @@ class Web2Description extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text(
-            "When I decided that I would learn how to use Flutter, it was exciting to have a new framework under my belt that I could apply to updating my portfolio."),
+            "After learning how to use Flutter to make Equidistant, applying the things I had learned towards making a more sophisticated portfolio website was an obvious followup project for me."),
         const Text(
-            "Not that I wasn't ... proud of what I was able to accomplish with vanilla html+css+js, but the results also weren't anything I was very excited to show off, either. 😹"),
-        const Text(
-            "As a web-only project, this was also a great opportunity to experiment with Flutter's WASM (web assembly) build option. It doesn't seem totally fleshed out yet but could be even more interesting as it advances in the coming years."),
+            "Working with Flutter on a second project was an awesome experience. I was able to pull in a lot of work that I had done on Equidistant, I had already researched some of the features I wanted to implement, and I already knew how to deploy my code to web. All of that and plenty of forethought on how I wanted to design the site made development a breeze. Despite a concurrent stay in the hospital, it only took about two weeks to launch the first draft of the page. I also felt like my coding through this project was more clean and organized, and I was much more confident in how I could spread my work into reusable self contained classes and components. I also added a sort of handicap to my work - I wanted to work with as much ootb content as possible, and minimize the use of packages sourced from pub.dev. That way I could rely on my own widget composition skills a little more. Customizing properties is a breeze, and simple ternaries were enough to create breakpoints to ensure responsive design on various device widths."),
         const Text(''),
         const Text(
-            "Working with Flutter on a second project was an awesome experience, because I was able to pull in a lot of work that I had done on Equidistant, I had researched some of the features I wanted to implement, and I already knew how to deploy my code to web."),
+            "However, Flutter Web has some notable drawbacks as well. My primary issue is that Flutter created web apps are not compatible with webcrawlers, which heavily impairs SEO potential and can potentially prevent pages from coming up on Google search results completely. I'm in the process of researching how I can best correct this, but it being a hurdle at all is a major shortcoming for development. There are also some random issues with Flutter UI that I've noticed - it seems that Flutter is pretty Mac oriented. I say that because, as a Windows user, I noticed that you can't use the middle mouse button to click-scroll, and from the packages I've looked at there doesn't seem to be a very satisfying workaround. Finally, although I don't really mind the bootup time to run Flutter, and I've observed that the launch time is pretty comparable to no-code webtool created portfolio sites, the fact is that having any kind of boot up time makes it a poor use case for a small page like mine."),
         const Text(
-            "It made development a breeze, and all in all it only took about two weeks (despite a concurrent stay in the hospital) to develop the page you're looking at now."),
+            "For these reasons this will probably be my final web-only Flutter project. However, I'm currently experimenting with deploying this project in Web Assembly mode, and as advancements are made in that area of Flutter it may make an impact on any of these issues."),
         const Text(
-            "I also felt like my coding through this project was more clean and organized, because I was more confident in how Flutter allows stateful widgets to be self contained into their own classes rather."),
-        const Text(
-            "I did add a sort of handicap though - I wanted to work with as much ootb content as possible, and minimize the use of packages sourced from pub.dev. That way I could rely on my own widget composition skills a little more."),
-        const Text(''),
-        const Text(
-            "Flutter is really a pleasure to work with, and I really enjoyed creating class based components that I could resuse throughout the page. "),
-        const Text(
-            "Customizing properties is a breeze, and simple ternaries were enough to create breakpoints to ensure responsive design on various device widths."),
-        const Text(''),
-        const Text(
-            "However, Flutter Web has some notable drawbacks that I've discovered."),
-        const Text(
-            "The primary issue is that it's not compatible with webcrawlers, which heavily impairs its SEO potential and prevents pages from coming up on Google search results without any extra effort."),
-        const Text(
-            "I'm in the process of researching how I can correct this, but it being a hurdle at all is a major shortcoming for development."),
-        const Text(
-            "There are also some random issues with Flutter UI that I've noticed - it seems that Flutter is pretty Mac oriented. I say that because, as a Windows user, I noticed that you can't use the middle mouse button to click-scroll, and without a designated package (most of which are very poorly reviewed) there is no workaround for this."),
-        const Text(
-            "Finally, although I don't really mind the bootup time to run Flutter, and have found it to be pretty comparable to webtool created portfolio sites, it's a little excessive for a small page like mine."),
-        const Text(''),
-        const Text(
-            "For these reasons this will probably be my final web-only Flutter project, at least until some substantial WASM improvements are made."),
-        const Text("Surprise surprise, Flutter is an app framework."),
-        const Text(
-            "However, I'm sure the experience with class based web development will be invaluable working with other frameworks in the future, and I'm very happy with the results."),
+            "Ultimately Flutter is an app framework, so these shortcomings were to be expected. And in fact, they actually were not as bad as I expected from reading Flutter forums. Regardless, I'm sure the experience with class based web development will be invaluable working with other frameworks in the future, and I'm very happy with the results."),
         const Text(''),
         const Text(
             "Speaking to the themes of this project, my biggest feedback with my last website design was that it was too loud."),
