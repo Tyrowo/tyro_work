@@ -293,27 +293,13 @@ class Web1Description extends StatelessWidget {
         ),
         const Text(''),
         const Text(
-            "When I started learning how to code I wasn't sure if I wanted to be more of a front end developer or back end developer."),
+            "When I started learning how to code I wasn't sure if I wanted to be more of a front end developer or back end developer. I decided to try out everything, and to do so I started learning how to code in Javascript."),
         const Text(
-            "I decided to try out everything, and to do so I started learning how to code in Javascript."),
-        const Text(
-            'When I asked a friend whether I should learn a framework like React, he gave me the advice "sure, just don\'t start coding anything in react that you wouldn\'t know how to make in vanilla js."'),
-        const Text(
-            "I may have gone a little overboard, because I decided to code a website as a little sandbox area to test javascript projects, and decided to do it in 100% vanilla html/css + js."),
-        const Text(
-            "The results were basic, and the project convinced me I would prefer to be more of a backend developer than a front end developer. 😹"),
+            "I thought about picking up React early on, but decided to code a website 100% vanilla html/css + js first. Nothing crazy, just a little sandbox area to test javascript projects. The results were unsurprisingly pretty elementary in design, and the project actually convinced me I would prefer to be more of a backend developer than a front end developer."),
         const Text(
             "But it was nice to build something to start with, and learning the core design of css properties has made my life a lot easier working on other projects since."),
-        const Text(''),
         const Text(
-            "While it was a little basic, I put a lot of love into some of the components."),
-        const Text(
-            "In particular, I designed the notepad sheet sections to represent the piles of notebooks I had filled during my coding self-study over the previous months."),
-        const Text(''),
-        const Text(
-            "My font I actually created prior to the website, it was a project where I wanted to use my actual handwriting as a font for use in documents."),
-        const Text(
-            "I created it with a web app called calligraphr, and went through tons of iterations creating variations of the lettering that would make it as natural looking as possible. In all I created over 116 of these handwritten character sheets."),
+            "Rather than focus on recreating elements of successful web design, I worked on making personalized components. The notepad sheet sections represented the piles of notebooks I had filled during my coding self-study over the previous months, and highlighted my handwriting font. I had created a font of my handwriting earlier that year with a web app called Calligraphr, and went through tons of iterations creating variations of the lettering that would make it as natural looking as possible. In all I created over 116 of these handwritten character sheets."),
         const Text(''),
         const Center(
           child: ResizeableImage(
@@ -324,15 +310,10 @@ class Web1Description extends StatelessWidget {
         ),
         const Text(''),
         const Text(
-            "My intent was to have it published as a Google Font, but unfortunately fonts created through Calligraphr are not supported because they don't have the component files."),
+            "My intent was to have it published as a Google Font, but unfortunately fonts created through Calligraphr are not supported because they don't have the component files. One day I hope to return to this project, because I would love to have it publicly available and use it on my Google Docs. Unfortunately, it will probably require starting almost completely from scratch, so it's definitely on the backburner for now."),
         const Text(''),
         const Text(
-            "My intent is to one day return to this project, because I would love to have it publicly available and use it on my googledocs. "),
-        const Text(
-            "But it will require starting almost completely from scratch, so it's definitely on the backburner for now."),
-        const Text(''),
-        const Text(
-            "However, it's still available as is for personal use, and I love that I can inscribe my actual handwriting onto the internet."),
+            "However, Tyrowo Inked as it is still works great for my personal use, and I was even using it in my IDE for a while. 😹 For projects like my portfolio websites I love that I can inscribe my actual handwriting onto the internet. It's my way of saying, \"This is me. I was here.\""),
         const Text(''),
         Wrap(
           children: [
