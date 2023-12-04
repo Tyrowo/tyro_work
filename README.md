@@ -203,4 +203,6 @@ keep an eye out for when wasm gets launched. wasm isn't fully stable yet so I do
 
 don't feel like this is necessary right now - need to make a third banner size for projects on mobile
 
-
+mom suggestion - The Rockstar Developer You've Been Searching For (capitalize it all)
+make text selectable - mom wanted to copy paste stuff easier
+mom revisions - she went hard on selling the procrastination buster lol
