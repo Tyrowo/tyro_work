@@ -26,53 +26,39 @@ class LeetCodePiece extends StatelessWidget {
           ),
         ),
         Text(''),
-        Text("Closing out my year competing in challenges"),
+        Text(
+            "Around this time last year I decided I wanted to improve my Java skills so that I could be more confident and productive at work. To become a proficient member of the team I felt like it was necessary to relearn how to create basic data structures and algorithms. I still understood them all conceptually, but had practiced in Javascript, so I wasn't familiar with Java's built in data structures and often had to rely on Googling. Of course Googling is an inherent part of the job, but what I wanted to accomplish was gain some \"conversational fluency\" in the language, where I would no longer second guess myself on syntax. Day to day job responsibilities don't usually require large data structures, but I also wanted to be more aware of simple elegant solutions to common problems and improve my code literacy in general for code reviews."),
         Text(''),
-        Text(
-            "After beginning work on a new contract at work, I decided I wanted to become more confident at coding in Java."),
-        Text(
-            "To become a proficient member of the team I wanted to relearn how to create basic data structures and algorithms, because I had learned them in Javascript originally."),
-        Text(
-            'However, I also wanted to become more "conversationally fluent," because day to day job responsibilities aren\'t usually going to require large data structures. Instead I wanted to be more aware of simple elegant solutions to common problems and improve my code literacy in general for code reviews.'),
-        Text(''),
-        Text("So I set two goals for the year:"),
+        Text("So I set two goals for 2023:"),
         Text(
             "The first was to relearn all of the general data structures and algorithms, becoming familiar at working with their respective Java classes."),
         Text(
-            "The other was to complete at least one problem a day for the entire year, even if it was an easy problem, to become more comfortable with completing simple tasks without having to Google them. You see, the modern day video game free-to-play / battle pass incentivization model had wired my brain to compulsively complete minimum daily challenges for a number of games, and I realized if I could restructure my studying in a way that took advantage of these carved out dopamine pathways I would be magnitudes more productive."),
+            "The other was to complete at least one unique problem a day for the entire year, even if it was an easy problem, to become more comfortable with completing simple tasks without having to Google them."),
         Text(''),
         Text(
-            "Today I've made it through most of the year, and have completed the 300 days required to get the 2023-year achievement on Leetcode."),
-        Text(
-            "Didn't quite make it to 365, but the goal was more to build it as a habit rather than ignore everything in life that came up."),
+            "I chose a daily plan to accomplish this because modern day video game free-to-play/'battle pass' incentivization models have wired my brain to compulsively complete minimum daily challenges, and I realized if I could restructure my studying in a way that took advantage of these carved out dopamine pathways I would be magnitudes more productive. Now I'm happy to say that I've made it through most of the year, and have completed the 300 days required to get the 2023-year achievement on Leetcode. I didn't quite make it to 365, but that wasn't ever really the point. The goal was more to build it as a habit rather than ignore everything in life that came up. And boy did life come up this year."),
         Text(''),
         Text(
-            "I also had some ancillary goals that I did through parts of the year, like for a few months I was completing an additional SQL easy problem every day."),
-        Text(
-            "Another goal was to try to complete the full body of easy problems."),
+            "Through the year there were some ancillary goals that I picked up and dropped off. For a few months I was completing an additional SQL easy problem every day. For a while I was only answering problems from a daily study plan list. For some weeks I would work on problems targeting one specific data structure that I was struggling to keep straight, really drilling in nuances like whether a class uses .add() or .append() or .put() or .push() or .offer(), or can use multiple interchangeably. I found creating smaller monthly challenges like this were very productive, and helped a lot to break up the tedium of just doing random problems. However, many of these challenges added a level of difficulty that required more thought and research in doing my problem(s) for the day, so there was a constant push/pull between putting in more effort striving to learn new concepts and reinforcing the things that I had already learned."),
         Text(''),
-        Text("My takeaways from the project - "),
+        Text("So here are my takeaways from the project - "),
         Text(
-            "• Going through a data structures and algorithms study plan is a great way to start practice. It should take you through easy problems to get warmed up first and give a good handle of the built in methods of your language's class"),
+            "• Going through a data structures and algorithms study course was a great way to start everything off. A well composed study plan will take you through easy problems, getting you familiar with the simpler built in methods of your language's classes, and for me that was exceptionally helpful."),
         Text(
-            "• Doing both a regular problem and a SQL problem was a little more difficult than I expected, since I was having to do a bunch of lookup time for basic concepts in SQL. It is something I want to pick up again in the future, but had to be axed to focus on other personal projects."),
+            "• Doing both a regular problem and a SQL problem was a little more difficult than I expected, since I was having to do a bunch of lookup time for basic concepts in SQL. It is something I want to pick up again in the future, but had to be axed to focus on other personal projects. I never found a great resource to really learn all of the built-in concepts in SQL, so all too often it felt like I was searching Google for some magic word I hadn't heard about yet."),
         Text(
-            "• Doing all of the easy's was definitely one of the best things I could've done for myself, but has some diminishing returns. Once I became fluent in easy syntax and started looking for my 250+ new easy problem, I fell into a bad habit of cherry picking for easy string manipulation problems just to get my dailies done."),
+            "• Focusing on doing easy problems was definitely one of the best things I could've done for myself, but admittedly has some diminishing returns. Once I became fluent in easy syntax and started looking for my 250+ new easy problem, I fell into a bad habit of cherry picking for easy string manipulation problems that I could answer quickly just to get my dailies done."),
         Text(
-            "• • However, my latest peak in Leetcode Weekly Challenges (1645) came from being able to quickly use the built in methods and strategies from my easy mode problems without second guessing myself. I think doing a thorough breadth of easies is important to build confidence in the language and think it's still more of a worthwhile experience to do one easy than completely stagnate."),
+            "• • However, my latest peak in Leetcode Weekly Challenges (1645) came from being able to quickly use the built in methods and strategies from my easy mode problems confidently, accurately, and quickly. I think doing a thorough breadth of easies is important to build confidence in the language and think it's still more of a worthwhile experience to do one easy a day than completely stagnate."),
         Text(
-            "• I noticed a limited capacity in my ability to do problems on days where I was also learning Flutter, and when I was building my project was when I stopped doing problems on Fridays. Leetcode is great, but shouldn't prioritize learning and creating."),
+            "• I noticed a limited capacity in my ability to do problems on days where I was also learning Flutter, and when I was actively building my project I subconsciously stopped doing problems on Fridays because I was so intent on my work. Leetcode is great, but I feel that it shouldn't be prioritized over actually creating something."),
         Text(
-            "• Although I'm pretty confident in most medium problems, I still consistently have a hard time with the third and fourth problems in any given Leetcode Weekly Challenge (high mediums and hards). There's a skill gap and maybe even a bit of a mental block on this eschelon of problems that simply cannot be overcome by doing easies and mediums. You definitely need to just take the plunge at some point."),
+            "• Although I'm pretty confident in most medium problems, I still consistently have a hard time with the third and fourth problems in any given Leetcode Weekly Challenge (high mediums and hards). I was able to complete all four questions in one single challenge this year, which was a nice feather in my cap. But there's a skill gap and maybe even a bit of a mental block I need to overcome on this echelon of problems that simply cannot be overcome by doing easies and mediums. You definitely need to just take the plunge at some point."),
         Text(
-            "• Having a routine (even of doing an easy problem) definitely at least prevents concerns that I'm stagnating and made me a confident coder professionally."),
+            "• Having a routine (even of doing an easy problem) definitely prevented feelings of imposter syndrome and any concerns that I'm stagnating, which were both huge mental benefits."),
         Text(''),
         Text(
-            "All in all, although it's easy to get sucked into 'taking it easy,' I've found this to be a worthwhile exercise and believe that I will continue the project inevitably. I may even switch languages so that I can also be more conversational with Dart if I continue to use Flutter."),
-        Text(
-            "My primary goal for the upcoming year is to start doing a hard problem a week to break through the mental barrier I have with them now."),
-        Text(
-            "If I'm successful, then my secondary goal is to improve my Challenge ranking, and hopefully get a Leetcode Knight badge."),
+            "All in all, although it's easy to get sucked into 'taking it easy,' I've found this to be a worthwhile exercise and believe that I will continue the project inevitably. I may even switch languages so that I can achieve more fluency with Dart if I plan to continue using Flutter for more complicated projects. My primary goal for the upcoming year is to start doing a hard problem a week to break through the mental barrier I have with them now. If I'm successful, then my secondary goal is to improve my Challenge ranking, and hopefully get a Leetcode Knight badge."),
         Text("Wish me luck! 😽"),
       ],
     );
