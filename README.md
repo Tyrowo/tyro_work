@@ -196,10 +196,10 @@ done - go through revisions of project descriptions and articles, making cuts to
 done - People (mom and jill) have repeated criticism that paragraphs of articles are breaking at odd points. Not sure if it would work putting them in wraps, but either need to do that or expand the text blocks into paragraphs instead of sentences.
 nah - add shadow around profile pic and headline?
 
-investigate this concept of deploying to webassembly instead of javascript. (build web --wasm) Since this is a simple page maybe web assembly would be able to improve performance? If it has a shorter boot up time then hell yeah.
+## Future
+
 https://docs.flutter.dev/platform-integration/web/wasm
-https://github.com/flutter/flutter/wiki/Flutter-build-release-channels
-// search master // Compiling to WebAssembly (wasm) is only available on the master channel.
+keep an eye out for when wasm gets launched. wasm isn't fully stable yet so I don't want to put in the work to keep my website up to date until it fully launches
 
 don't feel like this is necessary right now - need to make a third banner size for projects on mobile
 
