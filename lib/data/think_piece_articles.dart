@@ -76,13 +76,7 @@ class TEDHPiece extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text(
-            "I've loved Magic the Gathering since I was a child, though I had a falling out with it for many years due to some disagreements with how it is monetized and the secondary market in general."),
-        const Text(
-            "However, with the availability of proxy cards to allow the full potential Magic has to offer, I have found a huge resurgance in playing with friends at the kitchen table!"),
-        const Text(
-            "Personally I love a good cube draft, but drafting is absolutely not a beginner friendly format."),
-        const Text(
-            "EDH, however, has become the true kitchen table favorite, and as I played it more I noticed a few flaws."),
+            "I started playing Magic the Gathering when I was 8 years old, and always had a deep fondness for the complexity of the game and the fun in deckbuilding. However, I had a falling out with it for many years due to some disagreements with how it is monetized and the secondary market in general. Recently, with the accessibility of high quality proxy cards to allow the full potential Magic has to offer, I've had a huge resurgance in playing with friends at the kitchen table. Personally I love a good cube draft, but drafting is absolutely not a beginner friendly format. EDH, known colloquially as Commander, has become the true kitchen table favorite, and as I've played it more I noticed a few flaws."),
         const Text("Shuffling 100 card decks. Often."),
         const Text("Sluggish play from decision anxiety."),
         const Text("Unclear board states."),
@@ -91,16 +85,14 @@ class TEDHPiece extends StatelessWidget {
         const Text(
             "Tutors making new players unable to play a deck without some kind of cheat sheet or elaborate rundown of how the deck is supposed to be piloted."),
         const Text(
-            "The homogenization of deck lists due to staple cards allowed in every deck like fetchlands, mana crypt, sol ring."),
+            "The homogenization of deck lists due to staple cards allowed in every deck like fetchlands, mana crypt, and sol ring."),
         const Text(
             "Inconsistent and dramatic swings in power based off a lucky ramp draw in the first two turns of the game."),
         const Text(
             "Polarized matches when a player misses a land drop, and the unsettling feeling of watching a person waste upwards of 45 minutes playing from behind in a group environment and/or getting knocked out early."),
         const Text(''),
         const Text(
-            "These aren't issues unique to EDH, it's part of Magic's core ruleset."),
-        const Text(
-            "But I'm not trying to play competitive Magic, I want a game that's fun for my table and easier to pick up for newcomers."),
+            "These aren't issues unique to EDH, most of them are issues with Magic's core ruleset. But I'm not trying to play competitive Magic, I want a game that's fun for my table and easier to pick up for newcomers."),
         const Text(''),
         const Text(
             "I was thinking about the rate of play issues from a programming viewpoint, and wanted to break it down in terms of its time complexity."),
@@ -109,7 +101,7 @@ class TEDHPiece extends StatelessWidget {
         const Text(
             "R is reading time, the time it takes to understand the board state of everything that is going on on your opponents' fields."),
         const Text(
-            "P is preparation time, deciding what your gameplan is and what you want to do with your turn."),
+            "P is preparation time, deciding what your gameplan is and what you want to do with your turn, and what you want to do on your subsequent turns."),
         const Text(
             "F is the frequency of the amount of cards you play per turn that allow you to search your library for a card (usually somewhere between 1/4 and 2 in most decks)."),
         const Text(
@@ -117,68 +109,35 @@ class TEDHPiece extends StatelessWidget {
         const Text(
             "S is shuffling time, the amount of time it takes you to shuffle your remaining deck."),
         const Text(
-            "E is execution time, the amount of time it takes you to actually play out your turn."),
+            "and E is execution time, the amount of time it takes you to actually play out your turn."),
         const Text(''),
         const Text("Preparation Time - Multithreading vs Turning in sequence."),
         const Text(
-            "There is a great deal of skill involved in Magic the Gathering. You need to be able to understand what your opponent is doing, and adjust your plan to every new board state that is introduced."),
+            "There is a great deal of skill involved in Magic the Gathering. You need to be able to understand what your opponent is doing, and adjust your plan to every new board state that is introduced. Not everyone is a pro player and able to perfectly navigate the nigh infinite amount of sequences that can occur, but the two main cases All players need to consider is what they'll be doing if they hit their land drop, and what they're doing if they don't hit their land drop. What's more is it doesn't stop at your next turn. To make the correct play for this current turn, more skilled players will be planning for future turns so that they are making the correct move now. Unfortunately, regardless of skill level or how far down the road you're considering, this determination is revealed at the beginning of your next turn, and there's no way you can casually check the top card of your library to see what it will be, because it will determine your play on other players' turns. This requires turns to be planned out in sequence, which wastes all of the time that planning could be occuring on other players' turns."),
         const Text(
-            "Not everyone is a pro player and able to perfectly navigate the nigh infinite amount of sequences that can occur, but the two main cases All players need to consider is what they'll be doing if they hit their land drop, and what they're doing if they don't hit their land drop."),
-        const Text(
-            "What's more is it doesn't stop at your next turn. To make the correct play for this current turn, more skilled players will be planning for future turns so that they are making the correct move now."),
-        const Text(
-            "Unfortunately, regardless of skill level or how far down the road you're considering, this determination is revealed at the beginning of your next turn, and there's no way you can casually check the top card of your library to see what it will be, because it will determine your play on other players' turns."),
-        const Text(
-            "This requires turns to be planned out in sequence, which wastes all of the time that planning could be occuring on other players' turns."),
-        const Text(
-            "What I've come to realize is that if land drops were deterministic it would reduce the amount of preparation logarithmically that all players need to consider."),
-        const Text(
-            "Moreover, with consistent land drops all players should be able to accomplish multithreading in their turns."),
-        const Text(
-            "Having the ability to more accurately plan what you will be doing during your turn is paramount to creating good flow in a game of Magic, and is paramount to everyone enjoying themselves."),
+            "What I've come to realize is that if land drops were deterministic it would reduce the amount of preparation logarithmically that all players need to consider. Moreover, with consistent land drops all players should be able to accomplish multithreading in their turns. Having the ability to more accurately plan what you will be doing during your turn is paramount to creating good flow in a game of Magic, and is paramount to everyone enjoying themselves."),
         const Text(''),
         const Text("Reading Comprehension"),
         const Text(
-            "With the ever increasing complexity of Magic rules, it becomes harder and harder to know what's going on on the table for a new player."),
+            "With the ever increasing complexity of Magic rules, it becomes harder and harder to know what's going on on the table for a new player. When does Initiative trigger? What does The Monarch do again? Is it day or night? How many of your dice-represented tokens are tapped and how many are staying back? Answering these questions is a common occurance, and having to explain how a rule works (or worse, not remembering exactly how a rule works) takes a lot of time and greatly reduces the flow of the game."),
         const Text(
-            "When does Initiative trigger? What does The Monarch do again? Is it day or night? How many of your dice-represented tokens are tapped and how many are staying back? "),
-        const Text(
-            "Answering these questions is an uncommon occurance, and having to explain how a rule works (or worse, not remembering exactly how a rule works) takes a lot of time and greatly reduces "),
-        const Text(
-            "I think a lot about a card called The Hive. Tokens were a concept in Magic from the beginning of its creation, and yet many players take tokens for granted."),
-        const Text(
-            "Through my childhood tokens were very much a rarity, but the ones that appeared in Unglued and Invasion set a huge precedent for the game."),
-        const Text(
-            "Every card that makes a token has a token. So many of the complicated mechanics of each set are represented in tokens."),
-        const Text(
-            "They're used on the camera highlighted games of official matches, but where they're most important is right at home on the kitchen table."),
-        const Text(
-            "Plus, they're beautiful and customizable and can give a whole new feel to your deck."),
-        const Text(
-            "However, impromptu creation of tokens can dramatically increase the Execution time and stall play."),
-        const Text(
-            "For this reason it's vital to not only encourage, but require all the tokens that players create to be represented, and be prepared before the game in order to reduce the reading complexity of the board state."),
+            "I think a lot about a card called The Hive. Tokens were a concept in Magic from the beginning of its creation, and yet many players take tokens for granted. Through my childhood tokens were very much a rarity, but the ones that appeared in Unglued and Invasion set a huge precedent for the game. Now, every card that makes a token has a token. So many of the complicated mechanics of each set are represented in tokens. They're used on the camera highlighted games of official matches, but where they're most important is right at home on the kitchen table. Plus, they're beautiful and customizable and can give a whole new feel to your deck. However, impromptu creation of tokens can dramatically increase the Execution time and stall play. For this reason it's vital to not only encourage, but require all the tokens that players create to be represented, and be prepared before the game in order to reduce the reading complexity of the board state."),
         const Text(''),
         const Text("Searching"),
         const Text(
-            "In order to eliminate the time shuffling decks and the time searching for cards, one simply needs to eliminate F."),
-        const Text("The frequency of searching your library for a card."),
+            "In order to eliminate the time shuffling decks and the time searching for cards, one simply needs to eliminate F, the Frequency of searching your library for a card."),
         const Text(
-            "Shuffling and searching are both expensive methods, and more often than not cannot be timed out in a way that they do not interrupt play."),
+            "Shuffling and searching are both expensive methods, and more often than not cannot be timed out in a way that they do not interrupt play. Thus, eliminating the ability to search a player's library completely is the simplest and most effective way to decrease the time complexity of our Magic turn."),
         const Text(
-            "Thus, eliminating the ability to search a player's library completely is the simplest and most effective way to decrease the time complexity of our Magic turn."),
-        const Text(
-            'In lieu of "tutoring" (searching through the deck), I also wanted to enable Wishing instead. Wishing pulls a specific card from a smaller side pool of cards that do not need to be shuffled.'),
-        const Text(
-            "It's a little strange that EDH doesn't allow a sideboard in the first place, so I included 9 slots for a wishboard for every deck. Searching a deck of 9 presorted cards is a constant time function and can be ignored for time complexity."),
+            'In lieu of "tutoring" (searching through the deck), I also wanted to enable Wishing instead. Wishing pulls a specific card from a smaller side pool of cards that do not need to be shuffled. It\'s a little strange that EDH doesn\'t allow a sideboard in the first place, so I included 9 slots for a wishboard for every deck. Searching a deck of 9 presorted cards is a constant time function and can be ignored for time complexity.'),
         const Text(''),
         const Text(
-            "Thusly, I have created a ruleset that I feel solves these main issues with EDH that I've laid out."),
+            "With these considerations in mind, I have created a ruleset that I feel solves these main issues with EDH that I've laid out."),
         const Text("No searching."),
         const Text("Required tokens."),
         const Text("Guaranteed land drops."),
         const Text(
-            "With these principles I've created a ruleset that reduces the time complexity down to"),
+            "As such, my ruleset effectively reduces the time complexity down to"),
         const Text("O((R - A) + log(P)** + E)"),
         const Text(
             "where Reading time is reduced by A, the amount of time that it takes to ask what something is or does or how it works."),
@@ -188,31 +147,10 @@ class TEDHPiece extends StatelessWidget {
             "All this allows you to focus on E - Executing your gameplan."),
         const Text(''),
         const Text(
-            "I did make one more rule change that was unrelated to the time complexity thought project, and it is a pretty radical take on the fundamental commander design."),
-        const Text(
-            "I've done away with the legendary creature restriction on the commander card. Your commander doesn't even need to be a creature at all."),
-        const Text(
-            "I think EDH has created a very toxic design pattern in Magic the Gathering, where more and more creatures are being designed as legendaries simply to create a greater the market of EDH players."),
-        const Text(
-            "With the pool of potential commanders being flooded as it is, it has greatly watered down the restriction of using a legendary creature."),
-        const Text(
-            "Therefore I want to open the floodgates to more varied and wild interpretations of decks."),
-        const Text(
-            "Rather than pick a character to represent a deck, pick a favorite spell that really appeals to you and however you want to play the game."),
-        const Text('I call it your "Signature Spell."'),
-        const Text(
-            "It may prove to be too powerful a change, but for now I'm excited to see what kind of wacky decks it can bring to the table."),
+            "I did make one more rule change that was unrelated to the time complexity thought project, and it is a pretty radical take on the fundamental commander design. I've done away with the legendary creature restriction on the commander card. Your commander doesn't even need to be a creature at all. I think EDH has created a very toxic design pattern in Magic the Gathering, where more and more creatures are being designed as legendaries simply to create a greater the market of EDH players. With the pool of potential commanders being flooded as it is, it has greatly watered down the restriction of using a legendary creature. Therefore I want to open the floodgates to more varied and wild interpretations of decks. Rather than pick a character to represent a deck, pick a favorite spell that really appeals to you and however you want to play the game. I call it your \"Signature Spell.\" It may prove to be too powerful a change, but for now I'm excited to see what kind of wacky decks it can bring to the table."),
         const Text(''),
         const Text(
-            "I've started exclusively playing this ruleset with my friend group."),
-        const Text(
-            "I designed the deck composition such that unless a deck is completely reliant on tutoring, or has a gimmick that it's all lands/no lands, almost any EDH deck can be converted into a tEDH deck, so my friends that have decks have been able to play with their cards without any issue. Usually all it takes is pulling out the tutors, fetches, sol rings, and trimming down a few cards."),
-        const Text(
-            "It's been a lot of fun, and we've seen consistently high powered interactive games where everyone was involved but able to play at a faster clip."),
-        const Text(
-            "Even creating a token deck has been a really novel deckbuilding problem to work around, and has changed the way I look at a lot of high powered cards."),
-        const Text(
-            "If you give it a shot, I really hope you and your friends have as great a time as we have."),
+            "I've started exclusively playing this ruleset with my friend group, and it has been really easy for everyone to switch over to. I designed the deck composition such that unless a deck is completely reliant on tutoring, or has a gimmick that it's all lands/no lands, almost any EDH deck can be converted into a tEDH deck, so my friends that have decks have been able to play with their cards without any issue. Usually all it takes is pulling out the tutors, fetches, sol rings, and trimming down a few cards. It's been a lot of fun, and we've seen consistently high powered interactive games where everyone was involved but able to play at a faster clip. Even creating a designated token deck has been a really novel deckbuilding problem to work around, and has changed the way I look at a lot of high powered cards. If you give it a shot, I really hope you and your friends have as great a time as we have."),
         const Text(''),
         const Center(
           child: Wrap(
@@ -361,21 +299,7 @@ class TEDHPiece extends StatelessWidget {
         const Text(''),
         const Text("The current EDH banlist as of 11/20/23 is as follows:"),
         const Text(
-            "• Ancestral Recall • Balance • Biorhythm • Black Lotus • Braids, Cabal Minion • Channel •  Chaos Orb • Coalition Victory"),
-        const Text(
-            "• Emrakul, the Aeons Torn • Erayo, Soratami Ascendant • Falling Star • Fastbond • Flash • Gifts Ungiven"),
-        const Text(
-            "• Golos, Tireless Pilgrim • Griselbrand • Hullbreacher • Iona, Shield of Emeria • Karakas"),
-        const Text(
-            "• Leovold, Emissary of Trest • Library of Alexandria • Limited Resources • Lutri, the Spellchaser"),
-        const Text(
-            "• Mox Emerald • Mox Jet • Mox Pearl • Mox Ruby • Mox Sapphire • Panoptic Mirror • Paradox Engine"),
-        const Text(
-            "• Primeval Titan • Prophet of Kruphix • Recurring Nightmare • Rofellos, Llanowar Emissary"),
-        const Text(
-            "• Shahrazad • Sway of the Stars • Sundering Titan • Sylvan Primordial • Time Vault • Time Walk • Tinker"),
-        const Text(
-            "• Tolarian Academy • Trade Secrets • Upheaval • Yawgmoth’s Bargain"),
+            "• Ancestral Recall • Balance • Biorhythm • Black Lotus • Braids, Cabal Minion • Channel •  Chaos Orb • Coalition Victory • Emrakul, the Aeons Torn • Erayo, Soratami Ascendant • Falling Star • Fastbond • Flash • Gifts Ungiven • Golos, Tireless Pilgrim • Griselbrand • Hullbreacher • Iona, Shield of Emeria • Karakas • Leovold, Emissary of Trest • Library of Alexandria • Limited Resources • Lutri, the Spellchaser • Mox Emerald • Mox Jet • Mox Pearl • Mox Ruby • Mox Sapphire • Panoptic Mirror • Paradox Engine • Primeval Titan • Prophet of Kruphix • Recurring Nightmare • Rofellos, Llanowar Emissary • Shahrazad • Sway of the Stars • Sundering Titan • Sylvan Primordial • Time Vault • Time Walk • Tinker • Tolarian Academy • Trade Secrets • Upheaval • Yawgmoth’s Bargain"),
         const Text(''),
         const Text(
             "If you have any ideas for ways to improve the format or append the ban list or change a rule, I'm happy to hear it! Feel free to email me."),
