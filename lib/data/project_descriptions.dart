@@ -457,7 +457,7 @@ class Web2Description extends StatelessWidget {
         ),
         const Text(''),
         const Text(
-            "Creating a smooth tiling image was difficult with an inconsistent design, but after generating a hundred images or so with a variety of different variations of seed images and prompts, I had procured 6 perfect images to use for this project. I think the results speak for themselves, because I find them very visually appealing. Finally, to make sure the theme didn't feel too busy/gaudy, I used the images to choose nice clean complimentary off-black and off-white color schemes to temper the layout."),
+            "Creating a smooth tiling image was difficult with an inconsistent design, but after generating a hundred images or so with a variety of different variations of seed images and prompts, I was able to procure 6 perfect images to use for this project. I think the results speak for themselves, because I find them very visually appealing. Finally, to make sure the theme didn't feel too busy/gaudy, I used the images to choose nice clean complimentary off-black and off-white color schemes to temper the layout."),
         const Text(''),
 
         const Center(
