@@ -191,20 +191,16 @@ alternative fix - make light/dark pallets stack (in column, no wrap) instead of 
 done - made the close button for fullscreen vers of resizeable image a little more responsive to image size
 done - make profile picture resizeable image (darlin was tapping on it), converted the alert dialog function from the resizeable image to a universal version not hidden in the private _classState class
 done - write in leetcode think piece about how I was trying to convert dailies mindset from videogames to something productive
+done - write a plain html page for the tEDH rules to link publicly on reddit and stuff
+done - go through revisions of project descriptions and articles, making cuts to length where possible.
+done - People (mom and jill) have repeated criticism that paragraphs of articles are breaking at odd points. Not sure if it would work putting them in wraps, but either need to do that or expand the text blocks into paragraphs instead of sentences.
+nah - add shadow around profile pic and headline?
 
 investigate this concept of deploying to webassembly instead of javascript. (build web --wasm) Since this is a simple page maybe web assembly would be able to improve performance? If it has a shorter boot up time then hell yeah.
 https://docs.flutter.dev/platform-integration/web/wasm
 https://github.com/flutter/flutter/wiki/Flutter-build-release-channels
 // search master // Compiling to WebAssembly (wasm) is only available on the master channel.
 
-need to make a third banner size for projects on mobile
-
-nah - add shadow around profile pic and headline?
-nah - need to make a third banner size for projects on mobile
+don't feel like this is necessary right now - need to make a third banner size for projects on mobile
 
 
-write a plain html page for the tEDH rules to link publicly on reddit and stuff
-
-go through revisions of project descriptions and articles, making cuts to length where possible.
-
-People (mom and jill) have repeated criticism that paragraphs of articles are breaking at odd points. Not sure if it would work putting them in wraps, but either need to do that or expand the text blocks into paragraphs instead of sentences.
