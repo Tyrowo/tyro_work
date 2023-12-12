@@ -70,16 +70,17 @@ class _ProjectBannerState extends State<ProjectBanner> {
                     ? 50
                     : 150
                 : deviceHeight(context) * 0.9,
-            padding: state == 'closed'
+            // if the screen is bigger than 600 it's probably not mobile, so we can use the varying padding to create a hover effect when the device is not closed
+            padding: state == 'closed' && deviceWidth(context) >= 600
                 ? EdgeInsets.fromLTRB(
-                    deviceWidth(context) * 0.1,
+                    deviceWidth(context) * 0.05,
                     deviceHeight(context) * 0.0,
-                    deviceWidth(context) * 0.1,
+                    deviceWidth(context) * 0.05,
                     deviceHeight(context) * 0.0)
                 : EdgeInsets.fromLTRB(
-                    deviceWidth(context) * 0.05,
+                    deviceWidth(context) * 0.01,
                     deviceHeight(context) * 0.0,
-                    deviceWidth(context) * 0.05,
+                    deviceWidth(context) * 0.01,
                     deviceHeight(context) * 0.0,
                   ),
             child: state == 'open'
